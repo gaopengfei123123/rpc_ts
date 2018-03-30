@@ -1261,3 +1261,306 @@
 2018/03/29 21:02:10.263 [I] http://localhost:8899/api/test :  delay: 0 ms 200 {"message": "try"}
 2018/03/29 21:02:19.340 [I] message at offset 321: ts_queue_117 = {"ID":117,"exec_time":1522328530}
 
+2018/03/30 10:42:06.264 [I] message at offset 322: ts_queue_118 = {"ID":118,"exec_time":1522377723}
+
+2018/03/30 10:42:06.271 [I] 执行 try,ID: 118
+2018/03/30 10:42:06.273 [I] http://localhost:8899/api/test :  delay: 1 ms 200 {"message": "try"}
+2018/03/30 10:42:06.273 [I] http://localhost:8899/api/test_cancel_timeout :  delay: 1 ms 200 {"message": "try"}
+2018/03/30 10:42:06.273 [I] http://localhost:8899/api/test_confirm_fault :  delay: 1 ms 200 {"message": "try"}
+2018/03/30 10:42:06.273 [I] try 操作完成,ID: 118  返回结果: [{"code":200,"data":"{\"message\": \"try\"}","error_message":"","API":"http://localhost:8899/api/test/try","Index":2,"error_code":0},{"code":200,"data":"{\"message\": \"try\"}","error_message":"","API":"http://localhost:8899/api/test_cancel_timeout/try","Index":1,"error_code":0},{"code":200,"data":"{\"message\": \"try\"}","error_message":"","API":"http://localhost:8899/api/test_confirm_fault/try","Index":0,"error_code":0}]
+2018/03/30 10:42:06.280 [I] http://localhost:8899/api/test_cancel_timeout :  delay: 0 ms 200 {"message": "try"}
+2018/03/30 10:42:06.280 [I] http://localhost:8899/api/test_confirm_fault :  delay: 0 ms 401 {"message": "try"}
+2018/03/30 10:42:06.281 [I] http://localhost:8899/api/test :  delay: 0 ms 200 {"message": "try"}
+2018/03/30 10:42:06.281 [I] 执行中断操作操作,ID: 118
+2018/03/30 10:42:06.284 [I] http://localhost:8899/api/test :  delay: 0 ms 200 {"message": "try"}
+2018/03/30 10:42:06.284 [I] http://localhost:8899/api/test_cancel_timeout :  delay: 0 ms 408 {"message":"cancel","type":"try api","code":0,"error_code":408,"error_message":"something was wrong","data":"{\"message\": \"try\"}"}
+2018/03/30 10:42:15.362 [I] message at offset 323: ts_queue_118 = {"ID":118,"exec_time":1522377726}
+
+2018/03/30 10:44:21.390 [I] message at offset 324: ts_queue_119 = {"ID":119,"exec_time":1522377854}
+
+2018/03/30 10:44:21.393 [I] 执行 try,ID: 119
+2018/03/30 10:44:21.399 [I] http://localhost:8899/api/test_confirm_fault :  delay: 5 ms 200 {"message": "try"}
+2018/03/30 10:44:21.399 [I] http://localhost:8899/api/test :  delay: 5 ms 200 {"message": "try"}
+2018/03/30 10:44:21.399 [I] http://localhost:8899/api/test_cancel_timeout :  delay: 4 ms 200 {"message": "try"}
+2018/03/30 10:44:21.399 [I] try 操作完成,ID: 119  返回结果: [{"code":200,"data":"{\"message\": \"try\"}","error_message":"","API":"http://localhost:8899/api/test_confirm_fault/try","Index":0,"error_code":0},{"code":200,"data":"{\"message\": \"try\"}","error_message":"","API":"http://localhost:8899/api/test/try","Index":2,"error_code":0},{"code":200,"data":"{\"message\": \"try\"}","error_message":"","API":"http://localhost:8899/api/test_cancel_timeout/try","Index":1,"error_code":0}]
+2018/03/30 10:44:21.403 [I] http://localhost:8899/api/test_confirm_fault :  delay: 0 ms 401 {"message": "try"}
+2018/03/30 10:44:21.403 [I] http://localhost:8899/api/test :  delay: 0 ms 200 {"message": "try"}
+2018/03/30 10:44:21.403 [I] http://localhost:8899/api/test_cancel_timeout :  delay: 0 ms 200 {"message": "try"}
+2018/03/30 10:44:21.403 [I] 执行中断操作操作,ID: 119
+2018/03/30 10:44:21.406 [I] http://localhost:8899/api/test_cancel_timeout :  delay: 0 ms 408 {"message":"cancel","type":"try api","code":0,"error_code":408,"error_message":"something was wrong","data":"{\"message\": \"try\"}"}
+2018/03/30 10:44:21.406 [I] http://localhost:8899/api/test :  delay: 0 ms 200 {"message": "try"}
+2018/03/30 10:44:30.490 [I] message at offset 325: ts_queue_119 = {"ID":119,"exec_time":1522377861}
+
+2018/03/30 10:46:20.339 [I] message at offset 324: ts_queue_119 = {"ID":119,"exec_time":1522377854}
+
+2018/03/30 10:46:20.339 [I] message at offset 325: ts_queue_119 = {"ID":119,"exec_time":1522377861}
+
+2018/03/30 10:46:20.339 [I] message at offset 326: ts_queue_120 = {"ID":120,"exec_time":1522377973}
+
+2018/03/30 10:46:20.341 [I] 执行 try,ID: 120
+2018/03/30 10:46:20.344 [I] http://localhost:8899/api/test_confirm_fault :  delay: 2 ms 200 {"message": "try"}
+2018/03/30 10:46:20.344 [I] http://localhost:8899/api/test_cancel_timeout :  delay: 2 ms 200 {"message": "try"}
+2018/03/30 10:46:20.344 [I] http://localhost:8899/api/test :  delay: 2 ms 200 {"message": "try"}
+2018/03/30 10:46:20.344 [I] try 操作完成,ID: 120  返回结果: [{"code":200,"data":"{\"message\": \"try\"}","error_message":"","API":"http://localhost:8899/api/test_confirm_fault/try","Index":0,"error_code":0},{"code":200,"data":"{\"message\": \"try\"}","error_message":"","API":"http://localhost:8899/api/test_cancel_timeout/try","Index":1,"error_code":0},{"code":200,"data":"{\"message\": \"try\"}","error_message":"","API":"http://localhost:8899/api/test/try","Index":2,"error_code":0}]
+2018/03/30 10:46:20.347 [I] http://localhost:8899/api/test_cancel_timeout :  delay: 0 ms 200 {"message": "try"}
+2018/03/30 10:46:20.347 [I] http://localhost:8899/api/test_confirm_fault :  delay: 0 ms 401 {"message": "try"}
+2018/03/30 10:46:20.348 [I] http://localhost:8899/api/test :  delay: 0 ms 200 {"message": "try"}
+2018/03/30 10:46:20.348 [I] 执行中断操作操作,ID: 120
+2018/03/30 10:46:20.351 [I] http://localhost:8899/api/test :  delay: 0 ms 200 {"message": "try"}
+2018/03/30 10:46:20.351 [I] http://localhost:8899/api/test_cancel_timeout :  delay: 0 ms 408 {"message":"cancel","type":"try api","code":0,"error_code":408,"error_message":"something was wrong","data":"{\"message\": \"try\"}"}
+2018/03/30 10:46:29.437 [I] message at offset 327: ts_queue_120 = {"ID":120,"exec_time":1522377980}
+
+2018/03/30 10:47:06.693 [I] message at offset 324: ts_queue_119 = {"ID":119,"exec_time":1522377854}
+
+2018/03/30 10:47:06.693 [I] message at offset 325: ts_queue_119 = {"ID":119,"exec_time":1522377861}
+
+2018/03/30 10:47:06.693 [I] message at offset 326: ts_queue_120 = {"ID":120,"exec_time":1522377973}
+
+2018/03/30 10:47:06.693 [I] message at offset 327: ts_queue_120 = {"ID":120,"exec_time":1522377980}
+
+2018/03/30 11:01:05.798 [I] message at offset 328: ts_queue_121 = {"ID":121,"exec_time":1522378863}
+
+2018/03/30 11:01:05.802 [I] 执行 try,ID: 121
+2018/03/30 11:01:05.806 [I] http://localhost:8899/api/test :  delay: 3 ms 200 {"message": "try"}
+2018/03/30 11:01:05.806 [I] http://localhost:8899/api/test_cancel_timeout :  delay: 3 ms 200 {"message": "try"}
+2018/03/30 11:01:05.806 [I] http://localhost:8899/api/test_confirm_fault :  delay: 3 ms 200 {"message": "try"}
+2018/03/30 11:01:05.806 [I] try 操作完成,ID: 121  返回结果: [{"code":200,"data":"{\"message\": \"try\"}","error_message":"","API":"http://localhost:8899/api/test/try","Index":2,"error_code":0},{"code":200,"data":"{\"message\": \"try\"}","error_message":"","API":"http://localhost:8899/api/test_cancel_timeout/try","Index":1,"error_code":0},{"code":200,"data":"{\"message\": \"try\"}","error_message":"","API":"http://localhost:8899/api/test_confirm_fault/try","Index":0,"error_code":0}]
+2018/03/30 11:01:05.810 [I] http://localhost:8899/api/test :  delay: 0 ms 200 {"message": "try"}
+2018/03/30 11:01:05.810 [I] http://localhost:8899/api/test_confirm_fault :  delay: 0 ms 401 {"message": "try"}
+2018/03/30 11:01:05.810 [I] http://localhost:8899/api/test_cancel_timeout :  delay: 0 ms 200 {"message": "try"}
+2018/03/30 11:01:05.810 [I] 执行中断操作操作,ID: 121
+2018/03/30 11:01:05.813 [I] http://localhost:8899/api/test :  delay: 0 ms 200 {"message": "try"}
+2018/03/30 11:01:05.813 [I] http://localhost:8899/api/test_cancel_timeout :  delay: 0 ms 408 {"message":"cancel","type":"try api","code":0,"error_code":408,"error_message":"something was wrong","data":"{\"message\": \"try\"}"}
+2018/03/30 11:01:14.898 [I] message at offset 329: ts_queue_121 = {"ID":121,"exec_time":1522378865}
+
+2018/03/30 11:01:14.903 [I] http://localhost:8899/api/test :  delay: 1 ms 200 {"message": "try"}
+2018/03/30 11:01:14.903 [I] http://localhost:8899/api/test_cancel_timeout :  delay: 0 ms 408 {"message":"cancel","type":"try api","code":0,"error_code":408,"error_message":"something was wrong","data":"{\"message\": \"try\"}"}
+2018/03/30 11:01:23.998 [I] message at offset 330: ts_queue_121 = {"ID":121,"exec_time":1522378874}
+
+2018/03/30 11:01:24.002 [I] http://localhost:8899/api/test :  delay: 0 ms 200 {"message": "try"}
+2018/03/30 11:01:24.002 [I] http://localhost:8899/api/test_cancel_timeout :  delay: 1 ms 408 {"message":"cancel","type":"try api","code":0,"error_code":408,"error_message":"something was wrong","data":"{\"message\": \"try\"}"}
+2018/03/30 11:01:33.095 [I] message at offset 331: ts_queue_121 = {"ID":121,"exec_time":1522378884}
+
+2018/03/30 11:01:33.101 [I] http://localhost:8899/api/test_cancel_timeout :  delay: 1 ms 408 {"message":"cancel","type":"try api","code":0,"error_code":408,"error_message":"something was wrong","data":"{\"message\": \"try\"}"}
+2018/03/30 11:01:33.101 [I] http://localhost:8899/api/test :  delay: 1 ms 200 {"message": "try"}
+2018/03/30 11:01:42.198 [I] message at offset 332: ts_queue_121 = {"ID":121,"exec_time":1522378893}
+
+2018/03/30 11:01:42.201 [I] http://localhost:8899/api/test_cancel_timeout :  delay: 0 ms 408 {"message":"cancel","type":"try api","code":0,"error_code":408,"error_message":"something was wrong","data":"{\"message\": \"try\"}"}
+2018/03/30 11:01:42.201 [I] http://localhost:8899/api/test :  delay: 0 ms 200 {"message": "try"}
+2018/03/30 11:01:51.295 [I] message at offset 333: ts_queue_121 = {"ID":121,"exec_time":1522378902}
+
+2018/03/30 11:01:51.300 [I] http://localhost:8899/api/test :  delay: 1 ms 200 {"message": "try"}
+2018/03/30 11:01:51.302 [I] http://localhost:8899/api/test_cancel_timeout :  delay: 1 ms 408 {"message":"cancel","type":"try api","code":0,"error_code":408,"error_message":"something was wrong","data":"{\"message\": \"try\"}"}
+2018/03/30 11:02:00.393 [I] message at offset 334: ts_queue_121 = {"ID":121,"exec_time":1522378911}
+
+2018/03/30 11:02:00.397 [I] http://localhost:8899/api/test :  delay: 1 ms 200 {"message": "try"}
+2018/03/30 11:02:00.397 [I] http://localhost:8899/api/test_cancel_timeout :  delay: 1 ms 408 {"message":"cancel","type":"try api","code":0,"error_code":408,"error_message":"something was wrong","data":"{\"message\": \"try\"}"}
+2018/03/30 11:02:09.490 [I] message at offset 335: ts_queue_121 = {"ID":121,"exec_time":1522378920}
+
+2018/03/30 11:02:09.494 [I] http://localhost:8899/api/test :  delay: 1 ms 200 {"message": "try"}
+2018/03/30 11:02:09.494 [I] http://localhost:8899/api/test_cancel_timeout :  delay: 2 ms 408 {"message":"cancel","type":"try api","code":0,"error_code":408,"error_message":"something was wrong","data":"{\"message\": \"try\"}"}
+2018/03/30 11:02:18.592 [I] message at offset 336: ts_queue_121 = {"ID":121,"exec_time":1522378929}
+
+2018/03/30 11:02:18.595 [I] http://localhost:8899/api/test_cancel_timeout :  delay: 0 ms 408 {"message":"cancel","type":"try api","code":0,"error_code":408,"error_message":"something was wrong","data":"{\"message\": \"try\"}"}
+2018/03/30 11:02:18.595 [I] http://localhost:8899/api/test :  delay: 0 ms 200 {"message": "try"}
+2018/03/30 11:05:03.559 [I] message at offset 338: ts_queue_122 = {"ID":122,"exec_time":1522379098}
+
+2018/03/30 11:05:03.562 [I] 执行 try,ID: 122
+2018/03/30 11:05:03.567 [I] http://localhost:8899/api/test_cancel_timeout :  delay: 4 ms 200 {"message": "try"}
+2018/03/30 11:05:03.567 [I] http://localhost:8899/api/test_confirm_fault :  delay: 4 ms 200 {"message": "try"}
+2018/03/30 11:05:03.567 [I] http://localhost:8899/api/test :  delay: 5 ms 200 {"message": "try"}
+2018/03/30 11:05:03.567 [I] try 操作完成,ID: 122  返回结果: [{"code":200,"data":"{\"message\": \"try\"}","error_message":"","API":"http://localhost:8899/api/test_cancel_timeout/try","Index":1,"error_code":0},{"code":200,"data":"{\"message\": \"try\"}","error_message":"","API":"http://localhost:8899/api/test_confirm_fault/try","Index":0,"error_code":0},{"code":200,"data":"{\"message\": \"try\"}","error_message":"","API":"http://localhost:8899/api/test/try","Index":2,"error_code":0}]
+2018/03/30 11:05:03.572 [I] http://localhost:8899/api/test :  delay: 0 ms 200 {"message": "try"}
+2018/03/30 11:05:03.572 [I] http://localhost:8899/api/test_confirm_fault :  delay: 0 ms 401 {"message": "try"}
+2018/03/30 11:05:03.573 [I] http://localhost:8899/api/test_cancel_timeout :  delay: 0 ms 200 {"message": "try"}
+2018/03/30 11:05:03.573 [I] 执行中断操作操作,ID: 122
+2018/03/30 11:05:03.575 [I] http://localhost:8899/api/test_cancel_timeout :  delay: 0 ms 408 {"message":"cancel","type":"try api","code":0,"error_code":408,"error_message":"something was wrong","data":"{\"message\": \"try\"}"}
+2018/03/30 11:05:03.575 [I] http://localhost:8899/api/test :  delay: 0 ms 200 {"message": "try"}
+2018/03/30 11:05:12.659 [I] message at offset 339: ts_queue_122 = {"ID":122,"exec_time":1522379103}
+
+2018/03/30 11:05:12.664 [I] http://localhost:8899/api/test_cancel_timeout :  delay: 1 ms 408 {"message":"cancel","type":"try api","code":0,"error_code":408,"error_message":"something was wrong","data":"{\"message\": \"try\"}"}
+2018/03/30 11:05:12.665 [I] http://localhost:8899/api/test :  delay: 1 ms 200 {"message": "try"}
+2018/03/30 11:05:21.757 [I] message at offset 340: ts_queue_122 = {"ID":122,"exec_time":1522379112}
+
+2018/03/30 11:05:21.761 [I] http://localhost:8899/api/test_cancel_timeout :  delay: 0 ms 408 {"message":"cancel","type":"try api","code":0,"error_code":408,"error_message":"something was wrong","data":"{\"message\": \"try\"}"}
+2018/03/30 11:05:21.761 [I] http://localhost:8899/api/test :  delay: 1 ms 200 {"message": "try"}
+2018/03/30 11:05:30.855 [I] message at offset 341: ts_queue_122 = {"ID":122,"exec_time":1522379121}
+
+2018/03/30 11:07:03.250 [I] message at offset 338: ts_queue_122 = {"ID":122,"exec_time":1522379098}
+
+2018/03/30 11:07:03.250 [I] message at offset 339: ts_queue_122 = {"ID":122,"exec_time":1522379103}
+
+2018/03/30 11:07:03.250 [I] message at offset 340: ts_queue_122 = {"ID":122,"exec_time":1522379112}
+
+2018/03/30 11:07:03.250 [I] message at offset 341: ts_queue_122 = {"ID":122,"exec_time":1522379121}
+
+2018/03/30 11:07:03.258 [I] http://localhost:8899/api/test_cancel_timeout :  delay: 3 ms 408 {"message":"cancel","type":"try api","code":0,"error_code":408,"error_message":"something was wrong","data":"{\"message\": \"try\"}"}
+2018/03/30 11:07:03.258 [I] http://localhost:8899/api/test :  delay: 4 ms 200 {"message": "try"}
+2018/03/30 11:07:12.347 [I] message at offset 342: ts_queue_122 = {"ID":122,"exec_time":1522379223}
+
+2018/03/30 11:07:30.232 [I] message at offset 338: ts_queue_122 = {"ID":122,"exec_time":1522379098}
+
+2018/03/30 11:07:30.233 [I] message at offset 339: ts_queue_122 = {"ID":122,"exec_time":1522379103}
+
+2018/03/30 11:07:30.233 [I] message at offset 340: ts_queue_122 = {"ID":122,"exec_time":1522379112}
+
+2018/03/30 11:07:30.233 [I] message at offset 341: ts_queue_122 = {"ID":122,"exec_time":1522379121}
+
+2018/03/30 11:07:30.233 [I] message at offset 342: ts_queue_122 = {"ID":122,"exec_time":1522379223}
+
+2018/03/30 11:07:30.233 [I] message at offset 343: ts_queue_123 = {"ID":123,"exec_time":1522379244}
+
+2018/03/30 11:07:30.238 [I] 执行 try,ID: 123
+2018/03/30 11:07:30.241 [I] http://localhost:8899/api/test_confirm_fault :  delay: 2 ms 200 {"message": "try"}
+2018/03/30 11:07:30.241 [I] http://localhost:8899/api/test_cancel_timeout :  delay: 2 ms 200 {"message": "try"}
+2018/03/30 11:07:30.241 [I] http://localhost:8899/api/test :  delay: 3 ms 200 {"message": "try"}
+2018/03/30 11:07:30.241 [I] try 操作完成,ID: 123  返回结果: [{"code":200,"data":"{\"message\": \"try\"}","error_message":"","API":"http://localhost:8899/api/test_confirm_fault/try","Index":0,"error_code":0},{"code":200,"data":"{\"message\": \"try\"}","error_message":"","API":"http://localhost:8899/api/test_cancel_timeout/try","Index":1,"error_code":0},{"code":200,"data":"{\"message\": \"try\"}","error_message":"","API":"http://localhost:8899/api/test/try","Index":2,"error_code":0}]
+2018/03/30 11:07:30.245 [I] http://localhost:8899/api/test :  delay: 0 ms 200 {"message": "try"}
+2018/03/30 11:07:30.245 [I] http://localhost:8899/api/test_confirm_fault :  delay: 0 ms 401 {"message": "try"}
+2018/03/30 11:07:30.245 [I] http://localhost:8899/api/test_cancel_timeout :  delay: 0 ms 200 {"message": "try"}
+2018/03/30 11:07:30.245 [I] 执行中断操作操作,ID: 123
+2018/03/30 11:07:30.248 [I] http://localhost:8899/api/test :  delay: 0 ms 200 {"message": "try"}
+2018/03/30 11:07:30.248 [I] http://localhost:8899/api/test_cancel_timeout :  delay: 0 ms 408 {"message":"cancel","type":"try api","code":0,"error_code":408,"error_message":"something was wrong","data":"{\"message\": \"try\"}"}
+2018/03/30 11:09:41.166 [I] message at offset 345: ts_queue_124 = {"ID":124,"exec_time":1522379318}
+
+2018/03/30 11:09:41.170 [I] 执行 try,ID: 124
+2018/03/30 11:09:41.173 [I] http://localhost:8899/api/test_cancel_timeout :  delay: 2 ms 200 {"message": "try"}
+2018/03/30 11:09:41.173 [I] http://localhost:8899/api/test :  delay: 2 ms 200 {"message": "try"}
+2018/03/30 11:09:41.173 [I] http://localhost:8899/api/test_confirm_fault :  delay: 2 ms 200 {"message": "try"}
+2018/03/30 11:09:41.173 [I] try 操作完成,ID: 124  返回结果: [{"code":200,"data":"{\"message\": \"try\"}","error_message":"","API":"http://localhost:8899/api/test_cancel_timeout/try","Index":1,"error_code":0},{"code":200,"data":"{\"message\": \"try\"}","error_message":"","API":"http://localhost:8899/api/test/try","Index":2,"error_code":0},{"code":200,"data":"{\"message\": \"try\"}","error_message":"","API":"http://localhost:8899/api/test_confirm_fault/try","Index":0,"error_code":0}]
+2018/03/30 11:09:41.176 [I] http://localhost:8899/api/test :  delay: 0 ms 200 {"message": "try"}
+2018/03/30 11:09:41.176 [I] http://localhost:8899/api/test_cancel_timeout :  delay: 0 ms 200 {"message": "try"}
+2018/03/30 11:09:41.176 [I] http://localhost:8899/api/test_confirm_fault :  delay: 0 ms 401 {"message": "try"}
+2018/03/30 11:09:41.176 [I] 执行中断操作操作,ID: 124
+2018/03/30 11:09:41.179 [I] http://localhost:8899/api/test_cancel_timeout :  delay: 0 ms 408 {"message":"cancel","type":"try api","code":0,"error_code":408,"error_message":"something was wrong","data":"{\"message\": \"try\"}"}
+2018/03/30 11:09:41.179 [I] http://localhost:8899/api/test :  delay: 0 ms 200 {"message": "try"}
+2018/03/30 11:09:50.268 [I] message at offset 346: ts_queue_124 = {"ID":124,"exec_time":1522379381}
+
+2018/03/30 11:09:50.271 [I] http://localhost:8899/api/test_cancel_timeout :  delay: 0 ms 408 {"message":"cancel","type":"try api","code":0,"error_code":408,"error_message":"something was wrong","data":"{\"message\": \"try\"}"}
+2018/03/30 11:09:50.271 [I] http://localhost:8899/api/test :  delay: 0 ms 200 {"message": "try"}
+2018/03/30 11:10:09.688 [I] message at offset 345: ts_queue_124 = {"ID":124,"exec_time":1522379318}
+
+2018/03/30 11:10:09.688 [I] message at offset 346: ts_queue_124 = {"ID":124,"exec_time":1522379381}
+
+2018/03/30 11:10:09.688 [I] message at offset 347: ts_queue_124 = {"ID":124,"exec_time":1522379390}
+
+2018/03/30 11:10:09.688 [I] message at offset 348: ts_queue_125 = {"ID":125,"exec_time":1522379407}
+
+2018/03/30 11:10:09.691 [I] 执行 try,ID: 125
+2018/03/30 11:10:09.694 [I] http://localhost:8899/api/test_cancel_timeout :  delay: 2 ms 408 {"message":"cancel","type":"try api","code":0,"error_code":408,"error_message":"something was wrong","data":"{\"message\": \"try\"}"}
+2018/03/30 11:10:09.694 [I] http://localhost:8899/api/test :  delay: 2 ms 200 {"message": "try"}
+2018/03/30 11:10:09.694 [I] http://localhost:8899/api/test_cancel_timeout :  delay: 2 ms 200 {"message": "try"}
+2018/03/30 11:10:09.694 [I] http://localhost:8899/api/test_confirm_fault :  delay: 2 ms 200 {"message": "try"}
+2018/03/30 11:10:09.694 [I] http://localhost:8899/api/test :  delay: 3 ms 200 {"message": "try"}
+2018/03/30 11:10:09.694 [I] try 操作完成,ID: 125  返回结果: [{"code":200,"data":"{\"message\": \"try\"}","error_message":"","API":"http://localhost:8899/api/test_cancel_timeout/try","Index":1,"error_code":0},{"code":200,"data":"{\"message\": \"try\"}","error_message":"","API":"http://localhost:8899/api/test_confirm_fault/try","Index":0,"error_code":0},{"code":200,"data":"{\"message\": \"try\"}","error_message":"","API":"http://localhost:8899/api/test/try","Index":2,"error_code":0}]
+2018/03/30 11:10:09.698 [I] http://localhost:8899/api/test :  delay: 0 ms 200 {"message": "try"}
+2018/03/30 11:10:09.698 [I] http://localhost:8899/api/test_confirm_fault :  delay: 0 ms 401 {"message": "try"}
+2018/03/30 11:10:09.699 [I] http://localhost:8899/api/test_cancel_timeout :  delay: 0 ms 200 {"message": "try"}
+2018/03/30 11:10:09.699 [I] 执行中断操作操作,ID: 125
+2018/03/30 11:10:09.702 [I] http://localhost:8899/api/test_cancel_timeout :  delay: 0 ms 408 {"message":"cancel","type":"try api","code":0,"error_code":408,"error_message":"something was wrong","data":"{\"message\": \"try\"}"}
+2018/03/30 11:10:09.702 [I] http://localhost:8899/api/test :  delay: 0 ms 200 {"message": "try"}
+2018/03/30 11:10:18.788 [I] message at offset 349: ts_queue_124_3 = {"ID":124,"exec_time":1522379409}
+
+2018/03/30 11:10:18.788 [I] message at offset 350: ts_queue_125_1 = {"ID":125,"exec_time":1522379409}
+
+2018/03/30 11:10:18.792 [I] http://localhost:8899/api/test :  delay: 0 ms 200 {"message": "try"}
+2018/03/30 11:10:18.792 [I] http://localhost:8899/api/test_cancel_timeout :  delay: 0 ms 408 {"message":"cancel","type":"try api","code":0,"error_code":408,"error_message":"something was wrong","data":"{\"message\": \"try\"}"}
+2018/03/30 11:10:27.888 [I] message at offset 351: ts_queue_125_2 = {"ID":125,"exec_time":1522379418}
+
+2018/03/30 11:10:27.892 [I] http://localhost:8899/api/test :  delay: 1 ms 200 {"message": "try"}
+2018/03/30 11:10:27.892 [I] http://localhost:8899/api/test_cancel_timeout :  delay: 1 ms 408 {"message":"cancel","type":"try api","code":0,"error_code":408,"error_message":"something was wrong","data":"{\"message\": \"try\"}"}
+2018/03/30 11:10:36.990 [I] message at offset 352: ts_queue_125_3 = {"ID":125,"exec_time":1522379427}
+
+2018/03/30 11:15:37.156 [I] message at offset 353: ts_queue_126 = {"ID":126,"exec_time":1522379732}
+
+2018/03/30 11:15:37.158 [I] 执行 try,ID: 126
+2018/03/30 11:15:37.161 [I] http://localhost:8899/api/test_cancel_timeout :  delay: 2 ms 200 {"message": "try"}
+2018/03/30 11:15:37.161 [I] http://localhost:8899/api/test_confirm_fault :  delay: 3 ms 200 {"message": "try"}
+2018/03/30 11:15:37.161 [I] http://localhost:8899/api/test :  delay: 3 ms 200 {"message": "try"}
+2018/03/30 11:15:37.162 [I] try 操作完成,ID: 126  返回结果: [{"code":200,"data":"{\"message\": \"try\"}","error_message":"","API":"http://localhost:8899/api/test_cancel_timeout/try","Index":1,"error_code":0},{"code":200,"data":"{\"message\": \"try\"}","error_message":"","API":"http://localhost:8899/api/test_confirm_fault/try","Index":0,"error_code":0},{"code":200,"data":"{\"message\": \"try\"}","error_message":"","API":"http://localhost:8899/api/test/try","Index":2,"error_code":0}]
+2018/03/30 11:15:37.166 [I] http://localhost:8899/api/test :  delay: 0 ms 200 {"message": "try"}
+2018/03/30 11:15:37.166 [I] http://localhost:8899/api/test_confirm_fault :  delay: 0 ms 401 {"message": "try"}
+2018/03/30 11:15:37.167 [I] http://localhost:8899/api/test_cancel_timeout :  delay: 1 ms 200 {"message": "try"}
+2018/03/30 11:15:37.167 [I] 执行中断操作操作,ID: 126
+2018/03/30 11:15:37.171 [I] http://localhost:8899/api/test :  delay: 0 ms 200 {"message": "try"}
+2018/03/30 11:15:37.171 [I] http://localhost:8899/api/test_cancel_timeout :  delay: 0 ms 408 {"message":"cancel","type":"try api","code":0,"error_code":408,"error_message":"something was wrong","data":"{\"message\": \"try\"}"}
+2018/03/30 11:15:46.257 [I] message at offset 354: ts_queue_126_1 = {"ID":126,"exec_time":1522379737}
+
+2018/03/30 11:15:46.262 [I] http://localhost:8899/api/test_cancel_timeout :  delay: 0 ms 408 {"message":"cancel","type":"try api","code":0,"error_code":408,"error_message":"something was wrong","data":"{\"message\": \"try\"}"}
+2018/03/30 11:15:46.262 [I] http://localhost:8899/api/test :  delay: 1 ms 200 {"message": "try"}
+2018/03/30 11:15:55.254 [I] message at offset 355: ts_queue_126_2 = {"ID":126,"exec_time":1522379746}
+
+2018/03/30 11:15:55.258 [I] http://localhost:8899/api/test :  delay: 1 ms 200 {"message": "try"}
+2018/03/30 11:15:55.259 [I] http://localhost:8899/api/test_cancel_timeout :  delay: 1 ms 408 {"message":"cancel","type":"try api","code":0,"error_code":408,"error_message":"something was wrong","data":"{\"message\": \"try\"}"}
+2018/03/30 11:16:04.352 [I] message at offset 356: ts_queue_126_3 = {"ID":126,"exec_time":1522379755}
+
+2018/03/30 11:16:04.355 [I] http://localhost:8899/api/test :  delay: 1 ms 200 {"message": "try"}
+2018/03/30 11:16:04.355 [I] http://localhost:8899/api/test_cancel_timeout :  delay: 1 ms 408 {"message":"cancel","type":"try api","code":0,"error_code":408,"error_message":"something was wrong","data":"{\"message\": \"try\"}"}
+2018/03/30 11:16:13.448 [I] message at offset 357: ts_queue_126_4 = {"ID":126,"exec_time":1522379764}
+
+2018/03/30 11:23:57.516 [I] message at offset 358: ts_queue_127 = {"ID":127,"exec_time":1522380230}
+
+2018/03/30 11:23:57.518 [I] 执行 try,ID: 127
+2018/03/30 11:23:57.522 [I] http://localhost:8899/api/test_confirm_fault :  delay: 3 ms 200 {"message": "try"}
+2018/03/30 11:23:57.522 [I] http://localhost:8899/api/test :  delay: 3 ms 200 {"message": "try"}
+2018/03/30 11:23:57.522 [I] try 操作完成,ID: 127  返回结果: [{"code":200,"data":"{\"message\": \"try\"}","error_message":"","API":"http://localhost:8899/api/test_confirm_fault/try","Index":1,"error_code":0},{"code":200,"data":"{\"message\": \"try\"}","error_message":"","API":"http://localhost:8899/api/test/try","Index":0,"error_code":0}]
+2018/03/30 11:23:57.527 [I] http://localhost:8899/api/test :  delay: 0 ms 200 {"message": "try"}
+2018/03/30 11:23:57.528 [I] http://localhost:8899/api/test_confirm_fault :  delay: 0 ms 401 {"message": "try"}
+2018/03/30 11:23:57.528 [I] 执行中断操作操作,ID: 127
+2018/03/30 11:23:57.532 [I] http://localhost:8899/api/test :  delay: 0 ms 200 {"message": "try"}
+2018/03/30 11:23:57.538 [I] 终止操作完毕!ID: 127
+2018/03/30 11:38:56.185 [I] message at offset 359: ts_queue_128 = {"ID":128,"exec_time":1522381130}
+
+2018/03/30 11:38:56.186 [I] 执行 try,ID: 128
+2018/03/30 11:38:56.191 [I] http://localhost:8899/api/test :  delay: 3 ms 200 {"message": "try"}
+2018/03/30 11:38:56.191 [I] http://localhost:8899/api/test_confirm_fault :  delay: 4 ms 200 {"message": "try"}
+2018/03/30 11:38:56.191 [I] try 操作完成,ID: 128  返回结果: [{"code":200,"data":"{\"message\": \"try\"}","error_message":"","API":"http://localhost:8899/api/test/try","Index":0,"error_code":0},{"code":200,"data":"{\"message\": \"try\"}","error_message":"","API":"http://localhost:8899/api/test_confirm_fault/try","Index":1,"error_code":0}]
+2018/03/30 11:38:56.194 [I] http://localhost:8899/api/test_confirm_fault :  delay: 0 ms 401 {"message": "try"}
+2018/03/30 11:38:56.195 [I] http://localhost:8899/api/test :  delay: 0 ms 200 {"message": "try"}
+2018/03/30 11:38:56.195 [I] 执行中断操作操作,ID: 128
+2018/03/30 11:38:56.197 [I] http://localhost:8899/api/test :  delay: 0 ms 200 {"message": "try"}
+2018/03/30 11:38:56.201 [I] 终止操作完毕!ID: 128
+2018/03/30 11:39:05.284 [I] message at offset 360: ts_queue_129 = {"ID":129,"exec_time":1522381145}
+
+2018/03/30 11:39:05.287 [I] 执行 try,ID: 129
+2018/03/30 11:39:05.287 [I] http://localhost:8899/api/test :  delay: 0 ms 200 {"message": "try"}
+2018/03/30 11:39:05.287 [I] http://localhost:8899/api/test_confirm_fault :  delay: 0 ms 200 {"message": "try"}
+2018/03/30 11:39:05.288 [I] http://localhost:8899/api/test_cancel_timeout :  delay: 0 ms 200 {"message": "try"}
+2018/03/30 11:39:05.288 [I] try 操作完成,ID: 129  返回结果: [{"code":200,"data":"{\"message\": \"try\"}","error_message":"","API":"http://localhost:8899/api/test/try","Index":2,"error_code":0},{"code":200,"data":"{\"message\": \"try\"}","error_message":"","API":"http://localhost:8899/api/test_confirm_fault/try","Index":0,"error_code":0},{"code":200,"data":"{\"message\": \"try\"}","error_message":"","API":"http://localhost:8899/api/test_cancel_timeout/try","Index":1,"error_code":0}]
+2018/03/30 11:39:05.295 [I] http://localhost:8899/api/test :  delay: 0 ms 200 {"message": "try"}
+2018/03/30 11:39:05.295 [I] http://localhost:8899/api/test_confirm_fault :  delay: 0 ms 401 {"message": "try"}
+2018/03/30 11:39:05.295 [I] http://localhost:8899/api/test_cancel_timeout :  delay: 0 ms 200 {"message": "try"}
+2018/03/30 11:39:05.295 [I] 执行中断操作操作,ID: 129
+2018/03/30 11:39:05.298 [I] http://localhost:8899/api/test_cancel_timeout :  delay: 0 ms 408 {"message":"cancel","type":"try api","code":0,"error_code":408,"error_message":"something was wrong","data":"{\"message\": \"try\"}"}
+2018/03/30 11:39:05.298 [I] http://localhost:8899/api/test :  delay: 0 ms 200 {"message": "try"}
+2018/03/30 11:39:14.384 [I] message at offset 361: ts_queue_129_1 = {"ID":129,"exec_time":1522381145}
+
+2018/03/30 11:39:14.388 [I] http://localhost:8899/api/test_cancel_timeout :  delay: 0 ms 408 {"message":"cancel","type":"try api","code":0,"error_code":408,"error_message":"something was wrong","data":"{\"message\": \"try\"}"}
+2018/03/30 11:39:14.388 [I] http://localhost:8899/api/test :  delay: 0 ms 200 {"message": "try"}
+2018/03/30 11:39:23.485 [I] message at offset 362: ts_queue_129_2 = {"ID":129,"exec_time":1522381154}
+
+2018/03/30 11:39:23.490 [I] http://localhost:8899/api/test :  delay: 1 ms 200 {"message": "try"}
+2018/03/30 11:39:23.490 [I] http://localhost:8899/api/test_cancel_timeout :  delay: 1 ms 408 {"message":"cancel","type":"try api","code":0,"error_code":408,"error_message":"something was wrong","data":"{\"message\": \"try\"}"}
+2018/03/30 11:39:32.586 [I] message at offset 363: ts_queue_129_3 = {"ID":129,"exec_time":1522381163}
+
+2018/03/30 11:59:28.420 [I] message at offset 364: ts_queue_130 = {"ID":130,"exec_time":1522382364}
+
+2018/03/30 11:59:28.424 [I] 执行 try,ID: 130
+2018/03/30 11:59:28.426 [I] http://localhost:8899/api/test_confirm_fault :  delay: 2 ms 200 {"message": "try"}
+2018/03/30 11:59:28.427 [I] http://localhost:8899/api/test_cancel_timeout :  delay: 2 ms 200 {"message": "try"}
+2018/03/30 11:59:28.427 [I] http://localhost:8899/api/test :  delay: 2 ms 200 {"message": "try"}
+2018/03/30 11:59:28.427 [I] try 操作完成,ID: 130  返回结果: [{"code":200,"data":"{\"message\": \"try\"}","error_message":"","API":"http://localhost:8899/api/test_confirm_fault/try","Index":0,"error_code":0},{"code":200,"data":"{\"message\": \"try\"}","error_message":"","API":"http://localhost:8899/api/test_cancel_timeout/try","Index":1,"error_code":0},{"code":200,"data":"{\"message\": \"try\"}","error_message":"","API":"http://localhost:8899/api/test/try","Index":2,"error_code":0}]
+2018/03/30 11:59:28.431 [I] http://localhost:8899/api/test :  delay: 0 ms 200 {"message": "try"}
+2018/03/30 11:59:28.432 [I] http://localhost:8899/api/test_confirm_fault :  delay: 0 ms 401 {"message": "try"}
+2018/03/30 11:59:28.435 [I] http://localhost:8899/api/test_cancel_timeout :  delay: 3 ms 200 {"message": "try"}
+2018/03/30 11:59:28.435 [I] 执行中断操作操作,ID: 130
+2018/03/30 11:59:28.440 [I] http://localhost:8899/api/test_cancel_timeout :  delay: 0 ms 408 {"message":"cancel","type":"try api","code":0,"error_code":408,"error_message":"something was wrong","data":"{\"message\": \"try\"}"}
+2018/03/30 11:59:28.440 [I] http://localhost:8899/api/test :  delay: 0 ms 200 {"message": "try"}
+2018/03/30 11:59:37.521 [I] message at offset 365: ts_queue_130_1 = {"ID":130,"exec_time":1522382368}
+
+2018/03/30 11:59:37.526 [I] http://localhost:8899/api/test :  delay: 1 ms 200 {"message": "try"}
+2018/03/30 11:59:37.526 [I] http://localhost:8899/api/test_cancel_timeout :  delay: 1 ms 408 {"message":"cancel","type":"try api","code":0,"error_code":408,"error_message":"something was wrong","data":"{\"message\": \"try\"}"}
+2018/03/30 11:59:46.622 [I] message at offset 366: ts_queue_130_2 = {"ID":130,"exec_time":1522382377}
+
+2018/03/30 11:59:46.626 [I] http://localhost:8899/api/test :  delay: 1 ms 200 {"message": "try"}
+2018/03/30 11:59:46.626 [I] http://localhost:8899/api/test_cancel_timeout :  delay: 1 ms 408 {"message":"cancel","type":"try api","code":0,"error_code":408,"error_message":"something was wrong","data":"{\"message\": \"try\"}"}

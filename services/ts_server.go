@@ -91,21 +91,23 @@ func syncHandler(req ServerForm){
 // 并发执行
 func asyncHandler(req ServerForm){
 	fmt.Println("这里是异步操作")
-
-	// 检测执行次数
-	if req.ExecNum >= MAX_EXEC_NUM {
-		fmt.Println("已超过最大执行次数")
-		return 
-	}
 	// 执行次数加1
 	req.ExecNum ++
-
+	// 检测执行次数
+	if req.ExecNum > MAX_EXEC_NUM {
+		logs.Error("已超过最大执行次数,", req.toString())
+		return 
+	}
+	
 	// 根据不同的执行步骤进行操作
 	switch req.Step {
 	case 0:
 		req.combineTry()
 	case 1:
-
+		logs.Debug("需要执行commit 任务")
+	case 2:
+		logs.Debug("需要执行 cancel 任务", req.toString())
+		req.combineBreak()
 	}
 }
 
@@ -378,12 +380,21 @@ func (req *ServerForm) success(){
 
 // 插入MQ
 func (req *ServerForm) insertMQ() {
+	if (req.ExecNum >= MAX_EXEC_NUM){
+		logs.Error("超过最大执行次数, ID:", req.ID)
+
+		var respbd []respBody
+		respbd = append(respbd, respBody{Error: "out of max exec times",ErrorCode: 409,})
+		req.cancel(respbd)
+		return
+	}
+
 	jsonStr := MQTemplate{
 		ID: req.ID,
 		ExecTime: int(time.Now().Unix()),
 	}
 
-	insertKey := fmt.Sprintf("ts_queue_%d", req.ID)
+	insertKey := fmt.Sprintf("ts_queue_%d_%d", req.ID, req.ExecNum)
 	logs.Error("插入队列", insertKey, jsonStr)
 	// 向消息队列中发送消息
 	var mq MQService
@@ -428,6 +439,9 @@ func (req *ServerForm) insertMQ() {
 		}
 		result = append(result,res)
 	}
+
+	//更新一下状态
+	req.updateStatus()
 
 	if isBreak {
 		// 当存在事务无法回滚的情况

@@ -94,7 +94,7 @@ func startReading(){
 			break
 		}
 		logs.Info("message at offset %d: %s = %s\n", m.Offset, string(m.Key), string(m.Value))
-		ServerService(m.Value)
+		go ServerService(m.Value)
 
 		r.CommitMessages(ctx, m)
 	}

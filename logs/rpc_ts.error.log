@@ -358,3 +358,187 @@
 2018/03/29 21:02:10.263 [E] 插入队列 ts_queue_117 {117 1522328530}
 2018/03/29 21:02:19.343 [E] 打印队列: {"ID":117,"exec_time":1522328530}
 2018/03/29 21:02:19.343 [E] 收到消息: {async [{http://localhost:8899/api/test_confirm_fault {"message": "try"} {"message":"confirm"} {"message":"cancel"} 0  false } {http://localhost:8899/api/test_cancel_timeout {"message": "try"} {"message":"confirm"} {"message": "cancel"} 0  done } {http://localhost:8899/api/test {"message": "try"} {"message":"confirm"} {"message":"cancel"} 0  done }] 1 0 117 2 }
+2018/03/30 10:42:03.956 [E] 当前发送消息为:  {"ID":118,"exec_time":1522377723}
+2018/03/30 10:42:06.271 [E] 打印队列: {"ID":118,"exec_time":1522377723}
+2018/03/30 10:42:06.271 [E] 收到消息: {async [{http://localhost:8899/api/test_confirm_fault {"message": "try"} {"message":"confirm"} {"message":"cancel"} 0   } {http://localhost:8899/api/test_cancel_timeout {"message": "try"} {"message":"confirm"} {"message": "cancel"} 0   } {http://localhost:8899/api/test {"message": "try"} {"message":"confirm"} {"message":"cancel"} 0   }] 0 0 118 0 }
+2018/03/30 10:42:06.281 [E] 当前事务状态: &{async [{http://localhost:8899/api/test_confirm_fault {"message": "try"} {"message":"confirm"} {"message":"cancel"} 0  false } {http://localhost:8899/api/test_cancel_timeout {"message": "try"} {"message":"confirm"} {"message": "cancel"} 0  done } {http://localhost:8899/api/test {"message": "try"} {"message":"confirm"} {"message":"cancel"} 0  done }] 1 0 118 1 }
+2018/03/30 10:42:06.284 [E] 插入队列 ts_queue_118 {118 1522377726}
+2018/03/30 10:42:15.365 [E] 打印队列: {"ID":118,"exec_time":1522377726}
+2018/03/30 10:42:15.365 [E] 收到消息: {async [{http://localhost:8899/api/test_confirm_fault {"message": "try"} {"message":"confirm"} {"message":"cancel"} 0  false } {http://localhost:8899/api/test_cancel_timeout {"message": "try"} {"message":"confirm"} {"message": "cancel"} 0  done } {http://localhost:8899/api/test {"message": "try"} {"message":"confirm"} {"message":"cancel"} 0  done }] 1 0 118 2 }
+2018/03/30 10:44:14.940 [E] 当前发送消息为:  {"ID":119,"exec_time":1522377854}
+2018/03/30 10:44:21.393 [E] 打印队列: {"ID":119,"exec_time":1522377854}
+2018/03/30 10:44:21.393 [E] 收到消息: {async [{http://localhost:8899/api/test_confirm_fault {"message": "try"} {"message":"confirm"} {"message":"cancel"} 0   } {http://localhost:8899/api/test_cancel_timeout {"message": "try"} {"message":"confirm"} {"message": "cancel"} 0   } {http://localhost:8899/api/test {"message": "try"} {"message":"confirm"} {"message":"cancel"} 0   }] 0 0 119 0 }
+2018/03/30 10:44:21.403 [E] 当前事务状态: &{async [{http://localhost:8899/api/test_confirm_fault {"message": "try"} {"message":"confirm"} {"message":"cancel"} 0  false } {http://localhost:8899/api/test_cancel_timeout {"message": "try"} {"message":"confirm"} {"message": "cancel"} 0  done } {http://localhost:8899/api/test {"message": "try"} {"message":"confirm"} {"message":"cancel"} 0  done }] 1 0 119 1 }
+2018/03/30 10:44:21.406 [E] 插入队列 ts_queue_119 {119 1522377861}
+2018/03/30 10:44:30.492 [E] 打印队列: {"ID":119,"exec_time":1522377861}
+2018/03/30 10:44:30.492 [E] 收到消息: {async [{http://localhost:8899/api/test_confirm_fault {"message": "try"} {"message":"confirm"} {"message":"cancel"} 0  false } {http://localhost:8899/api/test_cancel_timeout {"message": "try"} {"message":"confirm"} {"message": "cancel"} 0  done } {http://localhost:8899/api/test {"message": "try"} {"message":"confirm"} {"message":"cancel"} 0  done }] 1 0 119 2 }
+2018/03/30 10:46:13.857 [E] 当前发送消息为:  {"ID":120,"exec_time":1522377973}
+2018/03/30 10:46:20.341 [E] 打印队列: {"ID":119,"exec_time":1522377854}
+2018/03/30 10:46:20.341 [E] sql: no rows in result set
+2018/03/30 10:46:20.341 [E] 打印队列: {"ID":120,"exec_time":1522377973}
+2018/03/30 10:46:20.341 [E] 打印队列: {"ID":119,"exec_time":1522377861}
+2018/03/30 10:46:20.341 [E] 收到消息: {async [{http://localhost:8899/api/test_confirm_fault {"message": "try"} {"message":"confirm"} {"message":"cancel"} 0  false } {http://localhost:8899/api/test_cancel_timeout {"message": "try"} {"message":"confirm"} {"message": "cancel"} 0  done } {http://localhost:8899/api/test {"message": "try"} {"message":"confirm"} {"message":"cancel"} 0  done }] 1 0 119 2 }
+2018/03/30 10:46:20.341 [E] 收到消息: {async [{http://localhost:8899/api/test_confirm_fault {"message": "try"} {"message":"confirm"} {"message":"cancel"} 0   } {http://localhost:8899/api/test_cancel_timeout {"message": "try"} {"message":"confirm"} {"message": "cancel"} 0   } {http://localhost:8899/api/test {"message": "try"} {"message":"confirm"} {"message":"cancel"} 0   }] 0 0 120 0 }
+2018/03/30 10:46:20.348 [E] 当前事务状态: &{async [{http://localhost:8899/api/test_confirm_fault {"message": "try"} {"message":"confirm"} {"message":"cancel"} 0  false } {http://localhost:8899/api/test_cancel_timeout {"message": "try"} {"message":"confirm"} {"message": "cancel"} 0  done } {http://localhost:8899/api/test {"message": "try"} {"message":"confirm"} {"message":"cancel"} 0  done }] 1 0 120 1 }
+2018/03/30 10:46:20.351 [E] 插入队列 ts_queue_120 {120 1522377980}
+2018/03/30 10:46:29.440 [E] 打印队列: {"ID":120,"exec_time":1522377980}
+2018/03/30 10:46:29.440 [E] 收到消息: {async [{http://localhost:8899/api/test_confirm_fault {"message": "try"} {"message":"confirm"} {"message":"cancel"} 0  false } {http://localhost:8899/api/test_cancel_timeout {"message": "try"} {"message":"confirm"} {"message": "cancel"} 0  done } {http://localhost:8899/api/test {"message": "try"} {"message":"confirm"} {"message":"cancel"} 0  done }] 1 0 120 2 }
+2018/03/30 10:47:06.697 [E] 打印队列: {"ID":119,"exec_time":1522377854}
+2018/03/30 10:47:06.697 [E] sql: no rows in result set
+2018/03/30 10:47:06.698 [E] 打印队列: {"ID":120,"exec_time":1522377980}
+2018/03/30 10:47:06.698 [E] 收到消息: {async [{http://localhost:8899/api/test_confirm_fault {"message": "try"} {"message":"confirm"} {"message":"cancel"} 0  false } {http://localhost:8899/api/test_cancel_timeout {"message": "try"} {"message":"confirm"} {"message": "cancel"} 0  done } {http://localhost:8899/api/test {"message": "try"} {"message":"confirm"} {"message":"cancel"} 0  done }] 1 0 120 2 }
+2018/03/30 10:47:06.698 [E] 打印队列: {"ID":119,"exec_time":1522377861}
+2018/03/30 10:47:06.698 [E] 收到消息: {async [{http://localhost:8899/api/test_confirm_fault {"message": "try"} {"message":"confirm"} {"message":"cancel"} 0  false } {http://localhost:8899/api/test_cancel_timeout {"message": "try"} {"message":"confirm"} {"message": "cancel"} 0  done } {http://localhost:8899/api/test {"message": "try"} {"message":"confirm"} {"message":"cancel"} 0  done }] 1 0 119 2 }
+2018/03/30 10:47:06.698 [E] 打印队列: {"ID":120,"exec_time":1522377973}
+2018/03/30 10:47:06.698 [E] sql: no rows in result set
+2018/03/30 11:01:03.739 [E] 当前发送消息为:  {"ID":121,"exec_time":1522378863}
+2018/03/30 11:01:05.802 [E] 打印队列: {"ID":121,"exec_time":1522378863}
+2018/03/30 11:01:05.802 [E] 收到消息: {async [{http://localhost:8899/api/test_confirm_fault {"message": "try"} {"message":"confirm"} {"message":"cancel"} 0   } {http://localhost:8899/api/test_cancel_timeout {"message": "try"} {"message":"confirm"} {"message": "cancel"} 0   } {http://localhost:8899/api/test {"message": "try"} {"message":"confirm"} {"message":"cancel"} 0   }] 0 0 121 0 }
+2018/03/30 11:01:05.810 [E] 当前事务状态: &{async [{http://localhost:8899/api/test_confirm_fault {"message": "try"} {"message":"confirm"} {"message":"cancel"} 0  false } {http://localhost:8899/api/test_cancel_timeout {"message": "try"} {"message":"confirm"} {"message": "cancel"} 0  done } {http://localhost:8899/api/test {"message": "try"} {"message":"confirm"} {"message":"cancel"} 0  done }] 1 0 121 1 }
+2018/03/30 11:01:05.813 [E] 插入队列 ts_queue_121 {121 1522378865}
+2018/03/30 11:01:14.902 [E] 打印队列: {"ID":121,"exec_time":1522378865}
+2018/03/30 11:01:14.902 [E] 收到消息: {async [{http://localhost:8899/api/test_confirm_fault {"message": "try"} {"message":"confirm"} {"message":"cancel"} 0  false } {http://localhost:8899/api/test_cancel_timeout {"message": "try"} {"message":"confirm"} {"message": "cancel"} 0  done } {http://localhost:8899/api/test {"message": "try"} {"message":"confirm"} {"message":"cancel"} 0  done }] 1 0 121 2 }
+2018/03/30 11:01:14.904 [E] 插入队列 ts_queue_121 {121 1522378874}
+2018/03/30 11:01:24.000 [E] 打印队列: {"ID":121,"exec_time":1522378874}
+2018/03/30 11:01:24.000 [E] 收到消息: {async [{http://localhost:8899/api/test_confirm_fault {"message": "try"} {"message":"confirm"} {"message":"cancel"} 0  false } {http://localhost:8899/api/test_cancel_timeout {"message": "try"} {"message":"confirm"} {"message": "cancel"} 0  done } {http://localhost:8899/api/test {"message": "try"} {"message":"confirm"} {"message":"cancel"} 0  done }] 1 0 121 2 }
+2018/03/30 11:01:24.002 [E] 插入队列 ts_queue_121 {121 1522378884}
+2018/03/30 11:01:33.098 [E] 打印队列: {"ID":121,"exec_time":1522378884}
+2018/03/30 11:01:33.099 [E] 收到消息: {async [{http://localhost:8899/api/test_confirm_fault {"message": "try"} {"message":"confirm"} {"message":"cancel"} 0  false } {http://localhost:8899/api/test_cancel_timeout {"message": "try"} {"message":"confirm"} {"message": "cancel"} 0  done } {http://localhost:8899/api/test {"message": "try"} {"message":"confirm"} {"message":"cancel"} 0  done }] 1 0 121 2 }
+2018/03/30 11:01:33.101 [E] 插入队列 ts_queue_121 {121 1522378893}
+2018/03/30 11:01:42.200 [E] 打印队列: {"ID":121,"exec_time":1522378893}
+2018/03/30 11:01:42.200 [E] 收到消息: {async [{http://localhost:8899/api/test_confirm_fault {"message": "try"} {"message":"confirm"} {"message":"cancel"} 0  false } {http://localhost:8899/api/test_cancel_timeout {"message": "try"} {"message":"confirm"} {"message": "cancel"} 0  done } {http://localhost:8899/api/test {"message": "try"} {"message":"confirm"} {"message":"cancel"} 0  done }] 1 0 121 2 }
+2018/03/30 11:01:42.201 [E] 插入队列 ts_queue_121 {121 1522378902}
+2018/03/30 11:01:51.298 [E] 打印队列: {"ID":121,"exec_time":1522378902}
+2018/03/30 11:01:51.298 [E] 收到消息: {async [{http://localhost:8899/api/test_confirm_fault {"message": "try"} {"message":"confirm"} {"message":"cancel"} 0  false } {http://localhost:8899/api/test_cancel_timeout {"message": "try"} {"message":"confirm"} {"message": "cancel"} 0  done } {http://localhost:8899/api/test {"message": "try"} {"message":"confirm"} {"message":"cancel"} 0  done }] 1 0 121 2 }
+2018/03/30 11:01:51.302 [E] 插入队列 ts_queue_121 {121 1522378911}
+2018/03/30 11:02:00.395 [E] 打印队列: {"ID":121,"exec_time":1522378911}
+2018/03/30 11:02:00.396 [E] 收到消息: {async [{http://localhost:8899/api/test_confirm_fault {"message": "try"} {"message":"confirm"} {"message":"cancel"} 0  false } {http://localhost:8899/api/test_cancel_timeout {"message": "try"} {"message":"confirm"} {"message": "cancel"} 0  done } {http://localhost:8899/api/test {"message": "try"} {"message":"confirm"} {"message":"cancel"} 0  done }] 1 0 121 2 }
+2018/03/30 11:02:00.397 [E] 插入队列 ts_queue_121 {121 1522378920}
+2018/03/30 11:02:09.492 [E] 打印队列: {"ID":121,"exec_time":1522378920}
+2018/03/30 11:02:09.492 [E] 收到消息: {async [{http://localhost:8899/api/test_confirm_fault {"message": "try"} {"message":"confirm"} {"message":"cancel"} 0  false } {http://localhost:8899/api/test_cancel_timeout {"message": "try"} {"message":"confirm"} {"message": "cancel"} 0  done } {http://localhost:8899/api/test {"message": "try"} {"message":"confirm"} {"message":"cancel"} 0  done }] 1 0 121 2 }
+2018/03/30 11:02:09.494 [E] 插入队列 ts_queue_121 {121 1522378929}
+2018/03/30 11:02:18.594 [E] 打印队列: {"ID":121,"exec_time":1522378929}
+2018/03/30 11:02:18.594 [E] 收到消息: {async [{http://localhost:8899/api/test_confirm_fault {"message": "try"} {"message":"confirm"} {"message":"cancel"} 0  false } {http://localhost:8899/api/test_cancel_timeout {"message": "try"} {"message":"confirm"} {"message": "cancel"} 0  done } {http://localhost:8899/api/test {"message": "try"} {"message":"confirm"} {"message":"cancel"} 0  done }] 1 0 121 2 }
+2018/03/30 11:02:18.595 [E] 插入队列 ts_queue_121 {121 1522378938}
+2018/03/30 11:04:58.213 [E] 当前发送消息为:  {"ID":122,"exec_time":1522379098}
+2018/03/30 11:05:03.562 [E] 打印队列: {"ID":122,"exec_time":1522379098}
+2018/03/30 11:05:03.562 [E] 收到消息: {async [{http://localhost:8899/api/test_confirm_fault {"message": "try"} {"message":"confirm"} {"message":"cancel"} 0   } {http://localhost:8899/api/test_cancel_timeout {"message": "try"} {"message":"confirm"} {"message": "cancel"} 0   } {http://localhost:8899/api/test {"message": "try"} {"message":"confirm"} {"message":"cancel"} 0   }] 0 0 122 0 }
+2018/03/30 11:05:03.573 [E] 当前事务状态: &{async [{http://localhost:8899/api/test_confirm_fault {"message": "try"} {"message":"confirm"} {"message":"cancel"} 0  false } {http://localhost:8899/api/test_cancel_timeout {"message": "try"} {"message":"confirm"} {"message": "cancel"} 0  done } {http://localhost:8899/api/test {"message": "try"} {"message":"confirm"} {"message":"cancel"} 0  done }] 1 0 122 1 }
+2018/03/30 11:05:03.577 [E] 插入队列 ts_queue_122 {122 1522379103}
+2018/03/30 11:05:12.662 [E] 打印队列: {"ID":122,"exec_time":1522379103}
+2018/03/30 11:05:12.662 [E] 收到消息: {async [{http://localhost:8899/api/test_confirm_fault {"message": "try"} {"message":"confirm"} {"message":"cancel"} 0  false } {http://localhost:8899/api/test_cancel_timeout {"message": "try"} {"message":"confirm"} {"message": "cancel"} 0  done false} {http://localhost:8899/api/test {"message": "try"} {"message":"confirm"} {"message":"cancel"} 0  done done}] 1 0 122 2 }
+2018/03/30 11:05:12.668 [E] 插入队列 ts_queue_122 {122 1522379112}
+2018/03/30 11:05:21.760 [E] 打印队列: {"ID":122,"exec_time":1522379112}
+2018/03/30 11:05:21.760 [E] 收到消息: {async [{http://localhost:8899/api/test_confirm_fault {"message": "try"} {"message":"confirm"} {"message":"cancel"} 0  false } {http://localhost:8899/api/test_cancel_timeout {"message": "try"} {"message":"confirm"} {"message": "cancel"} 0  done false} {http://localhost:8899/api/test {"message": "try"} {"message":"confirm"} {"message":"cancel"} 0  done done}] 2 0 122 2 }
+2018/03/30 11:05:21.764 [E] 插入队列 ts_queue_122 {122 1522379121}
+2018/03/30 11:05:30.857 [E] 打印队列: {"ID":122,"exec_time":1522379121}
+2018/03/30 11:05:30.857 [E] 收到消息: {async [{http://localhost:8899/api/test_confirm_fault {"message": "try"} {"message":"confirm"} {"message":"cancel"} 0  false } {http://localhost:8899/api/test_cancel_timeout {"message": "try"} {"message":"confirm"} {"message": "cancel"} 0  done false} {http://localhost:8899/api/test {"message": "try"} {"message":"confirm"} {"message":"cancel"} 0  done done}] 3 0 122 2 }
+2018/03/30 11:07:03.254 [E] 打印队列: {"ID":122,"exec_time":1522379098}
+2018/03/30 11:07:03.254 [E] sql: no rows in result set
+2018/03/30 11:07:03.254 [E] 打印队列: {"ID":122,"exec_time":1522379121}
+2018/03/30 11:07:03.254 [E] 打印队列: {"ID":122,"exec_time":1522379112}
+2018/03/30 11:07:03.254 [E] sql: no rows in result set
+2018/03/30 11:07:03.254 [E] 收到消息: {async [{http://localhost:8899/api/test_confirm_fault {"message": "try"} {"message":"confirm"} {"message":"cancel"} 0  false } {http://localhost:8899/api/test_cancel_timeout {"message": "try"} {"message":"confirm"} {"message": "cancel"} 0  done false} {http://localhost:8899/api/test {"message": "try"} {"message":"confirm"} {"message":"cancel"} 0  done done}] 3 0 122 2 }
+2018/03/30 11:07:03.256 [E] 打印队列: {"ID":122,"exec_time":1522379103}
+2018/03/30 11:07:03.256 [E] sql: no rows in result set
+2018/03/30 11:07:03.262 [E] 插入队列 ts_queue_122 {122 1522379223}
+2018/03/30 11:07:12.349 [E] 打印队列: {"ID":122,"exec_time":1522379223}
+2018/03/30 11:07:12.349 [E] 收到消息: {async [{http://localhost:8899/api/test_confirm_fault {"message": "try"} {"message":"confirm"} {"message":"cancel"} 0  false } {http://localhost:8899/api/test_cancel_timeout {"message": "try"} {"message":"confirm"} {"message": "cancel"} 0  done false} {http://localhost:8899/api/test {"message": "try"} {"message":"confirm"} {"message":"cancel"} 0  done done}] 4 0 122 2 }
+2018/03/30 11:07:24.456 [E] 当前发送消息为:  {"ID":123,"exec_time":1522379244}
+2018/03/30 11:07:30.238 [E] 打印队列: {"ID":123,"exec_time":1522379244}
+2018/03/30 11:07:30.238 [E] 打印队列: {"ID":122,"exec_time":1522379098}
+2018/03/30 11:07:30.238 [E] sql: no rows in result set
+2018/03/30 11:07:30.238 [E] 打印队列: {"ID":122,"exec_time":1522379112}
+2018/03/30 11:07:30.238 [E] sql: no rows in result set
+2018/03/30 11:07:30.238 [E] 打印队列: {"ID":122,"exec_time":1522379103}
+2018/03/30 11:07:30.238 [E] sql: no rows in result set
+2018/03/30 11:07:30.238 [E] 收到消息: {async [{http://localhost:8899/api/test_confirm_fault {"message": "try"} {"message":"confirm"} {"message":"cancel"} 0   } {http://localhost:8899/api/test_cancel_timeout {"message": "try"} {"message":"confirm"} {"message": "cancel"} 0   } {http://localhost:8899/api/test {"message": "try"} {"message":"confirm"} {"message":"cancel"} 0   }] 0 0 123 0 }
+2018/03/30 11:07:30.238 [E] 打印队列: {"ID":122,"exec_time":1522379223}
+2018/03/30 11:07:30.238 [E] 收到消息: {async [{http://localhost:8899/api/test_confirm_fault {"message": "try"} {"message":"confirm"} {"message":"cancel"} 0  false } {http://localhost:8899/api/test_cancel_timeout {"message": "try"} {"message":"confirm"} {"message": "cancel"} 0  done false} {http://localhost:8899/api/test {"message": "try"} {"message":"confirm"} {"message":"cancel"} 0  done done}] 4 0 122 2 }
+2018/03/30 11:07:30.238 [E] 打印队列: {"ID":122,"exec_time":1522379121}
+2018/03/30 11:07:30.238 [E] sql: no rows in result set
+2018/03/30 11:07:30.245 [E] 当前事务状态: &{async [{http://localhost:8899/api/test_confirm_fault {"message": "try"} {"message":"confirm"} {"message":"cancel"} 0  false } {http://localhost:8899/api/test_cancel_timeout {"message": "try"} {"message":"confirm"} {"message": "cancel"} 0  done } {http://localhost:8899/api/test {"message": "try"} {"message":"confirm"} {"message":"cancel"} 0  done }] 1 0 123 1 }
+2018/03/30 11:07:30.250 [E] 插入队列 ts_queue_123 {123 1522379250}
+2018/03/30 11:08:38.634 [E] 当前发送消息为:  {"ID":124,"exec_time":1522379318}
+2018/03/30 11:09:41.170 [E] 打印队列: {"ID":124,"exec_time":1522379318}
+2018/03/30 11:09:41.170 [E] 收到消息: {async [{http://localhost:8899/api/test_confirm_fault {"message": "try"} {"message":"confirm"} {"message":"cancel"} 0   } {http://localhost:8899/api/test_cancel_timeout {"message": "try"} {"message":"confirm"} {"message": "cancel"} 0   } {http://localhost:8899/api/test {"message": "try"} {"message":"confirm"} {"message":"cancel"} 0   }] 0 0 124 0 }
+2018/03/30 11:09:41.176 [E] 当前事务状态: &{async [{http://localhost:8899/api/test_confirm_fault {"message": "try"} {"message":"confirm"} {"message":"cancel"} 0  false } {http://localhost:8899/api/test_cancel_timeout {"message": "try"} {"message":"confirm"} {"message": "cancel"} 0  done } {http://localhost:8899/api/test {"message": "try"} {"message":"confirm"} {"message":"cancel"} 0  done }] 1 0 124 1 }
+2018/03/30 11:09:41.181 [E] 插入队列 ts_queue_124 {124 1522379381}
+2018/03/30 11:09:50.270 [E] 打印队列: {"ID":124,"exec_time":1522379381}
+2018/03/30 11:09:50.270 [E] 收到消息: {async [{http://localhost:8899/api/test_confirm_fault {"message": "try"} {"message":"confirm"} {"message":"cancel"} 0  false } {http://localhost:8899/api/test_cancel_timeout {"message": "try"} {"message":"confirm"} {"message": "cancel"} 0  done false} {http://localhost:8899/api/test {"message": "try"} {"message":"confirm"} {"message":"cancel"} 0  done done}] 1 0 124 2 }
+2018/03/30 11:09:50.275 [E] 插入队列 ts_queue_124 {124 1522379390}
+2018/03/30 11:10:07.023 [E] 当前发送消息为:  {"ID":125,"exec_time":1522379407}
+2018/03/30 11:10:09.691 [E] 打印队列: {"ID":124,"exec_time":1522379318}
+2018/03/30 11:10:09.691 [E] sql: no rows in result set
+2018/03/30 11:10:09.691 [E] 打印队列: {"ID":124,"exec_time":1522379381}
+2018/03/30 11:10:09.691 [E] sql: no rows in result set
+2018/03/30 11:10:09.691 [E] 打印队列: {"ID":125,"exec_time":1522379407}
+2018/03/30 11:10:09.691 [E] 收到消息: {async [{http://localhost:8899/api/test_confirm_fault {"message": "try"} {"message":"confirm"} {"message":"cancel"} 0   } {http://localhost:8899/api/test_cancel_timeout {"message": "try"} {"message":"confirm"} {"message": "cancel"} 0   } {http://localhost:8899/api/test {"message": "try"} {"message":"confirm"} {"message":"cancel"} 0   }] 0 0 125 0 }
+2018/03/30 11:10:09.691 [E] 打印队列: {"ID":124,"exec_time":1522379390}
+2018/03/30 11:10:09.691 [E] 收到消息: {async [{http://localhost:8899/api/test_confirm_fault {"message": "try"} {"message":"confirm"} {"message":"cancel"} 0  false } {http://localhost:8899/api/test_cancel_timeout {"message": "try"} {"message":"confirm"} {"message": "cancel"} 0  done false} {http://localhost:8899/api/test {"message": "try"} {"message":"confirm"} {"message":"cancel"} 0  done done}] 2 0 124 2 }
+2018/03/30 11:10:09.698 [E] 插入队列 ts_queue_124_3 {124 1522379409}
+2018/03/30 11:10:09.699 [E] 当前事务状态: &{async [{http://localhost:8899/api/test_confirm_fault {"message": "try"} {"message":"confirm"} {"message":"cancel"} 0  false } {http://localhost:8899/api/test_cancel_timeout {"message": "try"} {"message":"confirm"} {"message": "cancel"} 0  done } {http://localhost:8899/api/test {"message": "try"} {"message":"confirm"} {"message":"cancel"} 0  done }] 1 0 125 1 }
+2018/03/30 11:10:09.703 [E] 插入队列 ts_queue_125_1 {125 1522379409}
+2018/03/30 11:10:18.791 [E] 打印队列: {"ID":124,"exec_time":1522379409}
+2018/03/30 11:10:18.791 [E] 收到消息: {async [{http://localhost:8899/api/test_confirm_fault {"message": "try"} {"message":"confirm"} {"message":"cancel"} 0  false } {http://localhost:8899/api/test_cancel_timeout {"message": "try"} {"message":"confirm"} {"message": "cancel"} 0  done false} {http://localhost:8899/api/test {"message": "try"} {"message":"confirm"} {"message":"cancel"} 0  done done}] 3 0 124 2 }
+2018/03/30 11:10:18.791 [E] 打印队列: {"ID":125,"exec_time":1522379409}
+2018/03/30 11:10:18.791 [E] 收到消息: {async [{http://localhost:8899/api/test_confirm_fault {"message": "try"} {"message":"confirm"} {"message":"cancel"} 0  false } {http://localhost:8899/api/test_cancel_timeout {"message": "try"} {"message":"confirm"} {"message": "cancel"} 0  done false} {http://localhost:8899/api/test {"message": "try"} {"message":"confirm"} {"message":"cancel"} 0  done done}] 1 0 125 2 }
+2018/03/30 11:10:18.796 [E] 插入队列 ts_queue_125_2 {125 1522379418}
+2018/03/30 11:10:27.891 [E] 打印队列: {"ID":125,"exec_time":1522379418}
+2018/03/30 11:10:27.891 [E] 收到消息: {async [{http://localhost:8899/api/test_confirm_fault {"message": "try"} {"message":"confirm"} {"message":"cancel"} 0  false } {http://localhost:8899/api/test_cancel_timeout {"message": "try"} {"message":"confirm"} {"message": "cancel"} 0  done false} {http://localhost:8899/api/test {"message": "try"} {"message":"confirm"} {"message":"cancel"} 0  done done}] 2 0 125 2 }
+2018/03/30 11:10:27.896 [E] 插入队列 ts_queue_125_3 {125 1522379427}
+2018/03/30 11:10:36.993 [E] 打印队列: {"ID":125,"exec_time":1522379427}
+2018/03/30 11:10:36.993 [E] 收到消息: {async [{http://localhost:8899/api/test_confirm_fault {"message": "try"} {"message":"confirm"} {"message":"cancel"} 0  false } {http://localhost:8899/api/test_cancel_timeout {"message": "try"} {"message":"confirm"} {"message": "cancel"} 0  done false} {http://localhost:8899/api/test {"message": "try"} {"message":"confirm"} {"message":"cancel"} 0  done done}] 3 0 125 2 }
+2018/03/30 11:15:32.906 [E] 当前发送消息为:  {"ID":126,"exec_time":1522379732}
+2018/03/30 11:15:37.158 [E] 打印队列: {"ID":126,"exec_time":1522379732}
+2018/03/30 11:15:37.158 [E] 收到消息: {async [{http://localhost:8899/api/test_confirm_fault {"message": "try"} {"message":"confirm"} {"message":"cancel"} 0   } {http://localhost:8899/api/test_cancel_timeout {"message": "try"} {"message":"confirm"} {"message": "cancel"} 0   } {http://localhost:8899/api/test {"message": "try"} {"message":"confirm"} {"message":"cancel"} 0   }] 0 0 126 0 }
+2018/03/30 11:15:37.167 [E] 当前事务状态: &{async [{http://localhost:8899/api/test_confirm_fault {"message": "try"} {"message":"confirm"} {"message":"cancel"} 0  false } {http://localhost:8899/api/test_cancel_timeout {"message": "try"} {"message":"confirm"} {"message": "cancel"} 0  done } {http://localhost:8899/api/test {"message": "try"} {"message":"confirm"} {"message":"cancel"} 0  done }] 1 0 126 1 }
+2018/03/30 11:15:37.173 [E] 插入队列 ts_queue_126_1 {126 1522379737}
+2018/03/30 11:15:46.261 [E] 打印队列: {"ID":126,"exec_time":1522379737}
+2018/03/30 11:15:46.261 [E] 收到消息: {async [{http://localhost:8899/api/test_confirm_fault {"message": "try"} {"message":"confirm"} {"message":"cancel"} 0  false } {http://localhost:8899/api/test_cancel_timeout {"message": "try"} {"message":"confirm"} {"message": "cancel"} 0  done false} {http://localhost:8899/api/test {"message": "try"} {"message":"confirm"} {"message":"cancel"} 0  done done}] 1 0 126 2 }
+2018/03/30 11:15:46.266 [E] 插入队列 ts_queue_126_2 {126 1522379746}
+2018/03/30 11:15:55.257 [E] 打印队列: {"ID":126,"exec_time":1522379746}
+2018/03/30 11:15:55.257 [E] 收到消息: {async [{http://localhost:8899/api/test_confirm_fault {"message": "try"} {"message":"confirm"} {"message":"cancel"} 0  false } {http://localhost:8899/api/test_cancel_timeout {"message": "try"} {"message":"confirm"} {"message": "cancel"} 0  done false} {http://localhost:8899/api/test {"message": "try"} {"message":"confirm"} {"message":"cancel"} 0  done done}] 2 0 126 2 }
+2018/03/30 11:15:55.262 [E] 插入队列 ts_queue_126_3 {126 1522379755}
+2018/03/30 11:16:04.354 [E] 打印队列: {"ID":126,"exec_time":1522379755}
+2018/03/30 11:16:04.354 [E] 收到消息: {async [{http://localhost:8899/api/test_confirm_fault {"message": "try"} {"message":"confirm"} {"message":"cancel"} 0  false } {http://localhost:8899/api/test_cancel_timeout {"message": "try"} {"message":"confirm"} {"message": "cancel"} 0  done false} {http://localhost:8899/api/test {"message": "try"} {"message":"confirm"} {"message":"cancel"} 0  done done}] 3 0 126 2 }
+2018/03/30 11:16:04.358 [E] 插入队列 ts_queue_126_4 {126 1522379764}
+2018/03/30 11:16:13.451 [E] 打印队列: {"ID":126,"exec_time":1522379764}
+2018/03/30 11:16:13.451 [E] 收到消息: {async [{http://localhost:8899/api/test_confirm_fault {"message": "try"} {"message":"confirm"} {"message":"cancel"} 0  false } {http://localhost:8899/api/test_cancel_timeout {"message": "try"} {"message":"confirm"} {"message": "cancel"} 0  done false} {http://localhost:8899/api/test {"message": "try"} {"message":"confirm"} {"message":"cancel"} 0  done done}] 4 0 126 2 }
+2018/03/30 11:16:13.451 [E] 已超过最大执行次数, {"type":"async","Task":[{"api":"http://localhost:8899/api/test_confirm_fault","try":"{\"message\": \"try\"}","confirm":"{\"message\":\"confirm\"}","cancel":"{\"message\":\"cancel\"}","step":0,"try_status":"","commit_status":"false","cancel_status":""},{"api":"http://localhost:8899/api/test_cancel_timeout","try":"{\"message\": \"try\"}","confirm":"{\"message\":\"confirm\"}","cancel":"{\"message\": \"cancel\"}","step":0,"try_status":"","commit_status":"done","cancel_status":"false"},{"api":"http://localhost:8899/api/test","try":"{\"message\": \"try\"}","confirm":"{\"message\":\"confirm\"}","cancel":"{\"message\":\"cancel\"}","step":0,"try_status":"","commit_status":"done","cancel_status":"done"}],"exec_num":4,"exec_time":0,"ID":126,"step":2,"error_msg":""}
+2018/03/30 11:23:50.305 [E] 当前发送消息为:  {"ID":127,"exec_time":1522380230}
+2018/03/30 11:23:57.518 [E] 打印队列: {"ID":127,"exec_time":1522380230}
+2018/03/30 11:23:57.518 [E] 收到消息: {async [{http://localhost:8899/api/test {"message": "try"} {"message":"confirm"} {"message":"cancel"} 0   } {http://localhost:8899/api/test_confirm_fault {"message": "try"} {"message":"confirm"} {"message": "cancel"} 0   }] 0 0 127 0 }
+2018/03/30 11:23:57.528 [E] 当前事务状态: &{async [{http://localhost:8899/api/test {"message": "try"} {"message":"confirm"} {"message":"cancel"} 0  done } {http://localhost:8899/api/test_confirm_fault {"message": "try"} {"message":"confirm"} {"message": "cancel"} 0  false }] 1 0 127 1 }
+2018/03/30 11:23:57.536 [E] 准备开始取消
+2018/03/30 11:38:50.642 [E] 当前发送消息为:  {"ID":128,"exec_time":1522381130}
+2018/03/30 11:38:56.186 [E] 打印队列: {"ID":128,"exec_time":1522381130}
+2018/03/30 11:38:56.186 [E] 收到消息: {async [{http://localhost:8899/api/test {"message": "try"} {"message":"confirm"} {"message":"cancel"} 0   } {http://localhost:8899/api/test_confirm_fault {"message": "try"} {"message":"confirm"} {"message": "cancel"} 0   }] 0 0 128 0 }
+2018/03/30 11:38:56.195 [E] 当前事务状态: &{async [{http://localhost:8899/api/test {"message": "try"} {"message":"confirm"} {"message":"cancel"} 0  done } {http://localhost:8899/api/test_confirm_fault {"message": "try"} {"message":"confirm"} {"message": "cancel"} 0  false }] 1 0 128 1 }
+2018/03/30 11:38:56.198 [E] 准备开始取消
+2018/03/30 11:39:05.044 [E] 当前发送消息为:  {"ID":129,"exec_time":1522381145}
+2018/03/30 11:39:05.286 [E] 打印队列: {"ID":129,"exec_time":1522381145}
+2018/03/30 11:39:05.287 [E] 收到消息: {async [{http://localhost:8899/api/test_confirm_fault {"message": "try"} {"message":"confirm"} {"message":"cancel"} 0   } {http://localhost:8899/api/test_cancel_timeout {"message": "try"} {"message":"confirm"} {"message": "cancel"} 0   } {http://localhost:8899/api/test {"message": "try"} {"message":"confirm"} {"message":"cancel"} 0   }] 0 0 129 0 }
+2018/03/30 11:39:05.295 [E] 当前事务状态: &{async [{http://localhost:8899/api/test_confirm_fault {"message": "try"} {"message":"confirm"} {"message":"cancel"} 0  false } {http://localhost:8899/api/test_cancel_timeout {"message": "try"} {"message":"confirm"} {"message": "cancel"} 0  done } {http://localhost:8899/api/test {"message": "try"} {"message":"confirm"} {"message":"cancel"} 0  done }] 1 0 129 1 }
+2018/03/30 11:39:05.300 [E] 插入队列 ts_queue_129_1 {129 1522381145}
+2018/03/30 11:39:14.387 [E] 打印队列: {"ID":129,"exec_time":1522381145}
+2018/03/30 11:39:14.387 [E] 收到消息: {async [{http://localhost:8899/api/test_confirm_fault {"message": "try"} {"message":"confirm"} {"message":"cancel"} 0  false } {http://localhost:8899/api/test_cancel_timeout {"message": "try"} {"message":"confirm"} {"message": "cancel"} 0  done false} {http://localhost:8899/api/test {"message": "try"} {"message":"confirm"} {"message":"cancel"} 0  done done}] 1 0 129 2 }
+2018/03/30 11:39:14.393 [E] 插入队列 ts_queue_129_2 {129 1522381154}
+2018/03/30 11:39:23.488 [E] 打印队列: {"ID":129,"exec_time":1522381154}
+2018/03/30 11:39:23.488 [E] 收到消息: {async [{http://localhost:8899/api/test_confirm_fault {"message": "try"} {"message":"confirm"} {"message":"cancel"} 0  false } {http://localhost:8899/api/test_cancel_timeout {"message": "try"} {"message":"confirm"} {"message": "cancel"} 0  done false} {http://localhost:8899/api/test {"message": "try"} {"message":"confirm"} {"message":"cancel"} 0  done done}] 2 0 129 2 }
+2018/03/30 11:39:23.494 [E] 插入队列 ts_queue_129_3 {129 1522381163}
+2018/03/30 11:39:32.588 [E] 打印队列: {"ID":129,"exec_time":1522381163}
+2018/03/30 11:39:32.588 [E] 收到消息: {async [{http://localhost:8899/api/test_confirm_fault {"message": "try"} {"message":"confirm"} {"message":"cancel"} 0  false } {http://localhost:8899/api/test_cancel_timeout {"message": "try"} {"message":"confirm"} {"message": "cancel"} 0  done false} {http://localhost:8899/api/test {"message": "try"} {"message":"confirm"} {"message":"cancel"} 0  done done}] 3 0 129 2 }
+2018/03/30 11:39:32.588 [E] 已超过最大执行次数, {"type":"async","Task":[{"api":"http://localhost:8899/api/test_confirm_fault","try":"{\"message\": \"try\"}","confirm":"{\"message\":\"confirm\"}","cancel":"{\"message\":\"cancel\"}","step":0,"try_status":"","commit_status":"false","cancel_status":""},{"api":"http://localhost:8899/api/test_cancel_timeout","try":"{\"message\": \"try\"}","confirm":"{\"message\":\"confirm\"}","cancel":"{\"message\": \"cancel\"}","step":0,"try_status":"","commit_status":"done","cancel_status":"false"},{"api":"http://localhost:8899/api/test","try":"{\"message\": \"try\"}","confirm":"{\"message\":\"confirm\"}","cancel":"{\"message\":\"cancel\"}","step":0,"try_status":"","commit_status":"done","cancel_status":"done"}],"exec_num":4,"exec_time":0,"ID":129,"step":2,"error_msg":""}
+2018/03/30 11:59:24.844 [E] 当前发送消息为:  {"ID":130,"exec_time":1522382364}
+2018/03/30 11:59:28.423 [E] 打印队列: {"ID":130,"exec_time":1522382364}
+2018/03/30 11:59:28.424 [E] 收到消息: {async [{http://localhost:8899/api/test_confirm_fault {"message": "try"} {"message":"confirm"} {"message":"cancel"} 0   } {http://localhost:8899/api/test_cancel_timeout {"message": "try"} {"message":"confirm"} {"message": "cancel"} 0   } {http://localhost:8899/api/test {"message": "try"} {"message":"confirm"} {"message":"cancel"} 0   }] 0 0 130 0 }
+2018/03/30 11:59:28.435 [E] 当前事务状态: &{async [{http://localhost:8899/api/test_confirm_fault {"message": "try"} {"message":"confirm"} {"message":"cancel"} 0  false } {http://localhost:8899/api/test_cancel_timeout {"message": "try"} {"message":"confirm"} {"message": "cancel"} 0  done } {http://localhost:8899/api/test {"message": "try"} {"message":"confirm"} {"message":"cancel"} 0  done }] 1 0 130 1 }
+2018/03/30 11:59:28.442 [E] 插入队列 ts_queue_130_1 {130 1522382368}
+2018/03/30 11:59:37.524 [E] 打印队列: {"ID":130,"exec_time":1522382368}
+2018/03/30 11:59:37.524 [E] 收到消息: {async [{http://localhost:8899/api/test_confirm_fault {"message": "try"} {"message":"confirm"} {"message":"cancel"} 0  false } {http://localhost:8899/api/test_cancel_timeout {"message": "try"} {"message":"confirm"} {"message": "cancel"} 0  done false} {http://localhost:8899/api/test {"message": "try"} {"message":"confirm"} {"message":"cancel"} 0  done done}] 1 0 130 2 }
+2018/03/30 11:59:37.529 [E] 插入队列 ts_queue_130_2 {130 1522382377}
+2018/03/30 11:59:46.625 [E] 打印队列: {"ID":130,"exec_time":1522382377}
+2018/03/30 11:59:46.625 [E] 收到消息: {async [{http://localhost:8899/api/test_confirm_fault {"message": "try"} {"message":"confirm"} {"message":"cancel"} 0  false } {http://localhost:8899/api/test_cancel_timeout {"message": "try"} {"message":"confirm"} {"message": "cancel"} 0  done false} {http://localhost:8899/api/test {"message": "try"} {"message":"confirm"} {"message":"cancel"} 0  done done}] 2 0 130 2 }
+2018/03/30 11:59:46.631 [E] 超过最大执行次数, ID: 130
+2018/03/30 11:59:46.631 [E] 准备开始取消
