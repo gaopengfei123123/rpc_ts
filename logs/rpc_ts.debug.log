@@ -1,0 +1,1005 @@
+2018/03/29 10:25:51.113 [D] already send msg, key: ts_queue_47
+2018/03/29 10:27:37.469 [D] already send msg, key: ts_queue_48
+2018/03/29 10:27:49.357 [D] already send msg, key: ts_queue_49
+2018/03/29 10:31:07.998 [D] mq reader is starting
+2018/03/29 10:31:14.296 [D] already send msg, key: ts_queue_50
+2018/03/29 10:31:17.023 [D] post 请求返回内容: {"message":"try","type":"try api","code":200,"error_code":0,"error_message":"nothing wrong","data":"{\"message\": \"try\"}"}
+2018/03/29 10:31:17.023 [D] post 请求返回内容: {"message":"try","type":"try api","code":200,"error_code":0,"error_message":"nothing wrong","data":"{\"message\": \"try\"}"}
+2018/03/29 10:31:17.024 [D] try 操作成功, ID: 50 1
+2018/03/29 10:31:17.024 [D] 持久化状态,ID: 50
+2018/03/29 10:31:17.036 [D] 更新数据库信息,ID: 50
+2018/03/29 10:31:17.036 [D] 执行 commit 逻辑  执行步骤: 1
+2018/03/29 10:31:17.036 [D] post 请求返回内容: {"message":"confirm","Type":"confirm api"}
+2018/03/29 10:31:17.036 [D] post 请求返回内容: {"message":"confirm","Type":"confirm api"}
+2018/03/29 11:17:56.279 [D] mq reader is starting
+2018/03/29 11:18:33.286 [D] mq reader is starting
+2018/03/29 11:18:41.171 [D] already send msg, key: ts_queue_51
+2018/03/29 11:18:42.306 [D] post 请求返回内容: {"message":"try","type":"try api","code":200,"error_code":0,"error_message":"nothing wrong","data":"{\"message\": \"try\"}"}
+2018/03/29 11:18:42.306 [D] post 请求返回内容: {"message":"try","type":"try api","code":200,"error_code":0,"error_message":"nothing wrong","data":"{\"message\": \"try\"}"}
+2018/03/29 11:18:42.306 [D] try 操作成功, ID: 51 1
+2018/03/29 11:18:42.306 [D] 持久化状态,ID: 51
+2018/03/29 11:18:42.310 [D] 更新数据库信息,ID: 51
+2018/03/29 11:18:42.310 [D] 执行 commit 逻辑  执行步骤: 1
+2018/03/29 11:18:42.310 [D] post 请求返回内容: {"message":"confirm","type":"try api","code":0,"error_code":401,"error_message":"something was wrong","data":"{\"message\": \"try\"}"}
+2018/03/29 11:18:42.310 [D] post 请求返回内容: {"message":"confirm","type":"try api","code":200,"error_code":0,"error_message":"","data":"{\"message\": \"try\"}"}
+2018/03/29 11:19:02.623 [D] already send msg, key: ts_queue_52
+2018/03/29 11:19:09.605 [D] post 请求返回内容: {"message":"try","type":"try api","code":200,"error_code":0,"error_message":"nothing wrong","data":"{\"message\": \"try\"}"}
+2018/03/29 11:19:09.605 [D] post 请求返回内容: {"message":"try","type":"try api","code":200,"error_code":0,"error_message":"nothing wrong","data":"{\"message\": \"try\"}"}
+2018/03/29 11:19:09.605 [D] try 操作成功, ID: 52 1
+2018/03/29 11:19:09.605 [D] 持久化状态,ID: 52
+2018/03/29 11:19:09.609 [D] 更新数据库信息,ID: 52
+2018/03/29 11:19:09.609 [D] 执行 commit 逻辑  执行步骤: 1
+2018/03/29 11:19:09.609 [D] post 请求返回内容: {"message":"confirm","type":"try api","code":200,"error_code":0,"error_message":"","data":"{\"message\": \"try\"}"}
+2018/03/29 11:19:09.609 [D] post 请求返回内容: {"message":"confirm","type":"try api","code":200,"error_code":0,"error_message":"","data":"{\"message\": \"try\"}"}
+2018/03/29 11:19:09.610 [D] 当前准备执行的任务索引: [0 1]
+2018/03/29 11:22:25.016 [D] mq reader is starting
+2018/03/29 11:22:32.135 [D] already send msg, key: ts_queue_53
+2018/03/29 11:22:34.032 [D] post 请求返回内容: {"message":"try","type":"try api","code":0,"error_code":401,"error_message":"something was wrong","data":"{\"message\": \"try\"}"}
+2018/03/29 11:22:34.032 [D] post 请求返回内容: {"message":"try","type":"try api","code":0,"error_code":401,"error_message":"something was wrong","data":"{\"message\": \"try\"}"}
+2018/03/29 11:22:34.035 [D] 插入数据库内容: {"type":"async","Task":[{"api":"http://localhost:8899/api/test","try":"{\"message\": \"try\"}","confirm":"{\"message\":\"confirm\"}","cancel":"{\"message\": \"cancel\"}","step":0,"try_status":"","commit_status":"","cancel_status":""},{"api":"http://localhost:8899/api/test","try":"{\"message\": \"try\"}","confirm":"{\"message\":\"confirm\"}","cancel":"{\"message\": \"cancel\"}","step":0,"try_status":"","commit_status":"","cancel_status":""}],"exec_num":1,"exec_time":0,"ID":53,"step":0,"error_msg":""} 1522293754 [{"code":401,"data":"{\"message\": \"try\"}","error_message":"something was wrong","API":"","Index":0,"error_code":401},{"code":401,"data":"{\"message\": \"try\"}","error_message":"something was wrong","API":"","Index":1,"error_code":401}] 53
+2018/03/29 11:22:34.035 [D] 此处应该向某处发送错误通知
+2018/03/29 11:23:25.012 [D] already send msg, key: ts_queue_54
+2018/03/29 11:23:28.628 [D] post 请求返回内容: {"message":"try","type":"try api","code":200,"error_code":0,"error_message":"","data":"{\"message\": \"try\"}"}
+2018/03/29 11:23:28.628 [D] post 请求返回内容: {"message":"try","type":"try api","code":0,"error_code":401,"error_message":"something was wrong","data":"{\"message\": \"try\"}"}
+2018/03/29 11:23:28.633 [D] 插入数据库内容: {"type":"async","Task":[{"api":"http://localhost:8899/api/test","try":"{\"message\": \"try\"}","confirm":"{\"message\":\"confirm\"}","cancel":"{\"message\": \"cancel\"}","step":0,"try_status":"","commit_status":"","cancel_status":""},{"api":"http://localhost:8899/api/test","try":"{\"message\": \"try\"}","confirm":"{\"message\":\"confirm\"}","cancel":"{\"message\": \"cancel\"}","step":0,"try_status":"","commit_status":"","cancel_status":""}],"exec_num":1,"exec_time":0,"ID":54,"step":0,"error_msg":""} 1522293808 [{"code":200,"data":"{\"message\": \"try\"}","error_message":"","API":"","Index":0,"error_code":0},{"code":401,"data":"{\"message\": \"try\"}","error_message":"something was wrong","API":"","Index":1,"error_code":401}] 54
+2018/03/29 11:23:28.633 [D] 此处应该向某处发送错误通知
+2018/03/29 11:24:56.704 [D] mq reader is starting
+2018/03/29 11:24:59.231 [D] already send msg, key: ts_queue_55
+2018/03/29 11:25:05.720 [D] post 请求返回内容: {"message":"try","type":"try api","code":0,"error_code":401,"error_message":"something was wrong","data":"{\"message\": \"try\"}"}
+2018/03/29 11:25:05.720 [D] post 请求返回内容: {"message":"try","type":"try api","code":0,"error_code":401,"error_message":"something was wrong","data":"{\"message\": \"try\"}"}
+2018/03/29 11:25:05.724 [D] 取消事务时插入数据库内容: {"type":"async","Task":[{"api":"http://localhost:8899/api/test","try":"{\"message\": \"try\"}","confirm":"{\"message\":\"confirm\"}","cancel":"{\"message\": \"cancel\"}","step":0,"try_status":"","commit_status":"","cancel_status":""},{"api":"http://localhost:8899/api/test","try":"{\"message\": \"try\"}","confirm":"{\"message\":\"confirm\"}","cancel":"{\"message\": \"cancel\"}","step":0,"try_status":"","commit_status":"","cancel_status":""}],"exec_num":1,"exec_time":0,"ID":53,"step":0,"error_msg":""} 1522293905 [{"code":401,"data":"{\"message\": \"try\"}","error_message":"something was wrong","API":"","Index":1,"error_code":401},{"code":401,"data":"{\"message\": \"try\"}","error_message":"something was wrong","API":"","Index":0,"error_code":401}] 53
+2018/03/29 11:25:05.724 [D] 此处应该向某处发送错误通知
+2018/03/29 11:25:05.725 [D] post 请求返回内容: {"message":"try","type":"try api","code":200,"error_code":0,"error_message":"","data":"{\"message\": \"try\"}"}
+2018/03/29 11:25:05.725 [D] post 请求返回内容: {"message":"try","type":"try api","code":0,"error_code":401,"error_message":"something was wrong","data":"{\"message\": \"try\"}"}
+2018/03/29 11:25:05.727 [D] 取消事务时插入数据库内容: {"type":"async","Task":[{"api":"http://localhost:8899/api/test","try":"{\"message\": \"try\"}","confirm":"{\"message\":\"confirm\"}","cancel":"{\"message\": \"cancel\"}","step":0,"try_status":"","commit_status":"","cancel_status":""},{"api":"http://localhost:8899/api/test","try":"{\"message\": \"try\"}","confirm":"{\"message\":\"confirm\"}","cancel":"{\"message\": \"cancel\"}","step":0,"try_status":"","commit_status":"","cancel_status":""}],"exec_num":1,"exec_time":0,"ID":54,"step":0,"error_msg":""} 1522293905 [{"code":200,"data":"{\"message\": \"try\"}","error_message":"","API":"","Index":1,"error_code":0},{"code":401,"data":"{\"message\": \"try\"}","error_message":"something was wrong","API":"","Index":0,"error_code":401}] 54
+2018/03/29 11:25:05.727 [D] 此处应该向某处发送错误通知
+2018/03/29 11:25:05.727 [D] post 请求返回内容: {"message":"try","type":"try api","code":0,"error_code":401,"error_message":"something was wrong","data":"{\"message\": \"try\"}"}
+2018/03/29 11:25:05.727 [D] post 请求返回内容: {"message":"try","type":"try api","code":0,"error_code":401,"error_message":"something was wrong","data":"{\"message\": \"try\"}"}
+2018/03/29 11:25:05.729 [D] 取消事务时插入数据库内容: {"type":"async","Task":[{"api":"http://localhost:8899/api/test","try":"{\"message\": \"try\"}","confirm":"{\"message\":\"confirm\"}","cancel":"{\"message\": \"cancel\"}","step":0,"try_status":"","commit_status":"","cancel_status":""},{"api":"http://localhost:8899/api/test","try":"{\"message\": \"try\"}","confirm":"{\"message\":\"confirm\"}","cancel":"{\"message\": \"cancel\"}","step":0,"try_status":"","commit_status":"","cancel_status":""}],"exec_num":1,"exec_time":0,"ID":55,"step":0,"error_msg":""} 1522293905 [{"code":401,"data":"{\"message\": \"try\"}","error_message":"something was wrong","API":"","Index":0,"error_code":401},{"code":401,"data":"{\"message\": \"try\"}","error_message":"something was wrong","API":"","Index":1,"error_code":401}] 55
+2018/03/29 11:25:05.729 [D] 此处应该向某处发送错误通知
+2018/03/29 11:25:43.938 [D] mq reader is starting
+2018/03/29 11:25:52.973 [D] post 请求返回内容: {"message":"try","type":"try api","code":0,"error_code":401,"error_message":"something was wrong","data":"{\"message\": \"try\"}"}
+2018/03/29 11:25:52.973 [D] post 请求返回内容: {"message":"try","type":"try api","code":0,"error_code":401,"error_message":"something was wrong","data":"{\"message\": \"try\"}"}
+2018/03/29 11:25:52.978 [D] 取消事务时插入数据库内容: {"type":"async","Task":[{"api":"http://localhost:8899/api/test","try":"{\"message\": \"try\"}","confirm":"{\"message\":\"confirm\"}","cancel":"{\"message\": \"cancel\"}","step":0,"try_status":"","commit_status":"","cancel_status":""},{"api":"http://localhost:8899/api/test","try":"{\"message\": \"try\"}","confirm":"{\"message\":\"confirm\"}","cancel":"{\"message\": \"cancel\"}","step":0,"try_status":"","commit_status":"","cancel_status":""}],"exec_num":1,"exec_time":0,"ID":53,"step":0,"error_msg":""} 1522293952 [{"code":401,"data":"{\"message\": \"try\"}","error_message":"something was wrong","API":"","Index":0,"error_code":401},{"code":401,"data":"{\"message\": \"try\"}","error_message":"something was wrong","API":"","Index":1,"error_code":401}] 53
+2018/03/29 11:25:52.978 [D] 此处应该向某处发送错误通知
+2018/03/29 11:25:52.979 [D] post 请求返回内容: {"message":"try","type":"try api","code":200,"error_code":0,"error_message":"","data":"{\"message\": \"try\"}"}
+2018/03/29 11:25:52.979 [D] post 请求返回内容: {"message":"try","type":"try api","code":0,"error_code":401,"error_message":"something was wrong","data":"{\"message\": \"try\"}"}
+2018/03/29 11:25:52.982 [D] 取消事务时插入数据库内容: {"type":"async","Task":[{"api":"http://localhost:8899/api/test","try":"{\"message\": \"try\"}","confirm":"{\"message\":\"confirm\"}","cancel":"{\"message\": \"cancel\"}","step":0,"try_status":"","commit_status":"","cancel_status":""},{"api":"http://localhost:8899/api/test","try":"{\"message\": \"try\"}","confirm":"{\"message\":\"confirm\"}","cancel":"{\"message\": \"cancel\"}","step":0,"try_status":"","commit_status":"","cancel_status":""}],"exec_num":1,"exec_time":0,"ID":54,"step":0,"error_msg":""} 1522293952 [{"code":200,"data":"{\"message\": \"try\"}","error_message":"","API":"","Index":0,"error_code":0},{"code":401,"data":"{\"message\": \"try\"}","error_message":"something was wrong","API":"","Index":1,"error_code":401}] 54
+2018/03/29 11:25:52.982 [D] 此处应该向某处发送错误通知
+2018/03/29 11:25:52.983 [D] post 请求返回内容: {"message":"try","type":"try api","code":0,"error_code":401,"error_message":"something was wrong","data":"{\"message\": \"try\"}"}
+2018/03/29 11:25:52.983 [D] post 请求返回内容: {"message":"try","type":"try api","code":0,"error_code":401,"error_message":"something was wrong","data":"{\"message\": \"try\"}"}
+2018/03/29 11:25:52.985 [D] 取消事务时插入数据库内容: {"type":"async","Task":[{"api":"http://localhost:8899/api/test","try":"{\"message\": \"try\"}","confirm":"{\"message\":\"confirm\"}","cancel":"{\"message\": \"cancel\"}","step":0,"try_status":"","commit_status":"","cancel_status":""},{"api":"http://localhost:8899/api/test","try":"{\"message\": \"try\"}","confirm":"{\"message\":\"confirm\"}","cancel":"{\"message\": \"cancel\"}","step":0,"try_status":"","commit_status":"","cancel_status":""}],"exec_num":1,"exec_time":0,"ID":55,"step":0,"error_msg":""} 1522293952 [{"code":401,"data":"{\"message\": \"try\"}","error_message":"something was wrong","API":"","Index":1,"error_code":401},{"code":401,"data":"{\"message\": \"try\"}","error_message":"something was wrong","API":"","Index":0,"error_code":401}] 55
+2018/03/29 11:25:52.985 [D] 此处应该向某处发送错误通知
+2018/03/29 11:27:45.643 [D] mq reader is starting
+2018/03/29 11:27:48.273 [D] already send msg, key: ts_queue_56
+2018/03/29 11:27:54.656 [D] post 请求返回内容: {"message":"try","type":"try api","code":0,"error_code":401,"error_message":"something was wrong","data":"{\"message\": \"try\"}"}
+2018/03/29 11:27:54.657 [D] post 请求返回内容: {"message":"try","type":"try api","code":0,"error_code":401,"error_message":"something was wrong","data":"{\"message\": \"try\"}"}
+2018/03/29 11:27:54.664 [D] 取消事务时插入数据库内容: {"type":"async","Task":[{"api":"http://localhost:8899/api/test","try":"{\"message\": \"try\"}","confirm":"{\"message\":\"confirm\"}","cancel":"{\"message\": \"cancel\"}","step":0,"try_status":"","commit_status":"","cancel_status":""},{"api":"http://localhost:8899/api/test","try":"{\"message\": \"try\"}","confirm":"{\"message\":\"confirm\"}","cancel":"{\"message\": \"cancel\"}","step":0,"try_status":"","commit_status":"","cancel_status":""}],"exec_num":1,"exec_time":0,"ID":56,"step":0,"error_msg":""} 1522294074 [{"code":401,"data":"{\"message\": \"try\"}","error_message":"something was wrong","API":"","Index":1,"error_code":401},{"code":401,"data":"{\"message\": \"try\"}","error_message":"something was wrong","API":"","Index":0,"error_code":401}] 56
+2018/03/29 11:27:54.664 [D] 此处应该向某处发送错误通知
+2018/03/29 11:30:19.506 [D] mq reader is starting
+2018/03/29 11:30:22.562 [D] already send msg, key: ts_queue_57
+2018/03/29 11:30:28.522 [D] post 请求返回内容: {"message":"try","type":"try api","code":0,"error_code":401,"error_message":"something was wrong","data":"{\"message\": \"try\"}"}
+2018/03/29 11:30:28.522 [D] post 请求返回内容: {"message":"try","type":"try api","code":0,"error_code":401,"error_message":"something was wrong","data":"{\"message\": \"try\"}"}
+2018/03/29 11:30:28.525 [D] 取消事务时插入数据库内容: {"type":"async","Task":[{"api":"http://localhost:8899/api/test","try":"{\"message\": \"try\"}","confirm":"{\"message\":\"confirm\"}","cancel":"{\"message\": \"cancel\"}","step":0,"try_status":"","commit_status":"","cancel_status":""},{"api":"http://localhost:8899/api/test","try":"{\"message\": \"try\"}","confirm":"{\"message\":\"confirm\"}","cancel":"{\"message\": \"cancel\"}","step":0,"try_status":"","commit_status":"","cancel_status":""}],"exec_num":1,"exec_time":0,"ID":56,"step":0,"error_msg":""} 1522294228 [{"code":401,"data":"{\"message\": \"try\"}","error_message":"something was wrong","API":"http://localhost:8899/api/test/try","Index":0,"error_code":401},{"code":401,"data":"{\"message\": \"try\"}","error_message":"something was wrong","API":"http://localhost:8899/api/test/try","Index":1,"error_code":401}] 56
+2018/03/29 11:30:28.525 [D] 此处应该向某处发送错误通知
+2018/03/29 11:30:28.526 [D] post 请求返回内容: {"message":"try","type":"try api","code":0,"error_code":401,"error_message":"something was wrong","data":"{\"message\": \"try\"}"}
+2018/03/29 11:30:28.526 [D] post 请求返回内容: {"message":"try","type":"try api","code":200,"error_code":0,"error_message":"","data":"{\"message\": \"try\"}"}
+2018/03/29 11:30:28.528 [D] 取消事务时插入数据库内容: {"type":"async","Task":[{"api":"http://localhost:8899/api/test","try":"{\"message\": \"try\"}","confirm":"{\"message\":\"confirm\"}","cancel":"{\"message\": \"cancel\"}","step":0,"try_status":"","commit_status":"","cancel_status":""},{"api":"http://localhost:8899/api/test","try":"{\"message\": \"try\"}","confirm":"{\"message\":\"confirm\"}","cancel":"{\"message\": \"cancel\"}","step":0,"try_status":"","commit_status":"","cancel_status":""}],"exec_num":1,"exec_time":0,"ID":57,"step":0,"error_msg":""} 1522294228 [{"code":401,"data":"{\"message\": \"try\"}","error_message":"something was wrong","API":"http://localhost:8899/api/test/try","Index":1,"error_code":401},{"code":200,"data":"{\"message\": \"try\"}","error_message":"","API":"http://localhost:8899/api/test/try","Index":0,"error_code":0}] 57
+2018/03/29 11:30:28.528 [D] 此处应该向某处发送错误通知
+2018/03/29 11:31:01.126 [D] mq reader is starting
+2018/03/29 11:31:53.953 [D] mq reader is starting
+2018/03/29 11:32:04.092 [D] already send msg, key: ts_queue_58
+2018/03/29 11:32:12.072 [D] post 请求返回内容: {"message":"try","type":"try api","code":200,"error_code":0,"error_message":"","data":"{\"message\": \"try\"}"}
+2018/03/29 11:32:12.072 [D] post 请求返回内容: {"message":"try","type":"try api","code":200,"error_code":0,"error_message":"","data":"{\"message\": \"try\"}"}
+2018/03/29 11:32:12.072 [D] try 操作成功, ID: 58 1
+2018/03/29 11:32:12.072 [D] 持久化状态,ID: 58
+2018/03/29 11:32:12.075 [D] 更新数据库信息,ID: 58
+2018/03/29 11:32:12.075 [D] 执行 commit 逻辑  执行步骤: 1
+2018/03/29 11:32:12.075 [D] post 请求返回内容: {"message":"confirm","type":"try api","code":200,"error_code":0,"error_message":"","data":"{\"message\": \"try\"}"}
+2018/03/29 11:32:12.076 [D] post 请求返回内容: {"message":"confirm","type":"try api","code":0,"error_code":401,"error_message":"something was wrong","data":"{\"message\": \"try\"}"}
+2018/03/29 11:38:33.722 [D] mq reader is starting
+2018/03/29 11:38:40.427 [D] already send msg, key: ts_queue_59
+2018/03/29 11:38:42.740 [D] post 请求返回内容: {"message":"try","type":"try api","code":200,"error_code":0,"error_message":"","data":"{\"message\": \"try\"}"}
+2018/03/29 11:38:42.740 [D] post 请求返回内容: {"message":"try","type":"try api","code":200,"error_code":0,"error_message":"","data":"{\"message\": \"try\"}"}
+2018/03/29 11:38:42.740 [D] try 操作成功, ID: 59 1
+2018/03/29 11:38:42.740 [D] 持久化状态,ID: 59
+2018/03/29 11:38:42.744 [D] 更新数据库信息,ID: 59
+2018/03/29 11:38:42.744 [D] 执行 commit 逻辑  执行步骤: 1
+2018/03/29 11:38:42.745 [D] post 请求返回内容: {"message":"confirm","type":"try api","code":200,"error_code":0,"error_message":"","data":"{\"message\": \"try\"}"}
+2018/03/29 11:38:42.745 [D] post 请求返回内容: {"message":"confirm","type":"try api","code":200,"error_code":0,"error_message":"","data":"{\"message\": \"try\"}"}
+2018/03/29 11:38:42.745 [D] 当前准备执行的任务索引: [0 1]
+2018/03/29 11:40:26.486 [D] mq reader is starting
+2018/03/29 11:40:35.500 [D] post 请求返回内容: {"message":"try","type":"try api","code":200,"error_code":0,"error_message":"","data":"{\"message\": \"try\"}"}
+2018/03/29 11:40:35.500 [D] post 请求返回内容: {"message":"try","type":"try api","code":200,"error_code":0,"error_message":"","data":"{\"message\": \"try\"}"}
+2018/03/29 11:40:35.500 [D] try 操作成功, ID: 59 1
+2018/03/29 11:40:35.500 [D] 持久化状态,ID: 59
+2018/03/29 11:40:35.504 [D] 更新数据库信息,ID: 59
+2018/03/29 11:40:35.504 [D] 执行 commit 逻辑  执行步骤: 1
+2018/03/29 11:40:35.504 [D] post 请求返回内容: {"message":"confirm","type":"try api","code":200,"error_code":0,"error_message":"","data":"{\"message\": \"try\"}"}
+2018/03/29 11:40:35.504 [D] post 请求返回内容: {"message":"confirm","type":"try api","code":200,"error_code":0,"error_message":"","data":"{\"message\": \"try\"}"}
+2018/03/29 11:40:35.505 [D] 当前准备执行的任务索引: [0 1]
+2018/03/29 11:44:46.489 [D] already send msg, key: ts_queue_60
+2018/03/29 11:44:50.180 [D] post 请求返回内容: {"message":"try","type":"try api","code":200,"error_code":0,"error_message":"","data":"{\"message\": \"try\"}"}
+2018/03/29 11:44:50.180 [D] post 请求返回内容: {"message":"try","type":"try api","code":200,"error_code":0,"error_message":"","data":"{\"message\": \"try\"}"}
+2018/03/29 11:44:50.180 [D] try 操作成功, ID: 60 1
+2018/03/29 11:44:50.180 [D] 持久化状态,ID: 60
+2018/03/29 11:44:50.193 [D] 更新数据库信息,ID: 60
+2018/03/29 11:44:50.193 [D] 执行 commit 逻辑  执行步骤: 1
+2018/03/29 11:44:50.193 [D] post 请求返回内容: {"message":"confirm","type":"try api","code":200,"error_code":0,"error_message":"","data":"{\"message\": \"try\"}"}
+2018/03/29 11:44:50.193 [D] post 请求返回内容: {"message":"confirm","type":"try api","code":200,"error_code":0,"error_message":"","data":"{\"message\": \"try\"}"}
+2018/03/29 11:44:50.193 [D] 当前准备执行的任务索引: [0 1]
+2018/03/29 11:45:06.067 [D] mq reader is starting
+2018/03/29 11:45:12.296 [D] already send msg, key: ts_queue_61
+2018/03/29 11:45:15.082 [D] post 请求返回内容: {"message":"try","type":"try api","code":200,"error_code":0,"error_message":"","data":"{\"message\": \"try\"}"}
+2018/03/29 11:45:15.082 [D] post 请求返回内容: {"message":"try","type":"try api","code":200,"error_code":0,"error_message":"","data":"{\"message\": \"try\"}"}
+2018/03/29 11:45:15.082 [D] try 操作成功, ID: 60 1
+2018/03/29 11:45:15.082 [D] 持久化状态,ID: 60
+2018/03/29 11:45:15.087 [D] 更新数据库信息,ID: 60
+2018/03/29 11:45:15.087 [D] 执行 commit 逻辑  执行步骤: 1
+2018/03/29 11:45:15.087 [D] post 请求返回内容: {"message":"confirm","type":"try api","code":200,"error_code":0,"error_message":"","data":"{\"message\": \"try\"}"}
+2018/03/29 11:45:15.087 [D] post 请求返回内容: {"message":"confirm","type":"try api","code":200,"error_code":0,"error_message":"","data":"{\"message\": \"try\"}"}
+2018/03/29 11:45:15.087 [D] 当前准备执行的任务索引: [0 1]
+2018/03/29 11:45:15.088 [D] post 请求返回内容: {"message":"try","type":"try api","code":200,"error_code":0,"error_message":"","data":"{\"message\": \"try\"}"}
+2018/03/29 11:45:15.088 [D] post 请求返回内容: {"message":"try","type":"try api","code":200,"error_code":0,"error_message":"","data":"{\"message\": \"try\"}"}
+2018/03/29 11:45:15.088 [D] try 操作成功, ID: 61 1
+2018/03/29 11:45:15.088 [D] 持久化状态,ID: 61
+2018/03/29 11:45:15.090 [D] 更新数据库信息,ID: 61
+2018/03/29 11:45:15.090 [D] 执行 commit 逻辑  执行步骤: 1
+2018/03/29 11:45:15.090 [D] post 请求返回内容: {"message":"confirm","type":"try api","code":200,"error_code":0,"error_message":"","data":"{\"message\": \"try\"}"}
+2018/03/29 11:45:15.090 [D] post 请求返回内容: {"message":"confirm","type":"try api","code":200,"error_code":0,"error_message":"","data":"{\"message\": \"try\"}"}
+2018/03/29 11:45:15.090 [D] 当前准备执行的任务索引: [0 1]
+2018/03/29 11:56:03.539 [D] mq reader is starting
+2018/03/29 11:56:07.363 [D] already send msg, key: ts_queue_62
+2018/03/29 11:56:12.560 [D] post 请求返回内容: {"message":"try","type":"try api","code":200,"error_code":0,"error_message":"","data":"{\"message\": \"try\"}"}
+2018/03/29 11:56:12.560 [D] post 请求返回内容: {"message":"try","type":"try api","code":200,"error_code":0,"error_message":"","data":"{\"message\": \"try\"}"}
+2018/03/29 11:56:12.560 [D] try 操作成功, ID: 62 1
+2018/03/29 11:56:12.560 [D] 持久化状态,ID: 62
+2018/03/29 11:56:12.565 [D] 更新数据库信息,ID: 62
+2018/03/29 11:56:12.565 [D] 执行 commit 逻辑  执行步骤: 1
+2018/03/29 11:56:12.565 [D] post 请求返回内容: {"message":"confirm","type":"try api","code":200,"error_code":0,"error_message":"","data":"{\"message\": \"try\"}"}
+2018/03/29 11:56:12.565 [D] post 请求返回内容: {"message":"confirm","type":"try api","code":200,"error_code":0,"error_message":"","data":"{\"message\": \"try\"}"}
+2018/03/29 11:58:18.783 [D] mq reader is starting
+2018/03/29 11:58:22.032 [D] already send msg, key: ts_queue_63
+2018/03/29 11:58:27.798 [D] post 请求返回内容: {"message":"try","type":"try api","code":200,"error_code":0,"error_message":"","data":"{\"message\": \"try\"}"}
+2018/03/29 11:58:27.798 [D] post 请求返回内容: {"message":"try","type":"try api","code":200,"error_code":0,"error_message":"","data":"{\"message\": \"try\"}"}
+2018/03/29 11:58:27.799 [D] try 操作成功, ID: 62 1
+2018/03/29 11:58:27.799 [D] 持久化状态,ID: 62
+2018/03/29 11:58:27.802 [D] 更新数据库信息,ID: 62
+2018/03/29 11:58:27.802 [D] 执行 commit 逻辑  执行步骤: 1
+2018/03/29 11:58:27.802 [D] post 请求返回内容: {"message":"confirm","type":"try api","code":200,"error_code":0,"error_message":"","data":"{\"message\": \"try\"}"}
+2018/03/29 11:58:27.802 [D] post 请求返回内容: {"message":"confirm","type":"try api","code":200,"error_code":0,"error_message":"","data":"{\"message\": \"try\"}"}
+2018/03/29 11:58:27.804 [D] 执行成功的操作完成
+2018/03/29 11:58:27.804 [D] 当前准备执行的任务索引: [0 1]
+2018/03/29 11:58:27.805 [D] post 请求返回内容: {"message":"try","type":"try api","code":200,"error_code":0,"error_message":"","data":"{\"message\": \"try\"}"}
+2018/03/29 11:58:27.805 [D] post 请求返回内容: {"message":"try","type":"try api","code":200,"error_code":0,"error_message":"","data":"{\"message\": \"try\"}"}
+2018/03/29 11:58:27.805 [D] try 操作成功, ID: 63 1
+2018/03/29 11:58:27.805 [D] 持久化状态,ID: 63
+2018/03/29 11:58:27.806 [D] 更新数据库信息,ID: 63
+2018/03/29 11:58:27.806 [D] 执行 commit 逻辑  执行步骤: 1
+2018/03/29 11:58:27.807 [D] post 请求返回内容: {"message":"confirm","type":"try api","code":200,"error_code":0,"error_message":"","data":"{\"message\": \"try\"}"}
+2018/03/29 11:58:27.807 [D] post 请求返回内容: {"message":"confirm","type":"try api","code":200,"error_code":0,"error_message":"","data":"{\"message\": \"try\"}"}
+2018/03/29 11:58:27.809 [D] 执行成功的操作完成
+2018/03/29 11:58:27.809 [D] 当前准备执行的任务索引: [0 1]
+2018/03/29 11:58:44.081 [D] already send msg, key: ts_queue_64
+2018/03/29 11:58:45.995 [D] post 请求返回内容: {"message":"try","type":"try api","code":200,"error_code":0,"error_message":"","data":"{\"message\": \"try\"}"}
+2018/03/29 11:58:45.995 [D] post 请求返回内容: {"message":"try","type":"try api","code":200,"error_code":0,"error_message":"","data":"{\"message\": \"try\"}"}
+2018/03/29 11:58:45.995 [D] try 操作成功, ID: 64 1
+2018/03/29 11:58:45.995 [D] 持久化状态,ID: 64
+2018/03/29 11:58:46.000 [D] 更新数据库信息,ID: 64
+2018/03/29 11:58:46.000 [D] 执行 commit 逻辑  执行步骤: 1
+2018/03/29 11:58:46.001 [D] post 请求返回内容: {"message":"confirm","type":"try api","code":200,"error_code":0,"error_message":"","data":"{\"message\": \"try\"}"}
+2018/03/29 11:58:46.002 [D] post 请求返回内容: {"message":"confirm","type":"try api","code":200,"error_code":0,"error_message":"","data":"{\"message\": \"try\"}"}
+2018/03/29 11:58:46.006 [D] 执行成功的操作完成
+2018/03/29 11:58:46.006 [D] 当前准备执行的任务索引: [0 1]
+2018/03/29 13:56:04.185 [D] mq reader is starting
+2018/03/29 14:02:05.009 [D] mq reader is starting
+2018/03/29 14:05:47.359 [D] already send msg, key: ts_queue_65
+2018/03/29 14:05:52.384 [D] post 请求返回内容: {"message":"try","type":"try api","code":200,"error_code":0,"error_message":"","data":"{\"message\": \"try\"}"}
+2018/03/29 14:05:52.384 [D] post 请求返回内容: {"message":"try","type":"try api","code":200,"error_code":0,"error_message":"","data":"{\"message\": \"try\"}"}
+2018/03/29 14:05:52.384 [D] try 操作成功, ID: 65 1
+2018/03/29 14:05:52.384 [D] 持久化状态,ID: 65
+2018/03/29 14:05:52.389 [D] 更新数据库信息,ID: 65
+2018/03/29 14:05:52.389 [D] 执行 commit 逻辑  执行步骤: 1
+2018/03/29 14:05:52.389 [D] post 请求返回内容: {"message":"confirm","type":"try api","code":200,"error_code":0,"error_message":"","data":"{\"message\": \"try\"}"}
+2018/03/29 14:05:52.389 [D] post 请求返回内容: {"message":"confirm","type":"try api","code":0,"error_code":401,"error_message":"something was wrong","data":"{\"message\": \"try\"}"}
+2018/03/29 14:14:41.721 [D] mq reader is starting
+2018/03/29 14:14:45.817 [D] already send msg, key: ts_queue_66
+2018/03/29 14:14:50.737 [D] post 请求返回内容: {"message":"try","type":"try api","code":200,"error_code":0,"error_message":"","data":"{\"message\": \"try\"}"}
+2018/03/29 14:14:50.737 [D] post 请求返回内容: {"message":"try","type":"try api","code":200,"error_code":0,"error_message":"","data":"{\"message\": \"try\"}"}
+2018/03/29 14:14:50.738 [D] try 操作成功, ID: 66 1
+2018/03/29 14:14:50.738 [D] 持久化状态,ID: 66
+2018/03/29 14:14:50.741 [D] 更新数据库信息,ID: 66
+2018/03/29 14:14:50.741 [D] 执行 commit 逻辑  执行步骤: 1
+2018/03/29 14:14:50.742 [D] post 请求返回内容: {"message":"confirm","type":"try api","code":0,"error_code":401,"error_message":"something was wrong","data":"{\"message\": \"try\"}"}
+2018/03/29 14:14:50.742 [D] post 请求返回内容: {"message":"confirm","type":"try api","code":200,"error_code":0,"error_message":"","data":"{\"message\": \"try\"}"}
+2018/03/29 14:14:50.742 [D] 打印当前中断状态时的事务状态 {"type":"async","Task":[{"api":"http://localhost:8899/api/test","try":"{\"message\": \"try\"}","confirm":"{\"message\":\"confirm\"}","cancel":"{'message': 'cancel'}","step":0,"try_status":"","commit_status":"done","cancel_status":""},{"api":"http://localhost:8899/api/test_confirm_fault","try":"{\"message\": \"try\"}","confirm":"{\"message\":\"confirm\"}","cancel":"{\"message\": \"cancel\"}","step":0,"try_status":"","commit_status":"false","cancel_status":""}],"exec_num":1,"exec_time":0,"ID":66,"step":1,"error_msg":""}
+2018/03/29 14:25:07.384 [D] mq reader is starting
+2018/03/29 14:25:10.026 [D] already send msg, key: ts_queue_67
+2018/03/29 14:25:16.397 [D] post 请求返回内容: {"message":"try","type":"try api","code":200,"error_code":0,"error_message":"","data":"{\"message\": \"try\"}"}
+2018/03/29 14:25:16.397 [D] post 请求返回内容: {"message":"try","type":"try api","code":200,"error_code":0,"error_message":"","data":"{\"message\": \"try\"}"}
+2018/03/29 14:25:16.397 [D] try 操作成功, ID: 67 1
+2018/03/29 14:25:16.397 [D] 持久化状态,ID: 67
+2018/03/29 14:25:16.399 [D] 更新数据库信息,ID: 67
+2018/03/29 14:25:16.399 [D] 执行 commit 逻辑  执行步骤: 1
+2018/03/29 14:25:16.399 [D] post 请求返回内容: {"message":"confirm","type":"try api","code":0,"error_code":401,"error_message":"something was wrong","data":"{\"message\": \"try\"}"}
+2018/03/29 14:25:16.399 [D] post 请求返回内容: {"message":"confirm","type":"try api","code":200,"error_code":0,"error_message":"","data":"{\"message\": \"try\"}"}
+2018/03/29 14:25:16.400 [D] 打印当前中断状态时的事务状态 {"type":"async","Task":[{"api":"http://localhost:8899/api/test","try":"{\"message\": \"try\"}","confirm":"{\"message\":\"confirm\"}","cancel":"{'message': 'cancel'}","step":0,"try_status":"","commit_status":"done","cancel_status":""},{"api":"http://localhost:8899/api/test_confirm_fault","try":"{\"message\": \"try\"}","confirm":"{\"message\":\"confirm\"}","cancel":"{\"message\": \"cancel\"}","step":0,"try_status":"","commit_status":"false","cancel_status":""}],"exec_num":1,"exec_time":0,"ID":67,"step":1,"error_msg":""}
+2018/03/29 14:25:16.400 [D] post 请求返回内容: {"error_code":401,"error_message":"get nothing"}
+2018/03/29 14:25:16.400 [D] 打印获取当前的返回状态 {"code":400,"data":"{\"error_code\":401,\"error_message\":\"get nothing\"}","error_message":"request error","API":"http://localhost:8899/api/test/cancel","Index":0,"error_code":400}
+2018/03/29 14:27:03.456 [D] mq reader is starting
+2018/03/29 14:27:05.948 [D] already send msg, key: ts_queue_68
+2018/03/29 14:27:12.484 [D] post 请求返回内容: {"message":"try","type":"try api","code":200,"error_code":0,"error_message":"","data":"{\"message\": \"try\"}"}
+2018/03/29 14:27:12.484 [D] post 请求返回内容: {"message":"try","type":"try api","code":200,"error_code":0,"error_message":"","data":"{\"message\": \"try\"}"}
+2018/03/29 14:27:12.484 [D] try 操作成功, ID: 68 1
+2018/03/29 14:27:12.484 [D] 持久化状态,ID: 68
+2018/03/29 14:27:12.488 [D] 更新数据库信息,ID: 68
+2018/03/29 14:27:12.488 [D] 执行 commit 逻辑  执行步骤: 1
+2018/03/29 14:27:12.489 [D] post 请求返回内容: {"message":"confirm","type":"try api","code":0,"error_code":401,"error_message":"something was wrong","data":"{\"message\": \"try\"}"}
+2018/03/29 14:27:12.489 [D] post 请求返回内容: {"message":"confirm","type":"try api","code":200,"error_code":0,"error_message":"","data":"{\"message\": \"try\"}"}
+2018/03/29 14:27:12.490 [D] 打印当前中断状态时的事务状态 {"type":"async","Task":[{"api":"http://localhost:8899/api/test","try":"{\"message\": \"try\"}","confirm":"{\"message\":\"confirm\"}","cancel":"{\"message\":\"cancel\"}","step":0,"try_status":"","commit_status":"done","cancel_status":""},{"api":"http://localhost:8899/api/test_confirm_fault","try":"{\"message\": \"try\"}","confirm":"{\"message\":\"confirm\"}","cancel":"{\"message\": \"cancel\"}","step":0,"try_status":"","commit_status":"false","cancel_status":""}],"exec_num":1,"exec_time":0,"ID":68,"step":1,"error_msg":""}
+2018/03/29 14:27:12.490 [D] post 请求返回内容: {"message":"cancel","type":"cancel api","code":200,"error_code":0,"error_message":"","data":"{\"message\": \"try\"}"}
+2018/03/29 14:27:12.491 [D] 打印获取当前的返回状态 {"code":200,"data":"{\"message\": \"try\"}","error_message":"","API":"http://localhost:8899/api/test/cancel","Index":0,"error_code":0}
+2018/03/29 14:29:01.507 [D] already send msg, key: ts_queue_69
+2018/03/29 14:29:59.000 [D] mq reader is starting
+2018/03/29 14:30:01.902 [D] already send msg, key: ts_queue_70
+2018/03/29 14:30:08.019 [D] post 请求返回内容: {"message":"try","type":"try api","code":200,"error_code":0,"error_message":"","data":"{\"message\": \"try\"}"}
+2018/03/29 14:30:08.019 [D] post 请求返回内容: {"message":"try","type":"try api","code":200,"error_code":0,"error_message":"","data":"{\"message\": \"try\"}"}
+2018/03/29 14:30:08.019 [D] try 操作成功, ID: 68 1
+2018/03/29 14:30:08.019 [D] 持久化状态,ID: 68
+2018/03/29 14:30:08.022 [D] 更新数据库信息,ID: 68
+2018/03/29 14:30:08.023 [D] 执行 commit 逻辑  执行步骤: 1
+2018/03/29 14:30:08.023 [D] post 请求返回内容: {"message":"confirm","type":"try api","code":0,"error_code":401,"error_message":"something was wrong","data":"{\"message\": \"try\"}"}
+2018/03/29 14:30:08.023 [D] post 请求返回内容: {"message":"confirm","type":"try api","code":200,"error_code":0,"error_message":"","data":"{\"message\": \"try\"}"}
+2018/03/29 14:30:08.023 [D] 打印当前中断状态时的事务状态 {"type":"async","Task":[{"api":"http://localhost:8899/api/test","try":"{\"message\": \"try\"}","confirm":"{\"message\":\"confirm\"}","cancel":"{\"message\":\"cancel\"}","step":0,"try_status":"","commit_status":"done","cancel_status":""},{"api":"http://localhost:8899/api/test_confirm_fault","try":"{\"message\": \"try\"}","confirm":"{\"message\":\"confirm\"}","cancel":"{\"message\": \"cancel\"}","step":0,"try_status":"","commit_status":"false","cancel_status":""}],"exec_num":1,"exec_time":0,"ID":68,"step":1,"error_msg":""}
+2018/03/29 14:30:08.024 [D] post 请求返回内容: {"message":"cancel","type":"cancel api","code":200,"error_code":0,"error_message":"","data":"{\"message\": \"try\"}"}
+2018/03/29 14:30:08.024 [D] 打印获取当前的返回状态 {"code":200,"data":"{\"message\": \"try\"}","error_message":"","API":"http://localhost:8899/api/test/cancel","Index":0,"error_code":0}
+2018/03/29 14:31:36.813 [D] mq reader is starting
+2018/03/29 14:31:40.474 [D] already send msg, key: ts_queue_71
+2018/03/29 14:31:45.826 [D] post 请求返回内容: {"message":"try","type":"try api","code":200,"error_code":0,"error_message":"","data":"{\"message\": \"try\"}"}
+2018/03/29 14:31:45.826 [D] post 请求返回内容: {"message":"try","type":"try api","code":200,"error_code":0,"error_message":"","data":"{\"message\": \"try\"}"}
+2018/03/29 14:31:45.826 [D] try 操作成功, ID: 71 1
+2018/03/29 14:31:45.826 [D] 持久化状态,ID: 71
+2018/03/29 14:31:45.829 [D] 更新数据库信息,ID: 71
+2018/03/29 14:31:45.829 [D] 执行 commit 逻辑  执行步骤: 1
+2018/03/29 14:31:45.830 [D] post 请求返回内容: {"message":"confirm","type":"try api","code":0,"error_code":401,"error_message":"something was wrong","data":"{\"message\": \"try\"}"}
+2018/03/29 14:31:45.830 [D] post 请求返回内容: {"message":"confirm","type":"try api","code":200,"error_code":0,"error_message":"","data":"{\"message\": \"try\"}"}
+2018/03/29 14:31:45.830 [D] 打印当前中断状态时的事务状态 {"type":"async","Task":[{"api":"http://localhost:8899/api/test","try":"{\"message\": \"try\"}","confirm":"{\"message\":\"confirm\"}","cancel":"{\"message\":\"cancel\"}","step":0,"try_status":"","commit_status":"done","cancel_status":""},{"api":"http://localhost:8899/api/test_confirm_fault","try":"{\"message\": \"try\"}","confirm":"{\"message\":\"confirm\"}","cancel":"{\"message\": \"cancel\"}","step":0,"try_status":"","commit_status":"false","cancel_status":""}],"exec_num":1,"exec_time":0,"ID":71,"step":1,"error_msg":""}
+2018/03/29 14:31:45.830 [D] 打印获取当前的返回状态 {"code":0,"data":"","error_message":"","API":"","Index":0,"error_code":0}
+2018/03/29 14:31:45.830 [D] 打印获取当前的返回状态 {"code":0,"data":"","error_message":"","API":"","Index":0,"error_code":0}
+2018/03/29 14:31:45.832 [D] post 请求返回内容: {"message":"cancel","type":"cancel api","code":200,"error_code":0,"error_message":"","data":"{\"message\": \"try\"}"}
+2018/03/29 14:32:45.805 [D] mq reader is starting
+2018/03/29 14:32:54.837 [D] post 请求返回内容: {"message":"try","type":"try api","code":200,"error_code":0,"error_message":"","data":"{\"message\": \"try\"}"}
+2018/03/29 14:32:54.837 [D] post 请求返回内容: {"message":"try","type":"try api","code":200,"error_code":0,"error_message":"","data":"{\"message\": \"try\"}"}
+2018/03/29 14:32:54.837 [D] try 操作成功, ID: 71 1
+2018/03/29 14:32:54.837 [D] 持久化状态,ID: 71
+2018/03/29 14:32:54.841 [D] 更新数据库信息,ID: 71
+2018/03/29 14:32:54.841 [D] 执行 commit 逻辑  执行步骤: 1
+2018/03/29 14:32:54.841 [D] post 请求返回内容: {"message":"confirm","type":"try api","code":0,"error_code":401,"error_message":"something was wrong","data":"{\"message\": \"try\"}"}
+2018/03/29 14:32:54.841 [D] post 请求返回内容: {"message":"confirm","type":"try api","code":200,"error_code":0,"error_message":"","data":"{\"message\": \"try\"}"}
+2018/03/29 14:32:54.841 [D] 打印当前中断状态时的事务状态 {"type":"async","Task":[{"api":"http://localhost:8899/api/test","try":"{\"message\": \"try\"}","confirm":"{\"message\":\"confirm\"}","cancel":"{\"message\":\"cancel\"}","step":0,"try_status":"","commit_status":"done","cancel_status":""},{"api":"http://localhost:8899/api/test_confirm_fault","try":"{\"message\": \"try\"}","confirm":"{\"message\":\"confirm\"}","cancel":"{\"message\": \"cancel\"}","step":0,"try_status":"","commit_status":"false","cancel_status":""}],"exec_num":1,"exec_time":0,"ID":71,"step":1,"error_msg":""}
+2018/03/29 14:32:54.842 [D] post 请求返回内容: {"message":"cancel","type":"cancel api","code":200,"error_code":0,"error_message":"","data":"{\"message\": \"try\"}"}
+2018/03/29 14:32:54.842 [D] 打印获取当前的返回状态 {"code":200,"data":"{\"message\": \"try\"}","error_message":"","API":"http://localhost:8899/api/test/cancel","Index":0,"error_code":0}
+2018/03/29 14:33:01.757 [D] mq reader is starting
+2018/03/29 14:33:10.149 [D] already send msg, key: ts_queue_72
+2018/03/29 14:33:10.776 [D] post 请求返回内容: {"message":"try","type":"try api","code":200,"error_code":0,"error_message":"","data":"{\"message\": \"try\"}"}
+2018/03/29 14:33:10.776 [D] post 请求返回内容: {"message":"try","type":"try api","code":200,"error_code":0,"error_message":"","data":"{\"message\": \"try\"}"}
+2018/03/29 14:33:10.776 [D] try 操作成功, ID: 71 1
+2018/03/29 14:33:10.776 [D] 持久化状态,ID: 71
+2018/03/29 14:33:10.780 [D] 更新数据库信息,ID: 71
+2018/03/29 14:33:10.780 [D] 执行 commit 逻辑  执行步骤: 1
+2018/03/29 14:33:10.781 [D] post 请求返回内容: {"message":"confirm","type":"try api","code":0,"error_code":401,"error_message":"something was wrong","data":"{\"message\": \"try\"}"}
+2018/03/29 14:33:10.781 [D] post 请求返回内容: {"message":"confirm","type":"try api","code":200,"error_code":0,"error_message":"","data":"{\"message\": \"try\"}"}
+2018/03/29 14:33:10.781 [D] 打印当前中断状态时的事务状态 {"type":"async","Task":[{"api":"http://localhost:8899/api/test","try":"{\"message\": \"try\"}","confirm":"{\"message\":\"confirm\"}","cancel":"{\"message\":\"cancel\"}","step":0,"try_status":"","commit_status":"done","cancel_status":""},{"api":"http://localhost:8899/api/test_confirm_fault","try":"{\"message\": \"try\"}","confirm":"{\"message\":\"confirm\"}","cancel":"{\"message\": \"cancel\"}","step":0,"try_status":"","commit_status":"false","cancel_status":""}],"exec_num":1,"exec_time":0,"ID":71,"step":1,"error_msg":""}
+2018/03/29 14:33:10.781 [D] post 请求返回内容: {"message":"cancel","type":"cancel api","code":200,"error_code":0,"error_message":"","data":"{\"message\": \"try\"}"}
+2018/03/29 14:33:10.781 [D] 打印获取当前的返回状态 {"code":200,"data":"{\"message\": \"try\"}","error_message":"","API":"http://localhost:8899/api/test/cancel","Index":0,"error_code":0}
+2018/03/29 14:38:25.736 [D] mq reader is starting
+2018/03/29 14:39:05.011 [D] mq reader is starting
+2018/03/29 14:39:07.634 [D] already send msg, key: ts_queue_73
+2018/03/29 14:39:14.027 [D] post 请求返回内容: {"message":"try","type":"try api","code":200,"error_code":0,"error_message":"","data":"{\"message\": \"try\"}"}
+2018/03/29 14:39:14.027 [D] post 请求返回内容: {"message":"try","type":"try api","code":200,"error_code":0,"error_message":"","data":"{\"message\": \"try\"}"}
+2018/03/29 14:39:14.027 [D] try 操作成功, ID: 73 1
+2018/03/29 14:39:14.027 [D] 持久化状态,ID: 73
+2018/03/29 14:39:14.033 [D] 更新数据库信息,ID: 73
+2018/03/29 14:39:14.033 [D] 执行 commit 逻辑  执行步骤: 1
+2018/03/29 14:39:14.033 [D] post 请求返回内容: {"message":"confirm","type":"try api","code":0,"error_code":401,"error_message":"something was wrong","data":"{\"message\": \"try\"}"}
+2018/03/29 14:39:14.034 [D] post 请求返回内容: {"message":"confirm","type":"try api","code":200,"error_code":0,"error_message":"","data":"{\"message\": \"try\"}"}
+2018/03/29 14:39:14.034 [D] 打印当前中断状态时的事务状态 {"type":"async","Task":[{"api":"http://localhost:8899/api/test","try":"{\"message\": \"try\"}","confirm":"{\"message\":\"confirm\"}","cancel":"{\"message\":\"cancel\"}","step":0,"try_status":"","commit_status":"done","cancel_status":""},{"api":"http://localhost:8899/api/test_confirm_fault","try":"{\"message\": \"try\"}","confirm":"{\"message\":\"confirm\"}","cancel":"{\"message\": \"cancel\"}","step":0,"try_status":"","commit_status":"false","cancel_status":""}],"exec_num":1,"exec_time":0,"ID":73,"step":1,"error_msg":""}
+2018/03/29 14:39:14.034 [D] post 请求返回内容: {"message":"cancel","type":"cancel api","code":200,"error_code":0,"error_message":"","data":"{\"message\": \"try\"}"}
+2018/03/29 14:39:14.034 [D] 打印获取当前的返回状态 {"code":200,"data":"{\"message\": \"try\"}","error_message":"","API":"http://localhost:8899/api/test/cancel","Index":0,"error_code":0}
+2018/03/29 14:40:19.743 [D] mq reader is starting
+2018/03/29 14:40:22.229 [D] already send msg, key: ts_queue_74
+2018/03/29 14:40:28.759 [D] post 请求返回内容: {"message":"try","type":"try api","code":200,"error_code":0,"error_message":"","data":"{\"message\": \"try\"}"}
+2018/03/29 14:40:28.759 [D] post 请求返回内容: {"message":"try","type":"try api","code":200,"error_code":0,"error_message":"","data":"{\"message\": \"try\"}"}
+2018/03/29 14:40:28.759 [D] try 操作成功, ID: 74 1
+2018/03/29 14:40:28.759 [D] 持久化状态,ID: 74
+2018/03/29 14:40:28.763 [D] 更新数据库信息,ID: 74
+2018/03/29 14:40:28.763 [D] 执行 commit 逻辑  执行步骤: 1
+2018/03/29 14:40:28.763 [D] post 请求返回内容: {"message":"confirm","type":"try api","code":200,"error_code":0,"error_message":"","data":"{\"message\": \"try\"}"}
+2018/03/29 14:40:28.763 [D] post 请求返回内容: {"message":"confirm","type":"try api","code":0,"error_code":401,"error_message":"something was wrong","data":"{\"message\": \"try\"}"}
+2018/03/29 14:40:28.763 [D] 打印当前中断状态时的事务状态 {"type":"async","Task":[{"api":"http://localhost:8899/api/test","try":"{\"message\": \"try\"}","confirm":"{\"message\":\"confirm\"}","cancel":"{\"message\":\"cancel\"}","step":0,"try_status":"","commit_status":"done","cancel_status":""},{"api":"http://localhost:8899/api/test_confirm_fault","try":"{\"message\": \"try\"}","confirm":"{\"message\":\"confirm\"}","cancel":"{\"message\": \"cancel\"}","step":0,"try_status":"","commit_status":"false","cancel_status":""}],"exec_num":1,"exec_time":0,"ID":74,"step":1,"error_msg":""}
+2018/03/29 14:40:28.764 [D] post 请求返回内容: {"message":"cancel","type":"cancel api","code":200,"error_code":0,"error_message":"","data":"{\"message\": \"try\"}"}
+2018/03/29 14:41:09.708 [D] mq reader is starting
+2018/03/29 14:41:13.013 [D] already send msg, key: ts_queue_75
+2018/03/29 14:41:18.726 [D] post 请求返回内容: {"message":"try","type":"try api","code":200,"error_code":0,"error_message":"","data":"{\"message\": \"try\"}"}
+2018/03/29 14:41:18.726 [D] post 请求返回内容: {"message":"try","type":"try api","code":200,"error_code":0,"error_message":"","data":"{\"message\": \"try\"}"}
+2018/03/29 14:41:18.726 [D] try 操作成功, ID: 74 1
+2018/03/29 14:41:18.726 [D] 持久化状态,ID: 74
+2018/03/29 14:41:18.730 [D] 更新数据库信息,ID: 74
+2018/03/29 14:41:18.730 [D] 执行 commit 逻辑  执行步骤: 1
+2018/03/29 14:41:18.730 [D] post 请求返回内容: {"message":"confirm","type":"try api","code":0,"error_code":401,"error_message":"something was wrong","data":"{\"message\": \"try\"}"}
+2018/03/29 14:41:18.730 [D] post 请求返回内容: {"message":"confirm","type":"try api","code":200,"error_code":0,"error_message":"","data":"{\"message\": \"try\"}"}
+2018/03/29 14:41:18.731 [D] 打印当前中断状态时的事务状态 {"type":"async","Task":[{"api":"http://localhost:8899/api/test","try":"{\"message\": \"try\"}","confirm":"{\"message\":\"confirm\"}","cancel":"{\"message\":\"cancel\"}","step":0,"try_status":"","commit_status":"done","cancel_status":""},{"api":"http://localhost:8899/api/test_confirm_fault","try":"{\"message\": \"try\"}","confirm":"{\"message\":\"confirm\"}","cancel":"{\"message\": \"cancel\"}","step":0,"try_status":"","commit_status":"false","cancel_status":""}],"exec_num":1,"exec_time":0,"ID":74,"step":1,"error_msg":""}
+2018/03/29 14:41:18.731 [D] post 请求返回内容: {"message":"cancel","type":"cancel api","code":200,"error_code":0,"error_message":"","data":"{\"message\": \"try\"}"}
+2018/03/29 14:41:18.731 [D] 打印获取当前的返回状态 {"code":200,"data":"{\"message\": \"try\"}","error_message":"","API":"http://localhost:8899/api/test/cancel","Index":0,"error_code":0}
+2018/03/29 14:41:18.732 [D] post 请求返回内容: {"message":"try","type":"try api","code":200,"error_code":0,"error_message":"","data":"{\"message\": \"try\"}"}
+2018/03/29 14:41:18.732 [D] post 请求返回内容: {"message":"try","type":"try api","code":200,"error_code":0,"error_message":"","data":"{\"message\": \"try\"}"}
+2018/03/29 14:41:18.732 [D] try 操作成功, ID: 75 1
+2018/03/29 14:41:18.732 [D] 持久化状态,ID: 75
+2018/03/29 14:41:18.733 [D] 更新数据库信息,ID: 75
+2018/03/29 14:41:18.733 [D] 执行 commit 逻辑  执行步骤: 1
+2018/03/29 14:41:18.734 [D] post 请求返回内容: {"message":"confirm","type":"try api","code":200,"error_code":0,"error_message":"","data":"{\"message\": \"try\"}"}
+2018/03/29 14:41:18.734 [D] post 请求返回内容: {"message":"confirm","type":"try api","code":0,"error_code":401,"error_message":"something was wrong","data":"{\"message\": \"try\"}"}
+2018/03/29 14:41:18.734 [D] 打印当前中断状态时的事务状态 {"type":"async","Task":[{"api":"http://localhost:8899/api/test","try":"{\"message\": \"try\"}","confirm":"{\"message\":\"confirm\"}","cancel":"{\"message\":\"cancel\"}","step":0,"try_status":"","commit_status":"done","cancel_status":""},{"api":"http://localhost:8899/api/test_confirm_fault","try":"{\"message\": \"try\"}","confirm":"{\"message\":\"confirm\"}","cancel":"{\"message\": \"cancel\"}","step":0,"try_status":"","commit_status":"false","cancel_status":""}],"exec_num":1,"exec_time":0,"ID":75,"step":1,"error_msg":""}
+2018/03/29 14:41:18.734 [D] post 请求返回内容: {"message":"cancel","type":"cancel api","code":200,"error_code":0,"error_message":"","data":"{\"message\": \"try\"}"}
+2018/03/29 14:41:18.734 [D] 打印获取当前的返回状态 {"code":200,"data":"{\"message\": \"try\"}","error_message":"","API":"http://localhost:8899/api/test/cancel","Index":0,"error_code":0}
+2018/03/29 14:50:59.814 [D] mq reader is starting
+2018/03/29 14:51:04.459 [D] already send msg, key: ts_queue_76
+2018/03/29 14:51:08.834 [D] post 请求返回内容: {"message":"try","type":"try api","code":200,"error_code":0,"error_message":"","data":"{\"message\": \"try\"}"}
+2018/03/29 14:51:08.834 [D] post 请求返回内容: {"message":"try","type":"try api","code":200,"error_code":0,"error_message":"","data":"{\"message\": \"try\"}"}
+2018/03/29 14:51:08.834 [D] try 操作成功, ID: 76 1
+2018/03/29 14:51:08.834 [D] 持久化状态,ID: 76
+2018/03/29 14:51:08.838 [D] 更新数据库信息,ID: 76
+2018/03/29 14:51:08.838 [D] 执行 commit 逻辑  执行步骤: 1
+2018/03/29 14:51:08.839 [D] post 请求返回内容: {"message":"confirm","type":"try api","code":0,"error_code":401,"error_message":"something was wrong","data":"{\"message\": \"try\"}"}
+2018/03/29 14:51:08.839 [D] post 请求返回内容: {"message":"confirm","type":"try api","code":200,"error_code":0,"error_message":"","data":"{\"message\": \"try\"}"}
+2018/03/29 14:51:08.839 [D] 打印当前中断状态时的事务状态 {"type":"async","Task":[{"api":"http://localhost:8899/api/test","try":"{\"message\": \"try\"}","confirm":"{\"message\":\"confirm\"}","cancel":"{\"message\":\"cancel\"}","step":0,"try_status":"","commit_status":"done","cancel_status":""},{"api":"http://localhost:8899/api/test_confirm_fault","try":"{\"message\": \"try\"}","confirm":"{\"message\":\"confirm\"}","cancel":"{\"message\": \"cancel\"}","step":0,"try_status":"","commit_status":"false","cancel_status":""}],"exec_num":1,"exec_time":0,"ID":76,"step":1,"error_msg":""}
+2018/03/29 14:51:08.839 [D] post 请求返回内容: {"message":"cancel","type":"cancel api","code":200,"error_code":0,"error_message":"","data":"{\"message\": \"try\"}"}
+2018/03/29 14:51:08.839 [D] 打印获取当前的返回状态 {"code":200,"data":"{\"message\": \"try\"}","error_message":"","API":"http://localhost:8899/api/test/cancel","Index":0,"error_code":0}
+2018/03/29 14:57:52.945 [D] mq reader is starting
+2018/03/29 14:57:58.562 [D] already send msg, key: ts_queue_77
+2018/03/29 14:58:01.960 [D] post 请求返回内容: {"message":"try","type":"try api","code":200,"error_code":0,"error_message":"","data":"{\"message\": \"try\"}"}
+2018/03/29 14:58:01.960 [D] post 请求返回内容: {"message":"try","type":"try api","code":200,"error_code":0,"error_message":"","data":"{\"message\": \"try\"}"}
+2018/03/29 14:58:01.960 [D] try 操作成功, ID: 77 1
+2018/03/29 14:58:01.960 [D] 持久化状态,ID: 77
+2018/03/29 14:58:01.965 [D] 更新数据库信息,ID: 77
+2018/03/29 14:58:01.966 [D] 执行 commit 逻辑  执行步骤: 1
+2018/03/29 14:58:01.966 [D] post 请求返回内容: {"message":"confirm","type":"try api","code":200,"error_code":0,"error_message":"","data":"{\"message\": \"try\"}"}
+2018/03/29 14:58:01.966 [D] post 请求返回内容: {"message":"confirm","type":"try api","code":0,"error_code":401,"error_message":"something was wrong","data":"{\"message\": \"try\"}"}
+2018/03/29 14:58:01.966 [D] 打印当前中断状态时的事务状态 {"type":"async","Task":[{"api":"http://localhost:8899/api/test","try":"{\"message\": \"try\"}","confirm":"{\"message\":\"confirm\"}","cancel":"{\"message\":\"cancel\"}","step":0,"try_status":"","commit_status":"done","cancel_status":""},{"api":"http://localhost:8899/api/test_confirm_fault","try":"{\"message\": \"try\"}","confirm":"{\"message\":\"confirm\"}","cancel":"{\"message\": \"cancel\"}","step":0,"try_status":"","commit_status":"false","cancel_status":""}],"exec_num":1,"exec_time":0,"ID":77,"step":1,"error_msg":""}
+2018/03/29 14:58:01.967 [D] post 请求返回内容: {"message":"cancel","type":"cancel api","code":200,"error_code":0,"error_message":"","data":"{\"message\": \"try\"}"}
+2018/03/29 14:58:01.967 [D] 打印获取当前的返回状态 {"code":200,"data":"{\"message\": \"try\"}","error_message":"","API":"http://localhost:8899/api/test/cancel","Index":0,"error_code":0}
+2018/03/29 15:00:30.234 [D] mq reader is starting
+2018/03/29 15:00:33.379 [D] already send msg, key: ts_queue_78
+2018/03/29 15:00:39.244 [D] post 请求返回内容: {"message":"try","type":"try api","code":200,"error_code":0,"error_message":"","data":"{\"message\": \"try\"}"}
+2018/03/29 15:00:39.244 [D] post 请求返回内容: {"message":"try","type":"try api","code":200,"error_code":0,"error_message":"","data":"{\"message\": \"try\"}"}
+2018/03/29 15:00:39.244 [D] try 操作成功, ID: 78 1
+2018/03/29 15:00:39.244 [D] 持久化状态,ID: 78
+2018/03/29 15:00:39.248 [D] 更新数据库信息,ID: 78
+2018/03/29 15:00:39.248 [D] 执行 commit 逻辑  执行步骤: 1
+2018/03/29 15:00:39.248 [D] post 请求返回内容: {"message":"confirm","type":"try api","code":200,"error_code":0,"error_message":"","data":"{\"message\": \"try\"}"}
+2018/03/29 15:00:39.248 [D] post 请求返回内容: {"message":"confirm","type":"try api","code":0,"error_code":401,"error_message":"something was wrong","data":"{\"message\": \"try\"}"}
+2018/03/29 15:00:39.248 [D] 打印当前中断状态时的事务状态 {"type":"async","Task":[{"api":"http://localhost:8899/api/test","try":"{\"message\": \"try\"}","confirm":"{\"message\":\"confirm\"}","cancel":"{\"message\":\"cancel\"}","step":0,"try_status":"","commit_status":"done","cancel_status":""},{"api":"http://localhost:8899/api/test_confirm_fault","try":"{\"message\": \"try\"}","confirm":"{\"message\":\"confirm\"}","cancel":"{\"message\": \"cancel\"}","step":0,"try_status":"","commit_status":"false","cancel_status":""}],"exec_num":1,"exec_time":0,"ID":78,"step":1,"error_msg":""}
+2018/03/29 15:00:39.249 [D] post 请求返回内容: {"message":"cancel","type":"cancel api","code":200,"error_code":0,"error_message":"","data":"{\"message\": \"try\"}"}
+2018/03/29 15:00:39.249 [D] 打印获取当前的返回状态 {"code":200,"data":"{\"message\": \"try\"}","error_message":"","API":"http://localhost:8899/api/test/cancel","Index":0,"error_code":0}
+2018/03/29 15:01:38.771 [D] mq reader is starting
+2018/03/29 15:01:47.786 [D] post 请求返回内容: {"message":"try","type":"try api","code":200,"error_code":0,"error_message":"","data":"{\"message\": \"try\"}"}
+2018/03/29 15:01:47.786 [D] post 请求返回内容: {"message":"try","type":"try api","code":200,"error_code":0,"error_message":"","data":"{\"message\": \"try\"}"}
+2018/03/29 15:01:47.786 [D] try 操作成功, ID: 78 1
+2018/03/29 15:01:47.786 [D] 持久化状态,ID: 78
+2018/03/29 15:01:47.791 [D] 更新数据库信息,ID: 78
+2018/03/29 15:01:47.791 [D] 执行 commit 逻辑  执行步骤: 1
+2018/03/29 15:01:47.791 [D] post 请求返回内容: {"message":"confirm","type":"try api","code":200,"error_code":0,"error_message":"","data":"{\"message\": \"try\"}"}
+2018/03/29 15:01:47.791 [D] post 请求返回内容: {"message":"confirm","type":"try api","code":0,"error_code":401,"error_message":"something was wrong","data":"{\"message\": \"try\"}"}
+2018/03/29 15:01:47.792 [D] 打印当前中断状态时的事务状态 {"type":"async","Task":[{"api":"http://localhost:8899/api/test","try":"{\"message\": \"try\"}","confirm":"{\"message\":\"confirm\"}","cancel":"{\"message\":\"cancel\"}","step":0,"try_status":"","commit_status":"done","cancel_status":""},{"api":"http://localhost:8899/api/test_confirm_fault","try":"{\"message\": \"try\"}","confirm":"{\"message\":\"confirm\"}","cancel":"{\"message\": \"cancel\"}","step":0,"try_status":"","commit_status":"false","cancel_status":""}],"exec_num":1,"exec_time":0,"ID":78,"step":1,"error_msg":""}
+2018/03/29 15:01:47.792 [D] post 请求返回内容: {"message":"cancel","type":"cancel api","code":200,"error_code":0,"error_message":"","data":"{\"message\": \"try\"}"}
+2018/03/29 15:01:47.792 [D] 打印获取当前的返回状态 {"code":200,"data":"{\"message\": \"try\"}","error_message":"","API":"http://localhost:8899/api/test/cancel","Index":0,"error_code":0}
+2018/03/29 15:32:24.175 [D] mq reader is starting
+2018/03/29 15:32:45.464 [D] already send msg, key: ts_queue_79
+2018/03/29 15:32:51.371 [D] post 请求返回内容: {"message":"try","type":"try api","code":200,"error_code":0,"error_message":"","data":"{\"message\": \"try\"}"}
+2018/03/29 15:32:51.371 [D] post 请求返回内容: {"message":"try","type":"try api","code":200,"error_code":0,"error_message":"","data":"{\"message\": \"try\"}"}
+2018/03/29 15:32:51.371 [D] try 操作成功, ID: 79 1
+2018/03/29 15:32:51.371 [D] 持久化状态,ID: 79
+2018/03/29 15:32:51.375 [D] 更新数据库信息,ID: 79
+2018/03/29 15:32:51.375 [D] 执行 commit 逻辑  执行步骤: 1
+2018/03/29 15:32:51.375 [D] post 请求返回内容: {"message":"confirm","type":"try api","code":0,"error_code":401,"error_message":"something was wrong","data":"{\"message\": \"try\"}"}
+2018/03/29 15:32:51.375 [D] post 请求返回内容: {"message":"confirm","type":"try api","code":200,"error_code":0,"error_message":"","data":"{\"message\": \"try\"}"}
+2018/03/29 15:32:51.375 [D] 打印当前中断状态时的事务状态 {"type":"async","Task":[{"api":"http://localhost:8899/api/test","try":"{\"message\": \"try\"}","confirm":"{\"message\":\"confirm\"}","cancel":"{\"message\":\"cancel\"}","step":0,"try_status":"","commit_status":"done","cancel_status":""},{"api":"http://localhost:8899/api/test_confirm_fault","try":"{\"message\": \"try\"}","confirm":"{\"message\":\"confirm\"}","cancel":"{\"message\": \"cancel\"}","step":0,"try_status":"","commit_status":"false","cancel_status":""}],"exec_num":1,"exec_time":0,"ID":79,"step":1,"error_msg":""}
+2018/03/29 15:32:51.376 [D] post 请求返回内容: {"message":"cancel","type":"cancel api","code":200,"error_code":0,"error_message":"","data":"{\"message\": \"try\"}"}
+2018/03/29 15:32:51.376 [D] 打印获取当前的返回状态 {"code":200,"data":"{\"message\": \"try\"}","error_message":"","API":"http://localhost:8899/api/test/cancel","Index":0,"error_code":0}
+2018/03/29 15:32:51.378 [D] 取消事务时插入数据库内容: {"type":"async","Task":[{"api":"http://localhost:8899/api/test","try":"{\"message\": \"try\"}","confirm":"{\"message\":\"confirm\"}","cancel":"{\"message\":\"cancel\"}","step":0,"try_status":"","commit_status":"done","cancel_status":"done"},{"api":"http://localhost:8899/api/test_confirm_fault","try":"{\"message\": \"try\"}","confirm":"{\"message\":\"confirm\"}","cancel":"{\"message\": \"cancel\"}","step":0,"try_status":"","commit_status":"false","cancel_status":""}],"exec_num":1,"exec_time":0,"ID":79,"step":1,"error_msg":""} 1522308771 [] 79
+2018/03/29 15:32:51.378 [D] 此处应该向某处发送错误通知
+2018/03/29 15:40:58.923 [D] mq reader is starting
+2018/03/29 15:41:01.664 [D] already send msg, key: ts_queue_80
+2018/03/29 15:41:07.937 [D] post 请求返回内容: {"message":"try","type":"try api","code":200,"error_code":0,"error_message":"","data":"{\"message\": \"try\"}"}
+2018/03/29 15:41:07.937 [D] post 请求返回内容: {"message":"try","type":"try api","code":200,"error_code":0,"error_message":"","data":"{\"message\": \"try\"}"}
+2018/03/29 15:41:07.937 [D] try 操作成功, ID: 80 1
+2018/03/29 15:41:07.937 [D] 持久化状态,ID: 80
+2018/03/29 15:41:07.942 [D] 更新数据库信息,ID: 80
+2018/03/29 15:41:07.942 [D] 执行 commit 逻辑  执行步骤: 1
+2018/03/29 15:41:07.942 [D] post 请求返回内容: {"message":"confirm","type":"try api","code":200,"error_code":0,"error_message":"","data":"{\"message\": \"try\"}"}
+2018/03/29 15:41:07.942 [D] post 请求返回内容: {"message":"confirm","type":"try api","code":0,"error_code":401,"error_message":"something was wrong","data":"{\"message\": \"try\"}"}
+2018/03/29 15:41:07.942 [D] 打印当前中断状态时的事务状态 {"type":"async","Task":[{"api":"http://localhost:8899/api/test","try":"{\"message\": \"try\"}","confirm":"{\"message\":\"confirm\"}","cancel":"{\"message\":\"cancel\"}","step":0,"try_status":"","commit_status":"done","cancel_status":""},{"api":"http://localhost:8899/api/test_confirm_fault","try":"{\"message\": \"try\"}","confirm":"{\"message\":\"confirm\"}","cancel":"{\"message\": \"cancel\"}","step":0,"try_status":"","commit_status":"false","cancel_status":""}],"exec_num":1,"exec_time":0,"ID":80,"step":1,"error_msg":""}
+2018/03/29 15:41:07.943 [D] post 请求返回内容: {"message":"cancel","type":"cancel api","code":200,"error_code":0,"error_message":"","data":"{\"message\": \"try\"}"}
+2018/03/29 15:41:07.943 [D] 打印获取当前的返回状态 {"code":200,"data":"{\"message\": \"try\"}","error_message":"","API":"http://localhost:8899/api/test/cancel","Index":0,"error_code":0}
+2018/03/29 15:41:07.945 [D] 取消事务时插入数据库内容: {"type":"async","Task":[{"api":"http://localhost:8899/api/test","try":"{\"message\": \"try\"}","confirm":"{\"message\":\"confirm\"}","cancel":"{\"message\":\"cancel\"}","step":0,"try_status":"","commit_status":"done","cancel_status":"done"},{"api":"http://localhost:8899/api/test_confirm_fault","try":"{\"message\": \"try\"}","confirm":"{\"message\":\"confirm\"}","cancel":"{\"message\": \"cancel\"}","step":0,"try_status":"","commit_status":"false","cancel_status":""}],"exec_num":1,"exec_time":0,"ID":80,"step":1,"error_msg":""} 1522309267 [{"code":200,"data":"{\"message\": \"try\"}","error_message":"","API":"http://localhost:8899/api/test/cancel","Index":0,"error_code":0}] 80
+2018/03/29 15:41:07.945 [D] 此处应该向某处发送错误通知
+2018/03/29 15:45:29.224 [D] mq reader is starting
+2018/03/29 15:45:32.637 [D] already send msg, key: ts_queue_81
+2018/03/29 15:45:38.234 [D] post 请求返回内容: {"message":"try","type":"try api","code":200,"error_code":0,"error_message":"","data":"{\"message\": \"try\"}"}
+2018/03/29 15:45:38.235 [D] post 请求返回内容: {"message":"try","type":"try api","code":200,"error_code":0,"error_message":"","data":"{\"message\": \"try\"}"}
+2018/03/29 15:45:38.235 [D] try 操作成功, ID: 81 1
+2018/03/29 15:45:38.235 [D] 持久化状态,ID: 81
+2018/03/29 15:45:38.238 [D] 更新数据库信息,ID: 81
+2018/03/29 15:45:38.238 [D] 执行 commit 逻辑  执行步骤: 1
+2018/03/29 15:45:38.239 [D] post 请求返回内容: {"message":"confirm","type":"try api","code":200,"error_code":0,"error_message":"","data":"{\"message\": \"try\"}"}
+2018/03/29 15:45:38.239 [D] post 请求返回内容: {"message":"confirm","type":"try api","code":0,"error_code":401,"error_message":"something was wrong","data":"{\"message\": \"try\"}"}
+2018/03/29 15:45:38.239 [D] 打印当前中断状态时的事务状态 {"type":"async","Task":[{"api":"http://localhost:8899/api/test","try":"{\"message\": \"try\"}","confirm":"{\"message\":\"confirm\"}","cancel":"{\"message\":\"cancel\"}","step":0,"try_status":"","commit_status":"done","cancel_status":""},{"api":"http://localhost:8899/api/test_confirm_fault","try":"{\"message\": \"try\"}","confirm":"{\"message\":\"confirm\"}","cancel":"{\"message\": \"cancel\"}","step":0,"try_status":"","commit_status":"false","cancel_status":""}],"exec_num":1,"exec_time":0,"ID":81,"step":1,"error_msg":""}
+2018/03/29 15:45:38.239 [D] post 请求返回内容: {"message":"cancel","type":"cancel api","code":200,"error_code":0,"error_message":"","data":"{\"message\": \"try\"}"}
+2018/03/29 15:45:38.239 [D] 打印获取当前的返回状态 {"code":200,"data":"{\"message\": \"try\"}","error_message":"","API":"http://localhost:8899/api/test/cancel","Index":0,"error_code":0}
+2018/03/29 15:45:38.241 [D] 取消事务时插入数据库内容: {"type":"async","Task":[{"api":"http://localhost:8899/api/test","try":"{\"message\": \"try\"}","confirm":"{\"message\":\"confirm\"}","cancel":"{\"message\":\"cancel\"}","step":0,"try_status":"","commit_status":"done","cancel_status":"done"},{"api":"http://localhost:8899/api/test_confirm_fault","try":"{\"message\": \"try\"}","confirm":"{\"message\":\"confirm\"}","cancel":"{\"message\": \"cancel\"}","step":0,"try_status":"","commit_status":"false","cancel_status":""}],"exec_num":1,"exec_time":0,"ID":81,"step":1,"error_msg":""} 1522309538 [{"code":200,"data":"{\"message\": \"try\"}","error_message":"","API":"http://localhost:8899/api/test/cancel","Index":0,"error_code":0}] 81
+2018/03/29 15:45:38.241 [D] 此处应该向某处发送错误通知
+2018/03/29 16:12:39.235 [D] mq reader is starting
+2018/03/29 16:13:15.281 [D] already send msg, key: ts_queue_82
+2018/03/29 16:13:15.531 [D] post 请求返回内容: {"message":"try","type":"try api","code":200,"error_code":0,"error_message":"","data":"{\"message\": \"try\"}"}
+2018/03/29 16:13:15.532 [D] post 请求返回内容: {"message":"try","type":"try api","code":200,"error_code":0,"error_message":"","data":"{\"message\": \"try\"}"}
+2018/03/29 16:13:15.532 [D] try 操作成功, ID: 82 1
+2018/03/29 16:13:15.532 [D] 持久化状态,ID: 82
+2018/03/29 16:13:15.536 [D] 更新数据库信息,ID: 82
+2018/03/29 16:13:15.536 [D] 执行 commit 逻辑  执行步骤: 1
+2018/03/29 16:13:15.537 [D] post 请求返回内容: {"message":"confirm","type":"try api","code":200,"error_code":0,"error_message":"","data":"{\"message\": \"try\"}"}
+2018/03/29 16:13:15.537 [D] post 请求返回内容: {"message":"confirm","type":"try api","code":0,"error_code":401,"error_message":"something was wrong","data":"{\"message\": \"try\"}"}
+2018/03/29 16:13:15.537 [D] 打印当前中断状态时的事务状态 {"type":"async","Task":[{"api":"http://localhost:8899/api/test","try":"{\"message\": \"try\"}","confirm":"{\"message\":\"confirm\"}","cancel":"{\"message\":\"cancel\"}","step":0,"try_status":"","commit_status":"done","cancel_status":""},{"api":"http://localhost:8899/api/test_confirm_fault","try":"{\"message\": \"try\"}","confirm":"{\"message\":\"confirm\"}","cancel":"{\"message\": \"cancel\"}","step":0,"try_status":"","commit_status":"false","cancel_status":""}],"exec_num":1,"exec_time":0,"ID":82,"step":1,"error_msg":""}
+2018/03/29 16:13:15.537 [D] post 请求返回内容: {"message":"cancel","type":"cancel api","code":200,"error_code":0,"error_message":"","data":"{\"message\": \"try\"}"}
+2018/03/29 16:13:15.537 [D] 打印获取当前的返回状态 {"code":200,"data":"{\"message\": \"try\"}","error_message":"","API":"http://localhost:8899/api/test/cancel","Index":0,"error_code":0}
+2018/03/29 16:13:15.539 [D] 取消事务时插入数据库内容: {"type":"async","Task":[{"api":"http://localhost:8899/api/test","try":"{\"message\": \"try\"}","confirm":"{\"message\":\"confirm\"}","cancel":"{\"message\":\"cancel\"}","step":0,"try_status":"","commit_status":"done","cancel_status":"done"},{"api":"http://localhost:8899/api/test_confirm_fault","try":"{\"message\": \"try\"}","confirm":"{\"message\":\"confirm\"}","cancel":"{\"message\": \"cancel\"}","step":0,"try_status":"","commit_status":"false","cancel_status":""}],"exec_num":1,"exec_time":0,"ID":82,"step":1,"error_msg":""} 1522311195 [{"code":200,"data":"{\"message\": \"try\"}","error_message":"","API":"http://localhost:8899/api/test/cancel","Index":0,"error_code":0}] 82
+2018/03/29 16:13:15.539 [D] 此处应该向某处发送错误通知
+2018/03/29 16:15:34.534 [D] already send msg, key: ts_queue_83
+2018/03/29 16:15:41.059 [D] post 请求返回内容: {"message":"try","type":"try api","code":200,"error_code":0,"error_message":"","data":"{\"message\": \"try\"}"}
+2018/03/29 16:15:41.059 [D] post 请求返回内容: {"message":"try","type":"try api","code":200,"error_code":0,"error_message":"","data":"{\"message\": \"try\"}"}
+2018/03/29 16:15:41.059 [D] try 操作成功, ID: 83 1
+2018/03/29 16:15:41.059 [D] 持久化状态,ID: 83
+2018/03/29 16:15:41.062 [D] 更新数据库信息,ID: 83
+2018/03/29 16:15:41.062 [D] 执行 commit 逻辑  执行步骤: 1
+2018/03/29 16:15:41.063 [D] post 请求返回内容: {"message":"confirm","type":"try api","code":200,"error_code":0,"error_message":"","data":"{\"message\": \"try\"}"}
+2018/03/29 16:15:41.063 [D] post 请求返回内容: {"message":"confirm","type":"try api","code":0,"error_code":401,"error_message":"something was wrong","data":"{\"message\": \"try\"}"}
+2018/03/29 16:15:41.063 [D] 打印当前中断状态时的事务状态 {"type":"async","Task":[{"api":"http://localhost:8899/api/test","try":"{\"message\": \"try\"}","confirm":"{\"message\":\"confirm\"}","cancel":"{\"message\":\"cancel\"}","step":0,"try_status":"","commit_status":"done","cancel_status":""},{"api":"http://localhost:8899/api/test_cancel_fault","try":"{\"message\": \"try\"}","confirm":"{\"message\":\"confirm\"}","cancel":"{\"message\": \"cancel\"}","step":0,"try_status":"","commit_status":"false","cancel_status":""}],"exec_num":1,"exec_time":0,"ID":83,"step":1,"error_msg":""}
+2018/03/29 16:15:41.063 [D] post 请求返回内容: {"message":"cancel","type":"cancel api","code":200,"error_code":0,"error_message":"","data":"{\"message\": \"try\"}"}
+2018/03/29 16:15:41.063 [D] 打印获取当前的返回状态 {"code":200,"data":"{\"message\": \"try\"}","error_message":"","API":"http://localhost:8899/api/test/cancel","Index":0,"error_code":0}
+2018/03/29 16:15:41.065 [D] 取消事务时插入数据库内容: {"type":"async","Task":[{"api":"http://localhost:8899/api/test","try":"{\"message\": \"try\"}","confirm":"{\"message\":\"confirm\"}","cancel":"{\"message\":\"cancel\"}","step":0,"try_status":"","commit_status":"done","cancel_status":"done"},{"api":"http://localhost:8899/api/test_cancel_fault","try":"{\"message\": \"try\"}","confirm":"{\"message\":\"confirm\"}","cancel":"{\"message\": \"cancel\"}","step":0,"try_status":"","commit_status":"false","cancel_status":""}],"exec_num":1,"exec_time":0,"ID":83,"step":1,"error_msg":""} 1522311341 [{"code":200,"data":"{\"message\": \"try\"}","error_message":"","API":"http://localhost:8899/api/test/cancel","Index":0,"error_code":0}] 83
+2018/03/29 16:15:41.065 [D] 此处应该向某处发送错误通知
+2018/03/29 16:17:57.479 [D] mq reader is starting
+2018/03/29 16:18:06.487 [D] post 请求返回内容: {"message":"try","type":"try api","code":200,"error_code":0,"error_message":"","data":"{\"message\": \"try\"}"}
+2018/03/29 16:18:06.487 [D] post 请求返回内容: {"message":"try","type":"try api","code":200,"error_code":0,"error_message":"","data":"{\"message\": \"try\"}"}
+2018/03/29 16:18:06.487 [D] try 操作成功, ID: 83 1
+2018/03/29 16:18:06.487 [D] 持久化状态,ID: 83
+2018/03/29 16:18:06.490 [D] 更新数据库信息,ID: 83
+2018/03/29 16:18:06.490 [D] 执行 commit 逻辑  执行步骤: 1
+2018/03/29 16:18:06.491 [D] post 请求返回内容: {"message":"confirm","type":"try api","code":0,"error_code":401,"error_message":"something was wrong","data":"{\"message\": \"try\"}"}
+2018/03/29 16:18:06.491 [D] post 请求返回内容: {"message":"confirm","type":"try api","code":200,"error_code":0,"error_message":"","data":"{\"message\": \"try\"}"}
+2018/03/29 16:18:06.491 [D] 打印当前中断状态时的事务状态 {"type":"async","Task":[{"api":"http://localhost:8899/api/test","try":"{\"message\": \"try\"}","confirm":"{\"message\":\"confirm\"}","cancel":"{\"message\":\"cancel\"}","step":0,"try_status":"","commit_status":"done","cancel_status":""},{"api":"http://localhost:8899/api/test_cancel_fault","try":"{\"message\": \"try\"}","confirm":"{\"message\":\"confirm\"}","cancel":"{\"message\": \"cancel\"}","step":0,"try_status":"","commit_status":"false","cancel_status":""}],"exec_num":1,"exec_time":0,"ID":83,"step":1,"error_msg":""}
+2018/03/29 16:18:06.491 [D] post 请求返回内容: {"message":"cancel","type":"cancel api","code":200,"error_code":0,"error_message":"","data":"{\"message\": \"try\"}"}
+2018/03/29 16:18:06.491 [D] 打印获取当前的返回状态 {"code":200,"data":"{\"message\": \"try\"}","error_message":"","API":"http://localhost:8899/api/test/cancel","Index":0,"error_code":0}
+2018/03/29 16:18:06.493 [D] 取消事务时插入数据库内容: {"type":"async","Task":[{"api":"http://localhost:8899/api/test","try":"{\"message\": \"try\"}","confirm":"{\"message\":\"confirm\"}","cancel":"{\"message\":\"cancel\"}","step":0,"try_status":"","commit_status":"done","cancel_status":"done"},{"api":"http://localhost:8899/api/test_cancel_fault","try":"{\"message\": \"try\"}","confirm":"{\"message\":\"confirm\"}","cancel":"{\"message\": \"cancel\"}","step":0,"try_status":"","commit_status":"false","cancel_status":""}],"exec_num":1,"exec_time":0,"ID":83,"step":1,"error_msg":""} 1522311486 [{"code":200,"data":"{\"message\": \"try\"}","error_message":"","API":"http://localhost:8899/api/test/cancel","Index":0,"error_code":0}] 83
+2018/03/29 16:18:06.493 [D] 此处应该向某处发送错误通知
+2018/03/29 16:18:06.732 [D] already send msg, key: ts_queue_84
+2018/03/29 16:18:15.586 [D] post 请求返回内容: {"message":"try","type":"try api","code":200,"error_code":0,"error_message":"","data":"{\"message\": \"try\"}"}
+2018/03/29 16:18:15.586 [D] post 请求返回内容: {"message":"try","type":"try api","code":200,"error_code":0,"error_message":"","data":"{\"message\": \"try\"}"}
+2018/03/29 16:18:15.586 [D] try 操作成功, ID: 84 1
+2018/03/29 16:18:15.586 [D] 持久化状态,ID: 84
+2018/03/29 16:18:15.590 [D] 更新数据库信息,ID: 84
+2018/03/29 16:18:15.590 [D] 执行 commit 逻辑  执行步骤: 1
+2018/03/29 16:18:15.590 [D] post 请求返回内容: {"message":"confirm","type":"try api","code":0,"error_code":401,"error_message":"something was wrong","data":"{\"message\": \"try\"}"}
+2018/03/29 16:18:15.590 [D] post 请求返回内容: {"message":"confirm","type":"try api","code":200,"error_code":0,"error_message":"","data":"{\"message\": \"try\"}"}
+2018/03/29 16:18:15.590 [D] 打印当前中断状态时的事务状态 {"type":"async","Task":[{"api":"http://localhost:8899/api/test","try":"{\"message\": \"try\"}","confirm":"{\"message\":\"confirm\"}","cancel":"{\"message\":\"cancel\"}","step":0,"try_status":"","commit_status":"done","cancel_status":""},{"api":"http://localhost:8899/api/test_cancel_fault","try":"{\"message\": \"try\"}","confirm":"{\"message\":\"confirm\"}","cancel":"{\"message\": \"cancel\"}","step":0,"try_status":"","commit_status":"false","cancel_status":""}],"exec_num":1,"exec_time":0,"ID":84,"step":1,"error_msg":""}
+2018/03/29 16:18:15.591 [D] post 请求返回内容: {"message":"cancel","type":"cancel api","code":200,"error_code":0,"error_message":"","data":"{\"message\": \"try\"}"}
+2018/03/29 16:18:15.591 [D] 打印获取当前的返回状态 {"code":200,"data":"{\"message\": \"try\"}","error_message":"","API":"http://localhost:8899/api/test/cancel","Index":0,"error_code":0}
+2018/03/29 16:18:15.593 [D] 取消事务时插入数据库内容: {"type":"async","Task":[{"api":"http://localhost:8899/api/test","try":"{\"message\": \"try\"}","confirm":"{\"message\":\"confirm\"}","cancel":"{\"message\":\"cancel\"}","step":0,"try_status":"","commit_status":"done","cancel_status":"done"},{"api":"http://localhost:8899/api/test_cancel_fault","try":"{\"message\": \"try\"}","confirm":"{\"message\":\"confirm\"}","cancel":"{\"message\": \"cancel\"}","step":0,"try_status":"","commit_status":"false","cancel_status":""}],"exec_num":1,"exec_time":0,"ID":84,"step":1,"error_msg":""} 1522311495 [{"code":200,"data":"{\"message\": \"try\"}","error_message":"","API":"http://localhost:8899/api/test/cancel","Index":0,"error_code":0}] 84
+2018/03/29 16:18:15.593 [D] 此处应该向某处发送错误通知
+2018/03/29 16:18:55.534 [D] mq reader is starting
+2018/03/29 16:18:58.079 [D] already send msg, key: ts_queue_85
+2018/03/29 16:19:04.543 [D] post 请求返回内容: {"message":"try","type":"try api","code":200,"error_code":0,"error_message":"","data":"{\"message\": \"try\"}"}
+2018/03/29 16:19:04.543 [D] post 请求返回内容: {"message":"try","type":"try api","code":200,"error_code":0,"error_message":"","data":"{\"message\": \"try\"}"}
+2018/03/29 16:19:04.543 [D] try 操作成功, ID: 83 1
+2018/03/29 16:19:04.543 [D] 持久化状态,ID: 83
+2018/03/29 16:19:04.547 [D] 更新数据库信息,ID: 83
+2018/03/29 16:19:04.547 [D] 执行 commit 逻辑  执行步骤: 1
+2018/03/29 16:19:04.548 [D] post 请求返回内容: {"message":"confirm","type":"try api","code":0,"error_code":401,"error_message":"something was wrong","data":"{\"message\": \"try\"}"}
+2018/03/29 16:19:04.548 [D] post 请求返回内容: {"message":"confirm","type":"try api","code":200,"error_code":0,"error_message":"","data":"{\"message\": \"try\"}"}
+2018/03/29 16:19:04.548 [D] 打印当前中断状态时的事务状态 {"type":"async","Task":[{"api":"http://localhost:8899/api/test","try":"{\"message\": \"try\"}","confirm":"{\"message\":\"confirm\"}","cancel":"{\"message\":\"cancel\"}","step":0,"try_status":"","commit_status":"done","cancel_status":""},{"api":"http://localhost:8899/api/test_cancel_fault","try":"{\"message\": \"try\"}","confirm":"{\"message\":\"confirm\"}","cancel":"{\"message\": \"cancel\"}","step":0,"try_status":"","commit_status":"false","cancel_status":""}],"exec_num":1,"exec_time":0,"ID":83,"step":1,"error_msg":""}
+2018/03/29 16:19:04.548 [D] post 请求返回内容: {"message":"cancel","type":"cancel api","code":200,"error_code":0,"error_message":"","data":"{\"message\": \"try\"}"}
+2018/03/29 16:19:04.549 [D] 打印获取当前的返回状态 {"code":200,"data":"{\"message\": \"try\"}","error_message":"","API":"http://localhost:8899/api/test/cancel","Index":0,"error_code":0}
+2018/03/29 16:19:04.551 [D] 取消事务时插入数据库内容: {"type":"async","Task":[{"api":"http://localhost:8899/api/test","try":"{\"message\": \"try\"}","confirm":"{\"message\":\"confirm\"}","cancel":"{\"message\":\"cancel\"}","step":0,"try_status":"","commit_status":"done","cancel_status":"done"},{"api":"http://localhost:8899/api/test_cancel_fault","try":"{\"message\": \"try\"}","confirm":"{\"message\":\"confirm\"}","cancel":"{\"message\": \"cancel\"}","step":0,"try_status":"","commit_status":"false","cancel_status":""}],"exec_num":1,"exec_time":0,"ID":83,"step":1,"error_msg":""} 1522311544 [{"code":200,"data":"{\"message\": \"try\"}","error_message":"","API":"http://localhost:8899/api/test/cancel","Index":0,"error_code":0}] 83
+2018/03/29 16:19:04.551 [D] 此处应该向某处发送错误通知
+2018/03/29 16:19:04.551 [D] post 请求返回内容: {"message":"try","type":"try api","code":200,"error_code":0,"error_message":"","data":"{\"message\": \"try\"}"}
+2018/03/29 16:19:04.551 [D] post 请求返回内容: {"message":"try","type":"try api","code":200,"error_code":0,"error_message":"","data":"{\"message\": \"try\"}"}
+2018/03/29 16:19:04.551 [D] try 操作成功, ID: 84 1
+2018/03/29 16:19:04.551 [D] 持久化状态,ID: 84
+2018/03/29 16:19:04.553 [D] 更新数据库信息,ID: 84
+2018/03/29 16:19:04.553 [D] 执行 commit 逻辑  执行步骤: 1
+2018/03/29 16:19:04.553 [D] post 请求返回内容: {"message":"confirm","type":"try api","code":0,"error_code":401,"error_message":"something was wrong","data":"{\"message\": \"try\"}"}
+2018/03/29 16:19:04.553 [D] post 请求返回内容: {"message":"confirm","type":"try api","code":200,"error_code":0,"error_message":"","data":"{\"message\": \"try\"}"}
+2018/03/29 16:19:04.554 [D] 打印当前中断状态时的事务状态 {"type":"async","Task":[{"api":"http://localhost:8899/api/test","try":"{\"message\": \"try\"}","confirm":"{\"message\":\"confirm\"}","cancel":"{\"message\":\"cancel\"}","step":0,"try_status":"","commit_status":"done","cancel_status":""},{"api":"http://localhost:8899/api/test_cancel_fault","try":"{\"message\": \"try\"}","confirm":"{\"message\":\"confirm\"}","cancel":"{\"message\": \"cancel\"}","step":0,"try_status":"","commit_status":"false","cancel_status":""}],"exec_num":1,"exec_time":0,"ID":84,"step":1,"error_msg":""}
+2018/03/29 16:19:04.554 [D] post 请求返回内容: {"message":"cancel","type":"cancel api","code":200,"error_code":0,"error_message":"","data":"{\"message\": \"try\"}"}
+2018/03/29 16:19:04.554 [D] 打印获取当前的返回状态 {"code":200,"data":"{\"message\": \"try\"}","error_message":"","API":"http://localhost:8899/api/test/cancel","Index":0,"error_code":0}
+2018/03/29 16:19:04.556 [D] 取消事务时插入数据库内容: {"type":"async","Task":[{"api":"http://localhost:8899/api/test","try":"{\"message\": \"try\"}","confirm":"{\"message\":\"confirm\"}","cancel":"{\"message\":\"cancel\"}","step":0,"try_status":"","commit_status":"done","cancel_status":"done"},{"api":"http://localhost:8899/api/test_cancel_fault","try":"{\"message\": \"try\"}","confirm":"{\"message\":\"confirm\"}","cancel":"{\"message\": \"cancel\"}","step":0,"try_status":"","commit_status":"false","cancel_status":""}],"exec_num":1,"exec_time":0,"ID":84,"step":1,"error_msg":""} 1522311544 [{"code":200,"data":"{\"message\": \"try\"}","error_message":"","API":"http://localhost:8899/api/test/cancel","Index":0,"error_code":0}] 84
+2018/03/29 16:19:04.556 [D] 此处应该向某处发送错误通知
+2018/03/29 16:19:04.556 [D] post 请求返回内容: {"message":"try","type":"try api","code":200,"error_code":0,"error_message":"","data":"{\"message\": \"try\"}"}
+2018/03/29 16:19:04.557 [D] post 请求返回内容: {"message":"try","type":"try api","code":200,"error_code":0,"error_message":"","data":"{\"message\": \"try\"}"}
+2018/03/29 16:19:04.557 [D] try 操作成功, ID: 85 1
+2018/03/29 16:19:04.557 [D] 持久化状态,ID: 85
+2018/03/29 16:19:04.558 [D] 更新数据库信息,ID: 85
+2018/03/29 16:19:04.558 [D] 执行 commit 逻辑  执行步骤: 1
+2018/03/29 16:19:04.559 [D] post 请求返回内容: {"message":"confirm","type":"try api","code":200,"error_code":0,"error_message":"","data":"{\"message\": \"try\"}"}
+2018/03/29 16:19:04.559 [D] post 请求返回内容: {"message":"confirm","type":"try api","code":0,"error_code":401,"error_message":"something was wrong","data":"{\"message\": \"try\"}"}
+2018/03/29 16:19:04.559 [D] 打印当前中断状态时的事务状态 {"type":"async","Task":[{"api":"http://localhost:8899/api/test","try":"{\"message\": \"try\"}","confirm":"{\"message\":\"confirm\"}","cancel":"{\"message\":\"cancel\"}","step":0,"try_status":"","commit_status":"done","cancel_status":""},{"api":"http://localhost:8899/api/test_cancel_fault","try":"{\"message\": \"try\"}","confirm":"{\"message\":\"confirm\"}","cancel":"{\"message\": \"cancel\"}","step":0,"try_status":"","commit_status":"false","cancel_status":""}],"exec_num":1,"exec_time":0,"ID":85,"step":1,"error_msg":""}
+2018/03/29 16:19:04.559 [D] post 请求返回内容: {"message":"cancel","type":"cancel api","code":200,"error_code":0,"error_message":"","data":"{\"message\": \"try\"}"}
+2018/03/29 16:19:04.559 [D] 打印获取当前的返回状态 {"code":200,"data":"{\"message\": \"try\"}","error_message":"","API":"http://localhost:8899/api/test/cancel","Index":0,"error_code":0}
+2018/03/29 16:19:04.561 [D] 取消事务时插入数据库内容: {"type":"async","Task":[{"api":"http://localhost:8899/api/test","try":"{\"message\": \"try\"}","confirm":"{\"message\":\"confirm\"}","cancel":"{\"message\":\"cancel\"}","step":0,"try_status":"","commit_status":"done","cancel_status":"done"},{"api":"http://localhost:8899/api/test_cancel_fault","try":"{\"message\": \"try\"}","confirm":"{\"message\":\"confirm\"}","cancel":"{\"message\": \"cancel\"}","step":0,"try_status":"","commit_status":"false","cancel_status":""}],"exec_num":1,"exec_time":0,"ID":85,"step":1,"error_msg":""} 1522311544 [{"code":200,"data":"{\"message\": \"try\"}","error_message":"","API":"http://localhost:8899/api/test/cancel","Index":0,"error_code":0}] 85
+2018/03/29 16:19:04.561 [D] 此处应该向某处发送错误通知
+2018/03/29 16:22:24.329 [D] mq reader is starting
+2018/03/29 16:22:26.982 [D] already send msg, key: ts_queue_86
+2018/03/29 16:22:33.340 [D] post 请求返回内容: {"message":"try","type":"try api","code":200,"error_code":0,"error_message":"","data":"{\"message\": \"try\"}"}
+2018/03/29 16:22:33.340 [D] post 请求返回内容: {"message":"try","type":"try api","code":200,"error_code":0,"error_message":"","data":"{\"message\": \"try\"}"}
+2018/03/29 16:22:33.340 [D] try 操作成功, ID: 86 1
+2018/03/29 16:22:33.340 [D] 持久化状态,ID: 86
+2018/03/29 16:22:33.342 [D] 更新数据库信息,ID: 86
+2018/03/29 16:22:33.342 [D] 执行 commit 逻辑  执行步骤: 1
+2018/03/29 16:22:33.343 [D] post 请求返回内容: {"message":"confirm","type":"try api","code":200,"error_code":0,"error_message":"","data":"{\"message\": \"try\"}"}
+2018/03/29 16:22:33.343 [D] post 请求返回内容: {"message":"confirm","type":"try api","code":0,"error_code":401,"error_message":"something was wrong","data":"{\"message\": \"try\"}"}
+2018/03/29 16:22:33.343 [D] 打印当前中断状态时的事务状态 {"type":"async","Task":[{"api":"http://localhost:8899/api/test","try":"{\"message\": \"try\"}","confirm":"{\"message\":\"confirm\"}","cancel":"{\"message\":\"cancel\"}","step":0,"try_status":"","commit_status":"done","cancel_status":""},{"api":"http://localhost:8899/api/test_cancel_fault","try":"{\"message\": \"try\"}","confirm":"{\"message\":\"confirm\"}","cancel":"{\"message\": \"cancel\"}","step":0,"try_status":"","commit_status":"false","cancel_status":""}],"exec_num":1,"exec_time":0,"ID":86,"step":1,"error_msg":""}
+2018/03/29 16:22:33.343 [D] post 请求返回内容: {"message":"cancel","type":"cancel api","code":200,"error_code":0,"error_message":"","data":"{\"message\": \"try\"}"}
+2018/03/29 16:22:33.343 [D] 打印获取当前的返回状态 {"code":200,"data":"{\"message\": \"try\"}","error_message":"","API":"http://localhost:8899/api/test/cancel","Index":0,"error_code":0}
+2018/03/29 16:22:33.345 [D] 取消事务时插入数据库内容: {"type":"async","Task":[{"api":"http://localhost:8899/api/test","try":"{\"message\": \"try\"}","confirm":"{\"message\":\"confirm\"}","cancel":"{\"message\":\"cancel\"}","step":0,"try_status":"","commit_status":"done","cancel_status":"done"},{"api":"http://localhost:8899/api/test_cancel_fault","try":"{\"message\": \"try\"}","confirm":"{\"message\":\"confirm\"}","cancel":"{\"message\": \"cancel\"}","step":0,"try_status":"","commit_status":"false","cancel_status":""}],"exec_num":1,"exec_time":0,"ID":86,"step":1,"error_msg":""} 1522311753 [{"code":200,"data":"{\"message\": \"try\"}","error_message":"","API":"http://localhost:8899/api/test/cancel","Index":0,"error_code":0}] 86
+2018/03/29 16:22:33.345 [D] 此处应该向某处发送错误通知
+2018/03/29 16:24:12.198 [D] mq reader is starting
+2018/03/29 16:24:21.212 [D] post 请求返回内容: {"message":"try","type":"try api","code":200,"error_code":0,"error_message":"","data":"{\"message\": \"try\"}"}
+2018/03/29 16:24:21.212 [D] post 请求返回内容: {"message":"try","type":"try api","code":200,"error_code":0,"error_message":"","data":"{\"message\": \"try\"}"}
+2018/03/29 16:24:21.212 [D] try 操作成功, ID: 86 1
+2018/03/29 16:24:21.212 [D] 持久化状态,ID: 86
+2018/03/29 16:24:21.217 [D] 更新数据库信息,ID: 86
+2018/03/29 16:24:21.217 [D] 执行 commit 逻辑  执行步骤: 1
+2018/03/29 16:24:21.217 [D] post 请求返回内容: {"message":"confirm","type":"try api","code":200,"error_code":0,"error_message":"","data":"{\"message\": \"try\"}"}
+2018/03/29 16:24:21.217 [D] post 请求返回内容: {"message":"confirm","type":"try api","code":200,"error_code":0,"error_message":"","data":"{\"message\": \"try\"}"}
+2018/03/29 16:24:21.219 [D] 执行成功的操作完成
+2018/03/29 16:24:21.219 [D] 当前准备执行的任务索引: [0 1]
+2018/03/29 16:28:45.400 [D] already send msg, key: ts_queue_87
+2018/03/29 16:28:54.060 [D] post 请求返回内容: {"message":"try","type":"try api","code":200,"error_code":0,"error_message":"","data":"{\"message\": \"try\"}"}
+2018/03/29 16:28:54.060 [D] post 请求返回内容: {"message":"try","type":"try api","code":200,"error_code":0,"error_message":"","data":"{\"message\": \"try\"}"}
+2018/03/29 16:28:54.060 [D] try 操作成功, ID: 87 1
+2018/03/29 16:28:54.060 [D] 持久化状态,ID: 87
+2018/03/29 16:28:54.062 [D] 更新数据库信息,ID: 87
+2018/03/29 16:28:54.062 [D] 执行 commit 逻辑  执行步骤: 1
+2018/03/29 16:28:54.062 [D] post 请求返回内容: {"message":"confirm","type":"try api","code":200,"error_code":0,"error_message":"","data":"{\"message\": \"try\"}"}
+2018/03/29 16:28:54.062 [D] post 请求返回内容: {"message":"confirm","type":"try api","code":0,"error_code":401,"error_message":"something was wrong","data":"{\"message\": \"try\"}"}
+2018/03/29 16:28:54.062 [D] 打印当前中断状态时的事务状态 {"type":"async","Task":[{"api":"http://localhost:8899/api/test_confirm_fault","try":"{\"message\": \"try\"}","confirm":"{\"message\":\"confirm\"}","cancel":"{\"message\":\"cancel\"}","step":0,"try_status":"","commit_status":"false","cancel_status":""},{"api":"http://localhost:8899/api/test_cancel_fault","try":"{\"message\": \"try\"}","confirm":"{\"message\":\"confirm\"}","cancel":"{\"message\": \"cancel\"}","step":0,"try_status":"","commit_status":"done","cancel_status":""}],"exec_num":1,"exec_time":0,"ID":87,"step":1,"error_msg":""}
+2018/03/29 16:28:54.062 [D] post 请求返回内容: {"message":"cancel","type":"try api","code":0,"error_code":401,"error_message":"something was wrong","data":"{\"message\": \"try\"}"}
+2018/03/29 16:28:54.063 [D] 打印获取当前的返回状态 {"code":401,"data":"{\"message\": \"try\"}","error_message":"something was wrong","API":"http://localhost:8899/api/test_cancel_fault/cancel","Index":1,"error_code":401}
+2018/03/29 16:31:36.143 [D] mq reader is starting
+2018/03/29 16:32:29.526 [D] already send msg, key: ts_queue_88
+2018/03/29 16:32:30.665 [D] post 请求返回内容: {"message":"try","type":"try api","code":200,"error_code":0,"error_message":"","data":"{\"message\": \"try\"}"}
+2018/03/29 16:32:30.665 [D] post 请求返回内容: {"message":"try","type":"try api","code":200,"error_code":0,"error_message":"","data":"{\"message\": \"try\"}"}
+2018/03/29 16:32:30.665 [D] try 操作成功, ID: 88 1
+2018/03/29 16:32:30.665 [D] 持久化状态,ID: 88
+2018/03/29 16:32:30.669 [D] 更新数据库信息,ID: 88
+2018/03/29 16:32:30.669 [D] 执行 commit 逻辑  执行步骤: 1
+2018/03/29 16:32:30.669 [D] post 请求返回内容: {"message":"confirm","type":"try api","code":200,"error_code":0,"error_message":"","data":"{\"message\": \"try\"}"}
+2018/03/29 16:32:30.669 [D] post 请求返回内容: {"message":"confirm","type":"try api","code":0,"error_code":401,"error_message":"something was wrong","data":"{\"message\": \"try\"}"}
+2018/03/29 16:32:30.670 [D] 打印当前中断状态时的事务状态 {"type":"async","Task":[{"api":"http://localhost:8899/api/test_confirm_fault","try":"{\"message\": \"try\"}","confirm":"{\"message\":\"confirm\"}","cancel":"{\"message\":\"cancel\"}","step":0,"try_status":"","commit_status":"false","cancel_status":""},{"api":"http://localhost:8899/api/test_cancel_fault","try":"{\"message\": \"try\"}","confirm":"{\"message\":\"confirm\"}","cancel":"{\"message\": \"cancel\"}","step":0,"try_status":"","commit_status":"done","cancel_status":""}],"exec_num":1,"exec_time":0,"ID":88,"step":1,"error_msg":""}
+2018/03/29 16:32:30.670 [D] post 请求返回内容: {"message":"cancel","type":"try api","code":0,"error_code":401,"error_message":"something was wrong","data":"{\"message\": \"try\"}"}
+2018/03/29 16:32:30.670 [D] 打印获取当前的返回状态 {"code":401,"data":"{\"message\": \"try\"}","error_message":"something was wrong","API":"http://localhost:8899/api/test_cancel_fault/cancel","Index":1,"error_code":401}
+2018/03/29 16:34:41.856 [D] already send msg, key: ts_queue_89
+2018/03/29 16:34:47.089 [D] post 请求返回内容: {"message":"try","type":"try api","code":200,"error_code":0,"error_message":"","data":"{\"message\": \"try\"}"}
+2018/03/29 16:34:47.090 [D] post 请求返回内容: {"message":"try","type":"try api","code":200,"error_code":0,"error_message":"","data":"{\"message\": \"try\"}"}
+2018/03/29 16:34:47.090 [D] post 请求返回内容: {"message":"try","type":"try api","code":200,"error_code":0,"error_message":"","data":"{\"message\": \"try\"}"}
+2018/03/29 16:34:47.090 [D] try 操作成功, ID: 89 1
+2018/03/29 16:34:47.090 [D] 持久化状态,ID: 89
+2018/03/29 16:34:47.094 [D] 更新数据库信息,ID: 89
+2018/03/29 16:34:47.094 [D] 执行 commit 逻辑  执行步骤: 1
+2018/03/29 16:34:47.094 [D] post 请求返回内容: {"message":"confirm","type":"try api","code":200,"error_code":0,"error_message":"","data":"{\"message\": \"try\"}"}
+2018/03/29 16:34:47.095 [D] post 请求返回内容: {"message":"confirm","type":"try api","code":200,"error_code":0,"error_message":"","data":"{\"message\": \"try\"}"}
+2018/03/29 16:34:47.095 [D] post 请求返回内容: {"message":"confirm","type":"try api","code":0,"error_code":401,"error_message":"something was wrong","data":"{\"message\": \"try\"}"}
+2018/03/29 16:34:47.095 [D] 打印当前中断状态时的事务状态 {"type":"async","Task":[{"api":"http://localhost:8899/api/test_confirm_fault","try":"{\"message\": \"try\"}","confirm":"{\"message\":\"confirm\"}","cancel":"{\"message\":\"cancel\"}","step":0,"try_status":"","commit_status":"false","cancel_status":""},{"api":"http://localhost:8899/api/test_cancel_fault","try":"{\"message\": \"try\"}","confirm":"{\"message\":\"confirm\"}","cancel":"{\"message\": \"cancel\"}","step":0,"try_status":"","commit_status":"done","cancel_status":""},{"api":"http://localhost:8899/api/test","try":"{\"message\": \"try\"}","confirm":"{\"message\":\"confirm\"}","cancel":"{\"message\":\"cancel\"}","step":0,"try_status":"","commit_status":"done","cancel_status":""}],"exec_num":1,"exec_time":0,"ID":89,"step":1,"error_msg":""}
+2018/03/29 16:34:47.095 [D] post 请求返回内容: {"message":"cancel","type":"cancel api","code":200,"error_code":0,"error_message":"","data":"{\"message\": \"try\"}"}
+2018/03/29 16:34:47.095 [D] post 请求返回内容: {"message":"cancel","type":"try api","code":0,"error_code":401,"error_message":"something was wrong","data":"{\"message\": \"try\"}"}
+2018/03/29 16:34:47.095 [D] 打印获取当前的返回状态 {"code":200,"data":"{\"message\": \"try\"}","error_message":"","API":"http://localhost:8899/api/test/cancel","Index":2,"error_code":0}
+2018/03/29 16:34:47.095 [D] 打印获取当前的返回状态 {"code":401,"data":"{\"message\": \"try\"}","error_message":"something was wrong","API":"http://localhost:8899/api/test_cancel_fault/cancel","Index":1,"error_code":401}
+2018/03/29 16:39:47.249 [D] mq reader is starting
+2018/03/29 16:41:16.030 [D] mq reader is starting
+2018/03/29 16:41:22.117 [D] already send msg, key: ts_queue_90
+2018/03/29 16:41:25.049 [D] post 请求返回内容: {"message":"try","type":"try api","code":200,"error_code":0,"error_message":"","data":"{\"message\": \"try\"}"}
+2018/03/29 16:41:25.049 [D] post 请求返回内容: {"message":"try","type":"try api","code":200,"error_code":0,"error_message":"","data":"{\"message\": \"try\"}"}
+2018/03/29 16:41:25.049 [D] post 请求返回内容: {"message":"try","type":"try api","code":200,"error_code":0,"error_message":"","data":"{\"message\": \"try\"}"}
+2018/03/29 16:41:25.049 [D] try 操作成功, ID: 90 1
+2018/03/29 16:41:25.049 [D] 持久化状态,ID: 90
+2018/03/29 16:41:25.053 [D] 更新数据库信息,ID: 90
+2018/03/29 16:41:25.053 [D] 执行 commit 逻辑  执行步骤: 1
+2018/03/29 16:41:25.054 [D] post 请求返回内容: {"message":"confirm","type":"try api","code":0,"error_code":401,"error_message":"something was wrong","data":"{\"message\": \"try\"}"}
+2018/03/29 16:41:25.054 [D] post 请求返回内容: {"message":"confirm","type":"try api","code":200,"error_code":0,"error_message":"","data":"{\"message\": \"try\"}"}
+2018/03/29 16:41:25.054 [D] post 请求返回内容: {"message":"confirm","type":"try api","code":200,"error_code":0,"error_message":"","data":"{\"message\": \"try\"}"}
+2018/03/29 16:41:25.054 [D] 打印当前中断状态时的事务状态 {"type":"async","Task":[{"api":"http://localhost:8899/api/test_confirm_fault","try":"{\"message\": \"try\"}","confirm":"{\"message\":\"confirm\"}","cancel":"{\"message\":\"cancel\"}","step":0,"try_status":"","commit_status":"false","cancel_status":""},{"api":"http://localhost:8899/api/test_cancel_fault","try":"{\"message\": \"try\"}","confirm":"{\"message\":\"confirm\"}","cancel":"{\"message\": \"cancel\"}","step":0,"try_status":"","commit_status":"done","cancel_status":""},{"api":"http://localhost:8899/api/test","try":"{\"message\": \"try\"}","confirm":"{\"message\":\"confirm\"}","cancel":"{\"message\":\"cancel\"}","step":0,"try_status":"","commit_status":"done","cancel_status":""}],"exec_num":1,"exec_time":0,"ID":90,"step":1,"error_msg":""}
+2018/03/29 16:41:25.055 [D] post 请求返回内容: {"message":"cancel","type":"cancel api","code":200,"error_code":0,"error_message":"","data":"{\"message\": \"try\"}"}
+2018/03/29 16:41:25.055 [D] 打印获取当前的返回状态 {"code":200,"data":"{\"message\": \"try\"}","error_message":"","API":"http://localhost:8899/api/test/cancel","Index":2,"error_code":0}
+2018/03/29 16:41:25.055 [D] post 请求返回内容: {"message":"cancel","type":"try api","code":0,"error_code":401,"error_message":"something was wrong","data":"{\"message\": \"try\"}"}
+2018/03/29 16:41:25.055 [D] 打印获取当前的返回状态 {"code":401,"data":"{\"message\": \"try\"}","error_message":"something was wrong","API":"http://localhost:8899/api/test_cancel_fault/cancel","Index":1,"error_code":401}
+2018/03/29 16:41:25.058 [D] 此处应该向某处发送 [事务异常] 通知
+2018/03/29 16:42:15.004 [D] mq reader is starting
+2018/03/29 16:42:24.023 [D] post 请求返回内容: {"message":"try","type":"try api","code":200,"error_code":0,"error_message":"","data":"{\"message\": \"try\"}"}
+2018/03/29 16:42:24.023 [D] post 请求返回内容: {"message":"try","type":"try api","code":200,"error_code":0,"error_message":"","data":"{\"message\": \"try\"}"}
+2018/03/29 16:42:24.023 [D] post 请求返回内容: {"message":"try","type":"try api","code":200,"error_code":0,"error_message":"","data":"{\"message\": \"try\"}"}
+2018/03/29 16:42:24.023 [D] try 操作成功, ID: 90 1
+2018/03/29 16:42:24.023 [D] 持久化状态,ID: 90
+2018/03/29 16:42:24.025 [D] 更新数据库信息,ID: 90
+2018/03/29 16:42:24.025 [D] 执行 commit 逻辑  执行步骤: 1
+2018/03/29 16:42:24.026 [D] post 请求返回内容: {"message":"confirm","type":"try api","code":0,"error_code":401,"error_message":"something was wrong","data":"{\"message\": \"try\"}"}
+2018/03/29 16:42:24.026 [D] post 请求返回内容: {"message":"confirm","type":"try api","code":200,"error_code":0,"error_message":"","data":"{\"message\": \"try\"}"}
+2018/03/29 16:42:24.026 [D] post 请求返回内容: {"message":"confirm","type":"try api","code":200,"error_code":0,"error_message":"","data":"{\"message\": \"try\"}"}
+2018/03/29 16:42:24.026 [D] 打印当前中断状态时的事务状态 {"type":"async","Task":[{"api":"http://localhost:8899/api/test_confirm_fault","try":"{\"message\": \"try\"}","confirm":"{\"message\":\"confirm\"}","cancel":"{\"message\":\"cancel\"}","step":0,"try_status":"","commit_status":"false","cancel_status":""},{"api":"http://localhost:8899/api/test_cancel_fault","try":"{\"message\": \"try\"}","confirm":"{\"message\":\"confirm\"}","cancel":"{\"message\": \"cancel\"}","step":0,"try_status":"","commit_status":"done","cancel_status":""},{"api":"http://localhost:8899/api/test","try":"{\"message\": \"try\"}","confirm":"{\"message\":\"confirm\"}","cancel":"{\"message\":\"cancel\"}","step":0,"try_status":"","commit_status":"done","cancel_status":""}],"exec_num":1,"exec_time":0,"ID":90,"step":1,"error_msg":""}
+2018/03/29 16:42:24.027 [D] post 请求返回内容: {"message":"cancel","type":"try api","code":0,"error_code":401,"error_message":"something was wrong","data":"{\"message\": \"try\"}"}
+2018/03/29 16:42:24.027 [D] post 请求返回内容: {"message":"cancel","type":"cancel api","code":200,"error_code":0,"error_message":"","data":"{\"message\": \"try\"}"}
+2018/03/29 16:42:24.029 [D] 此处应该向某处发送 [事务异常] 通知
+2018/03/29 16:47:25.257 [D] mq reader is starting
+2018/03/29 16:48:26.102 [D] already send msg, key: ts_queue_91
+2018/03/29 16:48:28.875 [D] post 请求返回内容: {"message":"try","type":"try api","code":200,"error_code":0,"error_message":"","data":"{\"message\": \"try\"}"}
+2018/03/29 16:48:28.875 [D] post 请求返回内容: {"message":"try","type":"try api","code":200,"error_code":0,"error_message":"","data":"{\"message\": \"try\"}"}
+2018/03/29 16:48:28.875 [D] post 请求返回内容: {"message":"try","type":"try api","code":200,"error_code":0,"error_message":"","data":"{\"message\": \"try\"}"}
+2018/03/29 16:48:28.875 [D] try 操作成功, ID: 91 1
+2018/03/29 16:48:28.875 [D] 持久化状态,ID: 91
+2018/03/29 16:48:28.879 [D] 更新数据库信息,ID: 91
+2018/03/29 16:48:28.879 [D] 执行 commit 逻辑  执行步骤: 1
+2018/03/29 16:48:28.879 [D] post 请求返回内容: {"message":"confirm","type":"try api","code":200,"error_code":0,"error_message":"","data":"{\"message\": \"try\"}"}
+2018/03/29 16:48:28.879 [D] post 请求返回内容: {"message":"confirm","type":"try api","code":0,"error_code":401,"error_message":"something was wrong","data":"{\"message\": \"try\"}"}
+2018/03/29 16:48:28.879 [D] post 请求返回内容: {"message":"confirm","type":"try api","code":200,"error_code":0,"error_message":"","data":"{\"message\": \"try\"}"}
+2018/03/29 16:48:28.880 [D] 打印当前中断状态时的事务状态 {"type":"async","Task":[{"api":"http://localhost:8899/api/test_confirm_fault","try":"{\"message\": \"try\"}","confirm":"{\"message\":\"confirm\"}","cancel":"{\"message\":\"cancel\"}","step":0,"try_status":"","commit_status":"false","cancel_status":""},{"api":"http://localhost:8899/api/test_cancel_timeout","try":"{\"message\": \"try\"}","confirm":"{\"message\":\"confirm\"}","cancel":"{\"message\": \"cancel\"}","step":0,"try_status":"","commit_status":"done","cancel_status":""},{"api":"http://localhost:8899/api/test","try":"{\"message\": \"try\"}","confirm":"{\"message\":\"confirm\"}","cancel":"{\"message\":\"cancel\"}","step":0,"try_status":"","commit_status":"done","cancel_status":""}],"exec_num":1,"exec_time":0,"ID":91,"step":1,"error_msg":""}
+2018/03/29 16:48:28.881 [D] post 请求返回内容: {"message":"cancel","type":"try api","code":0,"error_code":408,"error_message":"something was wrong","data":"{\"message\": \"try\"}"}
+2018/03/29 16:48:28.881 [D] post 请求返回内容: {"message":"cancel","type":"cancel api","code":200,"error_code":0,"error_message":"","data":"{\"message\": \"try\"}"}
+2018/03/29 16:48:28.881 [D] 执行重回队列的操作
+2018/03/29 16:49:11.282 [D] mq reader is starting
+2018/03/29 16:49:13.470 [D] already send msg, key: ts_queue_92
+2018/03/29 16:49:20.302 [D] post 请求返回内容: {"message":"try","type":"try api","code":200,"error_code":0,"error_message":"","data":"{\"message\": \"try\"}"}
+2018/03/29 16:49:20.302 [D] post 请求返回内容: {"message":"try","type":"try api","code":200,"error_code":0,"error_message":"","data":"{\"message\": \"try\"}"}
+2018/03/29 16:49:20.302 [D] post 请求返回内容: {"message":"try","type":"try api","code":200,"error_code":0,"error_message":"","data":"{\"message\": \"try\"}"}
+2018/03/29 16:49:20.302 [D] try 操作成功, ID: 91 1
+2018/03/29 16:49:20.302 [D] 持久化状态,ID: 91
+2018/03/29 16:49:20.307 [D] 更新数据库信息,ID: 91
+2018/03/29 16:49:20.307 [D] 执行 commit 逻辑  执行步骤: 1
+2018/03/29 16:49:20.307 [D] post 请求返回内容: {"message":"confirm","type":"try api","code":200,"error_code":0,"error_message":"","data":"{\"message\": \"try\"}"}
+2018/03/29 16:49:20.307 [D] post 请求返回内容: {"message":"confirm","type":"try api","code":200,"error_code":0,"error_message":"","data":"{\"message\": \"try\"}"}
+2018/03/29 16:49:20.308 [D] post 请求返回内容: {"message":"confirm","type":"try api","code":0,"error_code":401,"error_message":"something was wrong","data":"{\"message\": \"try\"}"}
+2018/03/29 16:49:20.308 [D] 打印当前中断状态时的事务状态 {"type":"async","Task":[{"api":"http://localhost:8899/api/test_confirm_fault","try":"{\"message\": \"try\"}","confirm":"{\"message\":\"confirm\"}","cancel":"{\"message\":\"cancel\"}","step":0,"try_status":"","commit_status":"false","cancel_status":""},{"api":"http://localhost:8899/api/test_cancel_timeout","try":"{\"message\": \"try\"}","confirm":"{\"message\":\"confirm\"}","cancel":"{\"message\": \"cancel\"}","step":0,"try_status":"","commit_status":"done","cancel_status":""},{"api":"http://localhost:8899/api/test","try":"{\"message\": \"try\"}","confirm":"{\"message\":\"confirm\"}","cancel":"{\"message\":\"cancel\"}","step":0,"try_status":"","commit_status":"done","cancel_status":""}],"exec_num":1,"exec_time":0,"ID":91,"step":1,"error_msg":""}
+2018/03/29 16:49:20.309 [D] post 请求返回内容: {"message":"cancel","type":"try api","code":0,"error_code":408,"error_message":"something was wrong","data":"{\"message\": \"try\"}"}
+2018/03/29 16:49:20.309 [D] post 请求返回内容: {"message":"cancel","type":"cancel api","code":200,"error_code":0,"error_message":"","data":"{\"message\": \"try\"}"}
+2018/03/29 16:49:20.309 [D] 执行重回队列的操作 cancel step
+2018/03/29 16:49:20.310 [D] post 请求返回内容: {"message":"try","type":"try api","code":200,"error_code":0,"error_message":"","data":"{\"message\": \"try\"}"}
+2018/03/29 16:49:20.310 [D] post 请求返回内容: {"message":"try","type":"try api","code":200,"error_code":0,"error_message":"","data":"{\"message\": \"try\"}"}
+2018/03/29 16:49:20.310 [D] post 请求返回内容: {"message":"try","type":"try api","code":200,"error_code":0,"error_message":"","data":"{\"message\": \"try\"}"}
+2018/03/29 16:49:20.310 [D] try 操作成功, ID: 92 1
+2018/03/29 16:49:20.310 [D] 持久化状态,ID: 92
+2018/03/29 16:49:20.313 [D] 更新数据库信息,ID: 92
+2018/03/29 16:49:20.313 [D] 执行 commit 逻辑  执行步骤: 1
+2018/03/29 16:49:20.314 [D] post 请求返回内容: {"message":"confirm","type":"try api","code":200,"error_code":0,"error_message":"","data":"{\"message\": \"try\"}"}
+2018/03/29 16:49:20.314 [D] post 请求返回内容: {"message":"confirm","type":"try api","code":0,"error_code":401,"error_message":"something was wrong","data":"{\"message\": \"try\"}"}
+2018/03/29 16:49:20.315 [D] post 请求返回内容: {"message":"confirm","type":"try api","code":200,"error_code":0,"error_message":"","data":"{\"message\": \"try\"}"}
+2018/03/29 16:49:20.315 [D] 打印当前中断状态时的事务状态 {"type":"async","Task":[{"api":"http://localhost:8899/api/test_confirm_fault","try":"{\"message\": \"try\"}","confirm":"{\"message\":\"confirm\"}","cancel":"{\"message\":\"cancel\"}","step":0,"try_status":"","commit_status":"false","cancel_status":""},{"api":"http://localhost:8899/api/test_cancel_timeout","try":"{\"message\": \"try\"}","confirm":"{\"message\":\"confirm\"}","cancel":"{\"message\": \"cancel\"}","step":0,"try_status":"","commit_status":"done","cancel_status":""},{"api":"http://localhost:8899/api/test","try":"{\"message\": \"try\"}","confirm":"{\"message\":\"confirm\"}","cancel":"{\"message\":\"cancel\"}","step":0,"try_status":"","commit_status":"done","cancel_status":""}],"exec_num":1,"exec_time":0,"ID":92,"step":1,"error_msg":""}
+2018/03/29 16:49:20.316 [D] post 请求返回内容: {"message":"cancel","type":"cancel api","code":200,"error_code":0,"error_message":"","data":"{\"message\": \"try\"}"}
+2018/03/29 16:49:20.316 [D] post 请求返回内容: {"message":"cancel","type":"try api","code":0,"error_code":408,"error_message":"something was wrong","data":"{\"message\": \"try\"}"}
+2018/03/29 16:49:20.316 [D] 执行重回队列的操作 cancel step
+2018/03/29 16:50:44.066 [D] mq reader is starting
+2018/03/29 16:50:48.096 [D] already send msg, key: ts_queue_93
+2018/03/29 16:50:53.077 [D] post 请求返回内容: {"message":"try","type":"try api","code":200,"error_code":0,"error_message":"","data":"{\"message\": \"try\"}"}
+2018/03/29 16:50:53.077 [D] post 请求返回内容: {"message":"try","type":"try api","code":200,"error_code":0,"error_message":"","data":"{\"message\": \"try\"}"}
+2018/03/29 16:50:53.077 [D] post 请求返回内容: {"message":"try","type":"try api","code":200,"error_code":0,"error_message":"","data":"{\"message\": \"try\"}"}
+2018/03/29 16:50:53.077 [D] try 操作成功, ID: 93 1
+2018/03/29 16:50:53.077 [D] 持久化状态,ID: 93
+2018/03/29 16:50:53.081 [D] 更新数据库信息,ID: 93
+2018/03/29 16:50:53.081 [D] 执行 commit 逻辑  执行步骤: 1
+2018/03/29 16:50:53.081 [D] post 请求返回内容: {"message":"confirm","type":"try api","code":0,"error_code":401,"error_message":"something was wrong","data":"{\"message\": \"try\"}"}
+2018/03/29 16:50:53.081 [D] post 请求返回内容: {"message":"confirm","type":"try api","code":200,"error_code":0,"error_message":"","data":"{\"message\": \"try\"}"}
+2018/03/29 16:50:53.082 [D] post 请求返回内容: {"message":"confirm","type":"try api","code":200,"error_code":0,"error_message":"","data":"{\"message\": \"try\"}"}
+2018/03/29 16:50:53.082 [D] 打印当前中断状态时的事务状态 {"type":"async","Task":[{"api":"http://localhost:8899/api/test_confirm_fault","try":"{\"message\": \"try\"}","confirm":"{\"message\":\"confirm\"}","cancel":"{\"message\":\"cancel\"}","step":0,"try_status":"","commit_status":"false","cancel_status":""},{"api":"http://localhost:8899/api/test_cancel_timeout","try":"{\"message\": \"try\"}","confirm":"{\"message\":\"confirm\"}","cancel":"{\"message\": \"cancel\"}","step":0,"try_status":"","commit_status":"done","cancel_status":""},{"api":"http://localhost:8899/api/test","try":"{\"message\": \"try\"}","confirm":"{\"message\":\"confirm\"}","cancel":"{\"message\":\"cancel\"}","step":0,"try_status":"","commit_status":"done","cancel_status":""}],"exec_num":1,"exec_time":0,"ID":93,"step":1,"error_msg":""}
+2018/03/29 16:50:53.082 [D] post 请求返回内容: {"message":"cancel","type":"cancel api","code":200,"error_code":0,"error_message":"","data":"{\"message\": \"try\"}"}
+2018/03/29 16:50:53.082 [D] post 请求返回内容: {"message":"cancel","type":"try api","code":0,"error_code":408,"error_message":"something was wrong","data":"{\"message\": \"try\"}"}
+2018/03/29 16:50:53.082 [D] 执行重回队列的操作 cancel step
+2018/03/29 16:51:57.952 [D] mq reader is starting
+2018/03/29 16:52:06.969 [D] http://localhost:8899/api/test_confirm_fault/try post 请求返回内容: {"message":"try","type":"try api","code":200,"error_code":0,"error_message":"","data":"{\"message\": \"try\"}"}
+2018/03/29 16:52:06.969 [D] http://localhost:8899/api/test/try post 请求返回内容: {"message":"try","type":"try api","code":200,"error_code":0,"error_message":"","data":"{\"message\": \"try\"}"}
+2018/03/29 16:52:06.970 [D] http://localhost:8899/api/test_cancel_timeout/try post 请求返回内容: {"message":"try","type":"try api","code":200,"error_code":0,"error_message":"","data":"{\"message\": \"try\"}"}
+2018/03/29 16:52:06.970 [D] try 操作成功, ID: 93 1
+2018/03/29 16:52:06.970 [D] 持久化状态,ID: 93
+2018/03/29 16:52:06.974 [D] 更新数据库信息,ID: 93
+2018/03/29 16:52:06.974 [D] 执行 commit 逻辑  执行步骤: 1
+2018/03/29 16:52:06.974 [D] http://localhost:8899/api/test/confirm post 请求返回内容: {"message":"confirm","type":"try api","code":200,"error_code":0,"error_message":"","data":"{\"message\": \"try\"}"}
+2018/03/29 16:52:06.974 [D] http://localhost:8899/api/test_confirm_fault/confirm post 请求返回内容: {"message":"confirm","type":"try api","code":0,"error_code":401,"error_message":"something was wrong","data":"{\"message\": \"try\"}"}
+2018/03/29 16:52:06.975 [D] http://localhost:8899/api/test_cancel_timeout/confirm post 请求返回内容: {"message":"confirm","type":"try api","code":200,"error_code":0,"error_message":"","data":"{\"message\": \"try\"}"}
+2018/03/29 16:52:06.975 [D] 打印当前中断状态时的事务状态 {"type":"async","Task":[{"api":"http://localhost:8899/api/test_confirm_fault","try":"{\"message\": \"try\"}","confirm":"{\"message\":\"confirm\"}","cancel":"{\"message\":\"cancel\"}","step":0,"try_status":"","commit_status":"false","cancel_status":""},{"api":"http://localhost:8899/api/test_cancel_timeout","try":"{\"message\": \"try\"}","confirm":"{\"message\":\"confirm\"}","cancel":"{\"message\": \"cancel\"}","step":0,"try_status":"","commit_status":"done","cancel_status":""},{"api":"http://localhost:8899/api/test","try":"{\"message\": \"try\"}","confirm":"{\"message\":\"confirm\"}","cancel":"{\"message\":\"cancel\"}","step":0,"try_status":"","commit_status":"done","cancel_status":""}],"exec_num":1,"exec_time":0,"ID":93,"step":1,"error_msg":""}
+2018/03/29 16:52:06.975 [D] http://localhost:8899/api/test/cancel post 请求返回内容: {"message":"cancel","type":"cancel api","code":200,"error_code":0,"error_message":"","data":"{\"message\": \"try\"}"}
+2018/03/29 16:52:06.976 [D] http://localhost:8899/api/test_cancel_timeout/cancel post 请求返回内容: {"message":"cancel","type":"try api","code":0,"error_code":408,"error_message":"something was wrong","data":"{\"message\": \"try\"}"}
+2018/03/29 16:52:06.976 [D] 执行重回队列的操作 cancel step
+2018/03/29 16:57:42.325 [D] mq reader is starting
+2018/03/29 17:00:59.193 [D] mq reader is starting
+2018/03/29 17:07:10.803 [D] mq reader is starting
+2018/03/29 17:07:49.989 [D] already send msg, key: ts_queue_94
+2018/03/29 17:07:56.242 [D] http://localhost:8899/api/test_confirm_fault/try post 请求返回内容: {"message":"try","type":"try api","code":200,"error_code":0,"error_message":"","data":"{\"message\": \"try\"}"}
+2018/03/29 17:07:56.242 [D] http://localhost:8899/api/test_cancel_timeout/try post 请求返回内容: {"message":"try","type":"try api","code":200,"error_code":0,"error_message":"","data":"{\"message\": \"try\"}"}
+2018/03/29 17:07:56.242 [D] http://localhost:8899/api/test/try post 请求返回内容: {"message":"try","type":"try api","code":200,"error_code":0,"error_message":"","data":"{\"message\": \"try\"}"}
+2018/03/29 17:07:56.243 [D] try 操作成功, ID: 94 1
+2018/03/29 17:07:56.243 [D] 持久化状态,ID: 94
+2018/03/29 17:07:56.245 [D] 更新数据库信息,ID: 94
+2018/03/29 17:07:56.245 [D] 执行 commit 逻辑  执行步骤: 1
+2018/03/29 17:07:56.245 [D] http://localhost:8899/api/test/confirm post 请求返回内容: {"message":"confirm","type":"try api","code":200,"error_code":0,"error_message":"","data":"{\"message\": \"try\"}"}
+2018/03/29 17:07:56.246 [D] http://localhost:8899/api/test_confirm_fault/confirm post 请求返回内容: {"message":"confirm","type":"try api","code":0,"error_code":401,"error_message":"something was wrong","data":"{\"message\": \"try\"}"}
+2018/03/29 17:07:56.246 [D] http://localhost:8899/api/test_cancel_timeout/confirm post 请求返回内容: {"message":"confirm","type":"try api","code":200,"error_code":0,"error_message":"","data":"{\"message\": \"try\"}"}
+2018/03/29 17:07:56.246 [D] 持久化状态,ID: 94
+2018/03/29 17:07:56.248 [D] 更新数据库信息,ID: 94
+2018/03/29 17:07:56.248 [D] 打印当前中断状态时的事务状态 {"type":"async","Task":[{"api":"http://localhost:8899/api/test_confirm_fault","try":"{\"message\": \"try\"}","confirm":"{\"message\":\"confirm\"}","cancel":"{\"message\":\"cancel\"}","step":0,"try_status":"","commit_status":"false","cancel_status":""},{"api":"http://localhost:8899/api/test_cancel_timeout","try":"{\"message\": \"try\"}","confirm":"{\"message\":\"confirm\"}","cancel":"{\"message\": \"cancel\"}","step":0,"try_status":"","commit_status":"done","cancel_status":""},{"api":"http://localhost:8899/api/test","try":"{\"message\": \"try\"}","confirm":"{\"message\":\"confirm\"}","cancel":"{\"message\":\"cancel\"}","step":0,"try_status":"","commit_status":"done","cancel_status":""}],"exec_num":1,"exec_time":0,"ID":94,"step":2,"error_msg":""}
+2018/03/29 17:07:56.249 [D] http://localhost:8899/api/test_cancel_timeout/cancel post 请求返回内容: {"message":"cancel","type":"try api","code":0,"error_code":408,"error_message":"something was wrong","data":"{\"message\": \"try\"}"}
+2018/03/29 17:07:56.249 [D] http://localhost:8899/api/test/cancel post 请求返回内容: {"message":"cancel","type":"cancel api","code":200,"error_code":0,"error_message":"","data":"{\"message\": \"try\"}"}
+2018/03/29 17:07:56.249 [D] 执行重回队列的操作 cancel step
+2018/03/29 17:35:09.529 [D] mq reader is starting
+2018/03/29 17:35:25.391 [D] mq reader is starting
+2018/03/29 17:35:32.366 [D] already send msg, key: ts_queue_95
+2018/03/29 17:35:34.419 [D] http://localhost:8899/api/test_confirm_fault/try post 请求返回内容: {"message":"try","type":"try api","code":200,"error_code":0,"error_message":"","data":"{\"message\": \"try\"}"}
+2018/03/29 17:35:34.419 [D] http://localhost:8899/api/test_cancel_timeout/try post 请求返回内容: {"message":"try","type":"try api","code":200,"error_code":0,"error_message":"","data":"{\"message\": \"try\"}"}
+2018/03/29 17:35:34.419 [D] http://localhost:8899/api/test/try post 请求返回内容: {"message":"try","type":"try api","code":200,"error_code":0,"error_message":"","data":"{\"message\": \"try\"}"}
+2018/03/29 17:35:34.419 [D] try 操作成功, ID: 95 1
+2018/03/29 17:35:34.419 [D] 持久化状态,ID: 95
+2018/03/29 17:35:34.423 [D] 更新数据库信息,ID: 95
+2018/03/29 17:35:34.423 [D] 执行 commit 逻辑  执行步骤: 1
+2018/03/29 17:35:34.423 [D] http://localhost:8899/api/test/confirm post 请求返回内容: {"message":"confirm","type":"try api","code":200,"error_code":0,"error_message":"","data":"{\"message\": \"try\"}"}
+2018/03/29 17:35:34.423 [D] http://localhost:8899/api/test_confirm_fault/confirm post 请求返回内容: {"message":"confirm","type":"try api","code":0,"error_code":401,"error_message":"something was wrong","data":"{\"message\": \"try\"}"}
+2018/03/29 17:35:34.424 [D] http://localhost:8899/api/test_cancel_timeout/confirm post 请求返回内容: {"message":"confirm","type":"try api","code":200,"error_code":0,"error_message":"","data":"{\"message\": \"try\"}"}
+2018/03/29 17:35:34.424 [D] 持久化状态,ID: 95
+2018/03/29 17:35:34.426 [D] 更新数据库信息,ID: 95
+2018/03/29 17:35:34.426 [D] 打印当前中断状态时的事务状态 {"type":"async","Task":[{"api":"http://localhost:8899/api/test_confirm_fault","try":"{\"message\": \"try\"}","confirm":"{\"message\":\"confirm\"}","cancel":"{\"message\":\"cancel\"}","step":0,"try_status":"","commit_status":"false","cancel_status":""},{"api":"http://localhost:8899/api/test_cancel_timeout","try":"{\"message\": \"try\"}","confirm":"{\"message\":\"confirm\"}","cancel":"{\"message\": \"cancel\"}","step":0,"try_status":"","commit_status":"done","cancel_status":""},{"api":"http://localhost:8899/api/test","try":"{\"message\": \"try\"}","confirm":"{\"message\":\"confirm\"}","cancel":"{\"message\":\"cancel\"}","step":0,"try_status":"","commit_status":"done","cancel_status":""}],"exec_num":1,"exec_time":0,"ID":95,"step":2,"error_msg":""}
+2018/03/29 17:35:34.427 [D] http://localhost:8899/api/test_cancel_timeout/cancel post 请求返回内容: {"message":"cancel","type":"try api","code":0,"error_code":408,"error_message":"something was wrong","data":"{\"message\": \"try\"}"}
+2018/03/29 17:35:34.427 [D] http://localhost:8899/api/test/cancel post 请求返回内容: {"message":"cancel","type":"cancel api","code":200,"error_code":0,"error_message":"","data":"{\"message\": \"try\"}"}
+2018/03/29 17:35:34.427 [D] 执行重回队列的操作 cancel step
+2018/03/29 17:35:34.440 [D] already send msg, key: ts_queue_95_1
+2018/03/29 18:01:17.705 [D] mq reader is starting
+2018/03/29 18:07:56.183 [D] mq reader is starting
+2018/03/29 18:07:59.681 [D] already send msg, key: ts_queue_96
+2018/03/29 18:10:50.876 [D] mq reader is starting
+2018/03/29 18:10:54.761 [D] already send msg, key: ts_queue_97
+2018/03/29 18:24:45.277 [D] mq reader is starting
+2018/03/29 18:25:03.982 [D] already send msg, key: ts_queue_98
+2018/03/29 18:25:26.528 [D] mq reader is starting
+2018/03/29 18:25:28.989 [D] already send msg, key: ts_queue_99
+2018/03/29 18:25:57.428 [D] mq reader is starting
+2018/03/29 18:26:01.025 [D] already send msg, key: ts_queue_100
+2018/03/29 18:27:14.827 [D] mq reader is starting
+2018/03/29 18:27:17.566 [D] already send msg, key: ts_queue_101
+2018/03/29 18:27:58.123 [D] mq reader is starting
+2018/03/29 18:28:01.961 [D] already send msg, key: ts_queue_102
+2018/03/29 20:02:44.396 [D] mq reader is starting
+2018/03/29 20:02:50.137 [D] already send msg, key: ts_queue_103
+2018/03/29 20:03:11.183 [D] mq reader is starting
+2018/03/29 20:03:14.822 [D] already send msg, key: ts_queue_104
+2018/03/29 20:03:43.515 [D] already send msg, key: ts_queue_105
+2018/03/29 20:42:58.107 [D] mq reader is starting
+2018/03/29 20:43:02.168 [D] already send msg, key: ts_queue_106
+2018/03/29 20:44:54.749 [D] mq reader is starting
+2018/03/29 20:45:10.510 [D] already send msg, key: ts_queue_107
+2018/03/29 20:46:19.209 [D] mq reader is starting
+2018/03/29 20:47:54.942 [D] mq reader is starting
+2018/03/29 20:47:58.317 [D] already send msg, key: ts_queue_108
+2018/03/29 20:48:26.190 [D] mq reader is starting
+2018/03/29 20:48:28.938 [D] already send msg, key: ts_queue_109
+2018/03/29 20:48:35.199 [D] http://localhost:8899/api/test_confirm_fault/try post 请求返回内容: {"message":"try","type":"try api","code":200,"error_code":0,"error_message":"","data":"{\"message\": \"try\"}"}
+2018/03/29 20:48:35.199 [D] http://localhost:8899/api/test_cancel_timeout/try post 请求返回内容: {"message":"try","type":"try api","code":200,"error_code":0,"error_message":"","data":"{\"message\": \"try\"}"}
+2018/03/29 20:48:35.199 [D] http://localhost:8899/api/test/try post 请求返回内容: {"message":"try","type":"try api","code":200,"error_code":0,"error_message":"","data":"{\"message\": \"try\"}"}
+2018/03/29 20:48:35.199 [D] try 操作成功, ID: 0 1
+2018/03/29 20:48:35.199 [D] 持久化状态,ID: 0
+2018/03/29 20:48:35.201 [D] 更新数据库信息,ID: 0
+2018/03/29 20:48:35.201 [D] 执行 commit 逻辑  执行步骤: 1
+2018/03/29 20:48:35.201 [D] http://localhost:8899/api/test/confirm post 请求返回内容: {"message":"confirm","type":"try api","code":200,"error_code":0,"error_message":"","data":"{\"message\": \"try\"}"}
+2018/03/29 20:48:35.201 [D] http://localhost:8899/api/test_confirm_fault/confirm post 请求返回内容: {"message":"confirm","type":"try api","code":0,"error_code":401,"error_message":"something was wrong","data":"{\"message\": \"try\"}"}
+2018/03/29 20:48:35.202 [D] http://localhost:8899/api/test_cancel_timeout/confirm post 请求返回内容: {"message":"confirm","type":"try api","code":200,"error_code":0,"error_message":"","data":"{\"message\": \"try\"}"}
+2018/03/29 20:48:35.202 [D] 持久化状态,ID: 0
+2018/03/29 20:48:35.204 [D] 更新数据库信息,ID: 0
+2018/03/29 20:48:35.204 [D] 打印当前中断状态时的事务状态 {"type":"async","Task":[{"api":"http://localhost:8899/api/test_confirm_fault","try":"{\"message\": \"try\"}","confirm":"{\"message\":\"confirm\"}","cancel":"{\"message\":\"cancel\"}","step":0,"try_status":"","commit_status":"false","cancel_status":""},{"api":"http://localhost:8899/api/test_cancel_timeout","try":"{\"message\": \"try\"}","confirm":"{\"message\":\"confirm\"}","cancel":"{\"message\": \"cancel\"}","step":0,"try_status":"","commit_status":"done","cancel_status":""},{"api":"http://localhost:8899/api/test","try":"{\"message\": \"try\"}","confirm":"{\"message\":\"confirm\"}","cancel":"{\"message\":\"cancel\"}","step":0,"try_status":"","commit_status":"done","cancel_status":""}],"exec_num":1,"exec_time":0,"ID":0,"step":2,"error_msg":""}
+2018/03/29 20:48:35.204 [D] http://localhost:8899/api/test/cancel post 请求返回内容: {"message":"cancel","type":"cancel api","code":200,"error_code":0,"error_message":"","data":"{\"message\": \"try\"}"}
+2018/03/29 20:48:35.204 [D] http://localhost:8899/api/test_cancel_timeout/cancel post 请求返回内容: {"message":"cancel","type":"try api","code":0,"error_code":408,"error_message":"something was wrong","data":"{\"message\": \"try\"}"}
+2018/03/29 20:48:35.204 [D] 执行重回队列的操作 cancel step
+2018/03/29 20:48:35.212 [D] already send msg, key: ts_queue_0_1
+2018/03/29 20:48:35.215 [D] http://localhost:8899/api/test/try post 请求返回内容: {"message":"try","type":"try api","code":200,"error_code":0,"error_message":"","data":"{\"message\": \"try\"}"}
+2018/03/29 20:48:35.215 [D] http://localhost:8899/api/test_confirm_fault/try post 请求返回内容: {"message":"try","type":"try api","code":200,"error_code":0,"error_message":"","data":"{\"message\": \"try\"}"}
+2018/03/29 20:48:35.216 [D] http://localhost:8899/api/test_cancel_timeout/try post 请求返回内容: {"message":"try","type":"try api","code":200,"error_code":0,"error_message":"","data":"{\"message\": \"try\"}"}
+2018/03/29 20:48:35.216 [D] try 操作成功, ID: 0 1
+2018/03/29 20:48:35.216 [D] 持久化状态,ID: 0
+2018/03/29 20:48:35.217 [D] 更新数据库信息,ID: 0
+2018/03/29 20:48:35.217 [D] 执行 commit 逻辑  执行步骤: 1
+2018/03/29 20:48:35.218 [D] http://localhost:8899/api/test_cancel_timeout/confirm post 请求返回内容: {"message":"confirm","type":"try api","code":200,"error_code":0,"error_message":"","data":"{\"message\": \"try\"}"}
+2018/03/29 20:48:35.218 [D] http://localhost:8899/api/test/confirm post 请求返回内容: {"message":"confirm","type":"try api","code":200,"error_code":0,"error_message":"","data":"{\"message\": \"try\"}"}
+2018/03/29 20:48:35.218 [D] http://localhost:8899/api/test_confirm_fault/confirm post 请求返回内容: {"message":"confirm","type":"try api","code":0,"error_code":401,"error_message":"something was wrong","data":"{\"message\": \"try\"}"}
+2018/03/29 20:48:35.218 [D] 持久化状态,ID: 0
+2018/03/29 20:48:35.220 [D] 更新数据库信息,ID: 0
+2018/03/29 20:48:35.220 [D] 打印当前中断状态时的事务状态 {"type":"async","Task":[{"api":"http://localhost:8899/api/test_confirm_fault","try":"{\"message\": \"try\"}","confirm":"{\"message\":\"confirm\"}","cancel":"{\"message\":\"cancel\"}","step":0,"try_status":"","commit_status":"false","cancel_status":""},{"api":"http://localhost:8899/api/test_cancel_timeout","try":"{\"message\": \"try\"}","confirm":"{\"message\":\"confirm\"}","cancel":"{\"message\": \"cancel\"}","step":0,"try_status":"","commit_status":"done","cancel_status":""},{"api":"http://localhost:8899/api/test","try":"{\"message\": \"try\"}","confirm":"{\"message\":\"confirm\"}","cancel":"{\"message\":\"cancel\"}","step":0,"try_status":"","commit_status":"done","cancel_status":""}],"exec_num":1,"exec_time":0,"ID":0,"step":2,"error_msg":""}
+2018/03/29 20:48:35.221 [D] http://localhost:8899/api/test_cancel_timeout/cancel post 请求返回内容: {"message":"cancel","type":"try api","code":0,"error_code":408,"error_message":"something was wrong","data":"{\"message\": \"try\"}"}
+2018/03/29 20:48:35.221 [D] http://localhost:8899/api/test/cancel post 请求返回内容: {"message":"cancel","type":"cancel api","code":200,"error_code":0,"error_message":"","data":"{\"message\": \"try\"}"}
+2018/03/29 20:48:35.221 [D] 执行重回队列的操作 cancel step
+2018/03/29 20:48:35.232 [D] already send msg, key: ts_queue_0_1
+2018/03/29 20:48:35.236 [D] http://localhost:8899/api/test/try post 请求返回内容: {"message":"try","type":"try api","code":200,"error_code":0,"error_message":"","data":"{\"message\": \"try\"}"}
+2018/03/29 20:48:35.236 [D] http://localhost:8899/api/test_confirm_fault/try post 请求返回内容: {"message":"try","type":"try api","code":200,"error_code":0,"error_message":"","data":"{\"message\": \"try\"}"}
+2018/03/29 20:48:35.237 [D] http://localhost:8899/api/test_cancel_timeout/try post 请求返回内容: {"message":"try","type":"try api","code":200,"error_code":0,"error_message":"","data":"{\"message\": \"try\"}"}
+2018/03/29 20:48:35.237 [D] try 操作成功, ID: 0 1
+2018/03/29 20:48:35.237 [D] 持久化状态,ID: 0
+2018/03/29 20:48:35.239 [D] 更新数据库信息,ID: 0
+2018/03/29 20:48:35.239 [D] 执行 commit 逻辑  执行步骤: 1
+2018/03/29 20:48:35.239 [D] http://localhost:8899/api/test_confirm_fault/confirm post 请求返回内容: {"message":"confirm","type":"try api","code":0,"error_code":401,"error_message":"something was wrong","data":"{\"message\": \"try\"}"}
+2018/03/29 20:48:35.239 [D] http://localhost:8899/api/test/confirm post 请求返回内容: {"message":"confirm","type":"try api","code":200,"error_code":0,"error_message":"","data":"{\"message\": \"try\"}"}
+2018/03/29 20:48:35.239 [D] http://localhost:8899/api/test_cancel_timeout/confirm post 请求返回内容: {"message":"confirm","type":"try api","code":200,"error_code":0,"error_message":"","data":"{\"message\": \"try\"}"}
+2018/03/29 20:48:35.239 [D] 持久化状态,ID: 0
+2018/03/29 20:48:35.241 [D] 更新数据库信息,ID: 0
+2018/03/29 20:48:35.241 [D] 打印当前中断状态时的事务状态 {"type":"async","Task":[{"api":"http://localhost:8899/api/test_confirm_fault","try":"{\"message\": \"try\"}","confirm":"{\"message\":\"confirm\"}","cancel":"{\"message\":\"cancel\"}","step":0,"try_status":"","commit_status":"false","cancel_status":""},{"api":"http://localhost:8899/api/test_cancel_timeout","try":"{\"message\": \"try\"}","confirm":"{\"message\":\"confirm\"}","cancel":"{\"message\": \"cancel\"}","step":0,"try_status":"","commit_status":"done","cancel_status":""},{"api":"http://localhost:8899/api/test","try":"{\"message\": \"try\"}","confirm":"{\"message\":\"confirm\"}","cancel":"{\"message\":\"cancel\"}","step":0,"try_status":"","commit_status":"done","cancel_status":""}],"exec_num":1,"exec_time":0,"ID":0,"step":2,"error_msg":""}
+2018/03/29 20:48:35.242 [D] http://localhost:8899/api/test/cancel post 请求返回内容: {"message":"cancel","type":"cancel api","code":200,"error_code":0,"error_message":"","data":"{\"message\": \"try\"}"}
+2018/03/29 20:48:35.242 [D] http://localhost:8899/api/test_cancel_timeout/cancel post 请求返回内容: {"message":"cancel","type":"try api","code":0,"error_code":408,"error_message":"something was wrong","data":"{\"message\": \"try\"}"}
+2018/03/29 20:48:35.242 [D] 执行重回队列的操作 cancel step
+2018/03/29 20:48:35.250 [D] already send msg, key: ts_queue_0_1
+2018/03/29 20:49:20.419 [D] mq reader is starting
+2018/03/29 20:50:41.971 [D] mq reader is starting
+2018/03/29 20:50:48.313 [D] mq reader is starting
+2018/03/29 20:50:59.720 [D] mq reader is starting
+2018/03/29 20:51:02.252 [D] already send msg, key: ts_queue_110
+2018/03/29 20:51:08.730 [D] http://localhost:8899/api/test/try post 请求返回内容: {"message":"try","type":"try api","code":200,"error_code":0,"error_message":"","data":"{\"message\": \"try\"}"}
+2018/03/29 20:51:08.730 [D] http://localhost:8899/api/test_confirm_fault/try post 请求返回内容: {"message":"try","type":"try api","code":200,"error_code":0,"error_message":"","data":"{\"message\": \"try\"}"}
+2018/03/29 20:51:08.730 [D] http://localhost:8899/api/test_cancel_timeout/try post 请求返回内容: {"message":"try","type":"try api","code":200,"error_code":0,"error_message":"","data":"{\"message\": \"try\"}"}
+2018/03/29 20:51:08.730 [D] try 操作成功, ID: 0 1
+2018/03/29 20:51:08.730 [D] 持久化状态,ID: 0
+2018/03/29 20:51:08.732 [D] 更新数据库信息,ID: 0
+2018/03/29 20:51:08.732 [D] 执行 commit 逻辑  执行步骤: 1
+2018/03/29 20:51:08.732 [D] http://localhost:8899/api/test/confirm post 请求返回内容: {"message":"confirm","type":"try api","code":200,"error_code":0,"error_message":"","data":"{\"message\": \"try\"}"}
+2018/03/29 20:51:08.732 [D] http://localhost:8899/api/test_confirm_fault/confirm post 请求返回内容: {"message":"confirm","type":"try api","code":0,"error_code":401,"error_message":"something was wrong","data":"{\"message\": \"try\"}"}
+2018/03/29 20:51:08.732 [D] http://localhost:8899/api/test_cancel_timeout/confirm post 请求返回内容: {"message":"confirm","type":"try api","code":200,"error_code":0,"error_message":"","data":"{\"message\": \"try\"}"}
+2018/03/29 20:51:08.733 [D] 持久化状态,ID: 0
+2018/03/29 20:51:08.734 [D] 更新数据库信息,ID: 0
+2018/03/29 20:51:08.734 [D] 打印当前中断状态时的事务状态 {"type":"async","Task":[{"api":"http://localhost:8899/api/test_confirm_fault","try":"{\"message\": \"try\"}","confirm":"{\"message\":\"confirm\"}","cancel":"{\"message\":\"cancel\"}","step":0,"try_status":"","commit_status":"false","cancel_status":""},{"api":"http://localhost:8899/api/test_cancel_timeout","try":"{\"message\": \"try\"}","confirm":"{\"message\":\"confirm\"}","cancel":"{\"message\": \"cancel\"}","step":0,"try_status":"","commit_status":"done","cancel_status":""},{"api":"http://localhost:8899/api/test","try":"{\"message\": \"try\"}","confirm":"{\"message\":\"confirm\"}","cancel":"{\"message\":\"cancel\"}","step":0,"try_status":"","commit_status":"done","cancel_status":""}],"exec_num":1,"exec_time":0,"ID":0,"step":2,"error_msg":""}
+2018/03/29 20:51:08.735 [D] http://localhost:8899/api/test_cancel_timeout/cancel post 请求返回内容: {"message":"cancel","type":"try api","code":0,"error_code":408,"error_message":"something was wrong","data":"{\"message\": \"try\"}"}
+2018/03/29 20:51:08.735 [D] http://localhost:8899/api/test/cancel post 请求返回内容: {"message":"cancel","type":"cancel api","code":200,"error_code":0,"error_message":"","data":"{\"message\": \"try\"}"}
+2018/03/29 20:51:08.735 [D] 执行重回队列的操作 cancel step
+2018/03/29 20:51:08.742 [D] already send msg, key: ts_queue_0
+2018/03/29 20:53:09.199 [D] mq reader is starting
+2018/03/29 20:53:12.321 [D] already send msg, key: ts_queue_111
+2018/03/29 20:53:18.226 [D] http://localhost:8899/api/test_confirm_fault/try post 请求返回内容: {"message":"try","type":"try api","code":200,"error_code":0,"error_message":"","data":"{\"message\": \"try\"}"}
+2018/03/29 20:53:18.226 [D] http://localhost:8899/api/test/try post 请求返回内容: {"message":"try","type":"try api","code":200,"error_code":0,"error_message":"","data":"{\"message\": \"try\"}"}
+2018/03/29 20:53:18.226 [D] http://localhost:8899/api/test_cancel_timeout/try post 请求返回内容: {"message":"try","type":"try api","code":200,"error_code":0,"error_message":"","data":"{\"message\": \"try\"}"}
+2018/03/29 20:53:18.226 [D] try 操作成功, ID: 0 1
+2018/03/29 20:53:18.226 [D] 持久化状态,ID: 0
+2018/03/29 20:53:18.228 [D] 更新数据库信息,ID: 0
+2018/03/29 20:53:18.228 [D] 执行 commit 逻辑  执行步骤: 1
+2018/03/29 20:53:18.229 [D] http://localhost:8899/api/test_confirm_fault/confirm post 请求返回内容: {"message":"confirm","type":"try api","code":0,"error_code":401,"error_message":"something was wrong","data":"{\"message\": \"try\"}"}
+2018/03/29 20:53:18.229 [D] http://localhost:8899/api/test/confirm post 请求返回内容: {"message":"confirm","type":"try api","code":200,"error_code":0,"error_message":"","data":"{\"message\": \"try\"}"}
+2018/03/29 20:53:18.229 [D] http://localhost:8899/api/test_cancel_timeout/confirm post 请求返回内容: {"message":"confirm","type":"try api","code":200,"error_code":0,"error_message":"","data":"{\"message\": \"try\"}"}
+2018/03/29 20:53:18.229 [D] 持久化状态,ID: 0
+2018/03/29 20:53:18.233 [D] 更新数据库信息,ID: 0
+2018/03/29 20:53:18.233 [D] 打印当前中断状态时的事务状态 {"type":"async","Task":[{"api":"http://localhost:8899/api/test_confirm_fault","try":"{\"message\": \"try\"}","confirm":"{\"message\":\"confirm\"}","cancel":"{\"message\":\"cancel\"}","step":0,"try_status":"","commit_status":"false","cancel_status":""},{"api":"http://localhost:8899/api/test_cancel_timeout","try":"{\"message\": \"try\"}","confirm":"{\"message\":\"confirm\"}","cancel":"{\"message\": \"cancel\"}","step":0,"try_status":"","commit_status":"done","cancel_status":""},{"api":"http://localhost:8899/api/test","try":"{\"message\": \"try\"}","confirm":"{\"message\":\"confirm\"}","cancel":"{\"message\":\"cancel\"}","step":0,"try_status":"","commit_status":"done","cancel_status":""}],"exec_num":1,"exec_time":0,"ID":0,"step":2,"error_msg":""}
+2018/03/29 20:53:18.233 [D] http://localhost:8899/api/test/cancel post 请求返回内容: {"message":"cancel","type":"cancel api","code":200,"error_code":0,"error_message":"","data":"{\"message\": \"try\"}"}
+2018/03/29 20:53:18.233 [D] http://localhost:8899/api/test_cancel_timeout/cancel post 请求返回内容: {"message":"cancel","type":"try api","code":0,"error_code":408,"error_message":"something was wrong","data":"{\"message\": \"try\"}"}
+2018/03/29 20:53:18.233 [D] 执行重回队列的操作 cancel step
+2018/03/29 20:53:18.240 [D] already send msg, key: ts_queue_0
+2018/03/29 20:53:18.247 [D] http://localhost:8899/api/test_confirm_fault/try post 请求返回内容: {"message":"try","type":"try api","code":200,"error_code":0,"error_message":"","data":"{\"message\": \"try\"}"}
+2018/03/29 20:53:18.247 [D] http://localhost:8899/api/test/try post 请求返回内容: {"message":"try","type":"try api","code":200,"error_code":0,"error_message":"","data":"{\"message\": \"try\"}"}
+2018/03/29 20:53:18.247 [D] http://localhost:8899/api/test_cancel_timeout/try post 请求返回内容: {"message":"try","type":"try api","code":200,"error_code":0,"error_message":"","data":"{\"message\": \"try\"}"}
+2018/03/29 20:53:18.247 [D] try 操作成功, ID: 0 1
+2018/03/29 20:53:18.247 [D] 持久化状态,ID: 0
+2018/03/29 20:53:18.251 [D] 更新数据库信息,ID: 0
+2018/03/29 20:53:18.251 [D] 执行 commit 逻辑  执行步骤: 1
+2018/03/29 20:53:18.251 [D] http://localhost:8899/api/test/confirm post 请求返回内容: {"message":"confirm","type":"try api","code":200,"error_code":0,"error_message":"","data":"{\"message\": \"try\"}"}
+2018/03/29 20:53:18.251 [D] http://localhost:8899/api/test_confirm_fault/confirm post 请求返回内容: {"message":"confirm","type":"try api","code":0,"error_code":401,"error_message":"something was wrong","data":"{\"message\": \"try\"}"}
+2018/03/29 20:53:18.252 [D] http://localhost:8899/api/test_cancel_timeout/confirm post 请求返回内容: {"message":"confirm","type":"try api","code":200,"error_code":0,"error_message":"","data":"{\"message\": \"try\"}"}
+2018/03/29 20:53:18.252 [D] 持久化状态,ID: 0
+2018/03/29 20:53:18.254 [D] 更新数据库信息,ID: 0
+2018/03/29 20:53:18.254 [D] 打印当前中断状态时的事务状态 {"type":"async","Task":[{"api":"http://localhost:8899/api/test_confirm_fault","try":"{\"message\": \"try\"}","confirm":"{\"message\":\"confirm\"}","cancel":"{\"message\":\"cancel\"}","step":0,"try_status":"","commit_status":"false","cancel_status":""},{"api":"http://localhost:8899/api/test_cancel_timeout","try":"{\"message\": \"try\"}","confirm":"{\"message\":\"confirm\"}","cancel":"{\"message\": \"cancel\"}","step":0,"try_status":"","commit_status":"done","cancel_status":""},{"api":"http://localhost:8899/api/test","try":"{\"message\": \"try\"}","confirm":"{\"message\":\"confirm\"}","cancel":"{\"message\":\"cancel\"}","step":0,"try_status":"","commit_status":"done","cancel_status":""}],"exec_num":1,"exec_time":0,"ID":0,"step":2,"error_msg":""}
+2018/03/29 20:53:18.255 [D] http://localhost:8899/api/test_cancel_timeout/cancel post 请求返回内容: {"message":"cancel","type":"try api","code":0,"error_code":408,"error_message":"something was wrong","data":"{\"message\": \"try\"}"}
+2018/03/29 20:53:18.255 [D] http://localhost:8899/api/test/cancel post 请求返回内容: {"message":"cancel","type":"cancel api","code":200,"error_code":0,"error_message":"","data":"{\"message\": \"try\"}"}
+2018/03/29 20:53:18.255 [D] 执行重回队列的操作 cancel step
+2018/03/29 20:53:18.260 [D] already send msg, key: ts_queue_0
+2018/03/29 20:55:07.916 [D] mq reader is starting
+2018/03/29 20:55:15.294 [D] already send msg, key: ts_queue_112
+2018/03/29 20:55:16.935 [D] http://localhost:8899/api/test/try post 请求返回内容: {"message":"try","type":"try api","code":200,"error_code":0,"error_message":"","data":"{\"message\": \"try\"}"}
+2018/03/29 20:55:16.935 [D] http://localhost:8899/api/test_confirm_fault/try post 请求返回内容: {"message":"try","type":"try api","code":200,"error_code":0,"error_message":"","data":"{\"message\": \"try\"}"}
+2018/03/29 20:55:16.936 [D] http://localhost:8899/api/test_cancel_timeout/try post 请求返回内容: {"message":"try","type":"try api","code":200,"error_code":0,"error_message":"","data":"{\"message\": \"try\"}"}
+2018/03/29 20:55:16.936 [D] try 操作成功, ID: 0 1
+2018/03/29 20:55:16.936 [D] 持久化状态,ID: 0
+2018/03/29 20:55:16.941 [D] 更新数据库信息,ID: 0
+2018/03/29 20:55:16.941 [D] 执行 commit 逻辑  执行步骤: 1
+2018/03/29 20:55:16.942 [D] http://localhost:8899/api/test/confirm post 请求返回内容: {"message":"confirm","type":"try api","code":200,"error_code":0,"error_message":"","data":"{\"message\": \"try\"}"}
+2018/03/29 20:55:16.942 [D] http://localhost:8899/api/test_confirm_fault/confirm post 请求返回内容: {"message":"confirm","type":"try api","code":0,"error_code":401,"error_message":"something was wrong","data":"{\"message\": \"try\"}"}
+2018/03/29 20:55:16.943 [D] http://localhost:8899/api/test_cancel_timeout/confirm post 请求返回内容: {"message":"confirm","type":"try api","code":200,"error_code":0,"error_message":"","data":"{\"message\": \"try\"}"}
+2018/03/29 20:55:16.943 [D] 持久化状态,ID: 0
+2018/03/29 20:55:16.947 [D] 更新数据库信息,ID: 0
+2018/03/29 20:55:16.948 [D] 打印当前中断状态时的事务状态 {"type":"async","Task":[{"api":"http://localhost:8899/api/test_confirm_fault","try":"{\"message\": \"try\"}","confirm":"{\"message\":\"confirm\"}","cancel":"{\"message\":\"cancel\"}","step":0,"try_status":"","commit_status":"false","cancel_status":""},{"api":"http://localhost:8899/api/test_cancel_timeout","try":"{\"message\": \"try\"}","confirm":"{\"message\":\"confirm\"}","cancel":"{\"message\": \"cancel\"}","step":0,"try_status":"","commit_status":"done","cancel_status":""},{"api":"http://localhost:8899/api/test","try":"{\"message\": \"try\"}","confirm":"{\"message\":\"confirm\"}","cancel":"{\"message\":\"cancel\"}","step":0,"try_status":"","commit_status":"done","cancel_status":""}],"exec_num":1,"exec_time":0,"ID":0,"step":2,"error_msg":""}
+2018/03/29 20:55:16.948 [D] http://localhost:8899/api/test/cancel post 请求返回内容: {"message":"cancel","type":"cancel api","code":200,"error_code":0,"error_message":"","data":"{\"message\": \"try\"}"}
+2018/03/29 20:55:16.949 [D] http://localhost:8899/api/test_cancel_timeout/cancel post 请求返回内容: {"message":"cancel","type":"try api","code":0,"error_code":408,"error_message":"something was wrong","data":"{\"message\": \"try\"}"}
+2018/03/29 20:55:16.949 [D] 执行重回队列的操作 cancel step
+2018/03/29 20:56:09.296 [D] mq reader is starting
+2018/03/29 20:56:12.522 [D] already send msg, key: ts_queue_113
+2018/03/29 20:56:18.311 [D] http://localhost:8899/api/test/try post 请求返回内容: {"message":"try","type":"try api","code":200,"error_code":0,"error_message":"","data":"{\"message\": \"try\"}"}
+2018/03/29 20:56:18.311 [D] http://localhost:8899/api/test_confirm_fault/try post 请求返回内容: {"message":"try","type":"try api","code":200,"error_code":0,"error_message":"","data":"{\"message\": \"try\"}"}
+2018/03/29 20:56:18.311 [D] http://localhost:8899/api/test_cancel_timeout/try post 请求返回内容: {"message":"try","type":"try api","code":200,"error_code":0,"error_message":"","data":"{\"message\": \"try\"}"}
+2018/03/29 20:56:18.311 [D] try 操作成功, ID: 112 1
+2018/03/29 20:56:18.311 [D] 持久化状态,ID: 112
+2018/03/29 20:56:18.314 [D] 更新数据库信息,ID: 112
+2018/03/29 20:56:18.314 [D] 执行 commit 逻辑  执行步骤: 1
+2018/03/29 20:56:18.315 [D] http://localhost:8899/api/test_confirm_fault/confirm post 请求返回内容: {"message":"confirm","type":"try api","code":0,"error_code":401,"error_message":"something was wrong","data":"{\"message\": \"try\"}"}
+2018/03/29 20:56:18.315 [D] http://localhost:8899/api/test_cancel_timeout/confirm post 请求返回内容: {"message":"confirm","type":"try api","code":200,"error_code":0,"error_message":"","data":"{\"message\": \"try\"}"}
+2018/03/29 20:56:18.315 [D] http://localhost:8899/api/test/confirm post 请求返回内容: {"message":"confirm","type":"try api","code":200,"error_code":0,"error_message":"","data":"{\"message\": \"try\"}"}
+2018/03/29 20:56:18.315 [D] 持久化状态,ID: 112
+2018/03/29 20:56:18.317 [D] 更新数据库信息,ID: 112
+2018/03/29 20:56:18.317 [D] 打印当前中断状态时的事务状态 {"type":"async","Task":[{"api":"http://localhost:8899/api/test_confirm_fault","try":"{\"message\": \"try\"}","confirm":"{\"message\":\"confirm\"}","cancel":"{\"message\":\"cancel\"}","step":0,"try_status":"","commit_status":"false","cancel_status":""},{"api":"http://localhost:8899/api/test_cancel_timeout","try":"{\"message\": \"try\"}","confirm":"{\"message\":\"confirm\"}","cancel":"{\"message\": \"cancel\"}","step":0,"try_status":"","commit_status":"done","cancel_status":""},{"api":"http://localhost:8899/api/test","try":"{\"message\": \"try\"}","confirm":"{\"message\":\"confirm\"}","cancel":"{\"message\":\"cancel\"}","step":0,"try_status":"","commit_status":"done","cancel_status":""}],"exec_num":1,"exec_time":0,"ID":112,"step":2,"error_msg":""}
+2018/03/29 20:56:18.317 [D] http://localhost:8899/api/test_cancel_timeout/cancel post 请求返回内容: {"message":"cancel","type":"try api","code":0,"error_code":408,"error_message":"something was wrong","data":"{\"message\": \"try\"}"}
+2018/03/29 20:56:18.317 [D] http://localhost:8899/api/test/cancel post 请求返回内容: {"message":"cancel","type":"cancel api","code":200,"error_code":0,"error_message":"","data":"{\"message\": \"try\"}"}
+2018/03/29 20:56:18.317 [D] 执行重回队列的操作 cancel step
+2018/03/29 20:56:18.320 [D] http://localhost:8899/api/test_confirm_fault/try post 请求返回内容: {"message":"try","type":"try api","code":200,"error_code":0,"error_message":"","data":"{\"message\": \"try\"}"}
+2018/03/29 20:56:18.320 [D] http://localhost:8899/api/test_cancel_timeout/try post 请求返回内容: {"message":"try","type":"try api","code":200,"error_code":0,"error_message":"","data":"{\"message\": \"try\"}"}
+2018/03/29 20:56:18.320 [D] http://localhost:8899/api/test/try post 请求返回内容: {"message":"try","type":"try api","code":200,"error_code":0,"error_message":"","data":"{\"message\": \"try\"}"}
+2018/03/29 20:56:18.320 [D] try 操作成功, ID: 113 1
+2018/03/29 20:56:18.320 [D] 持久化状态,ID: 113
+2018/03/29 20:56:18.322 [D] 更新数据库信息,ID: 113
+2018/03/29 20:56:18.322 [D] 执行 commit 逻辑  执行步骤: 1
+2018/03/29 20:56:18.323 [D] http://localhost:8899/api/test_confirm_fault/confirm post 请求返回内容: {"message":"confirm","type":"try api","code":0,"error_code":401,"error_message":"something was wrong","data":"{\"message\": \"try\"}"}
+2018/03/29 20:56:18.323 [D] http://localhost:8899/api/test/confirm post 请求返回内容: {"message":"confirm","type":"try api","code":200,"error_code":0,"error_message":"","data":"{\"message\": \"try\"}"}
+2018/03/29 20:56:18.323 [D] http://localhost:8899/api/test_cancel_timeout/confirm post 请求返回内容: {"message":"confirm","type":"try api","code":200,"error_code":0,"error_message":"","data":"{\"message\": \"try\"}"}
+2018/03/29 20:56:18.323 [D] 持久化状态,ID: 113
+2018/03/29 20:56:18.325 [D] 更新数据库信息,ID: 113
+2018/03/29 20:56:18.325 [D] 打印当前中断状态时的事务状态 {"type":"async","Task":[{"api":"http://localhost:8899/api/test_confirm_fault","try":"{\"message\": \"try\"}","confirm":"{\"message\":\"confirm\"}","cancel":"{\"message\":\"cancel\"}","step":0,"try_status":"","commit_status":"false","cancel_status":""},{"api":"http://localhost:8899/api/test_cancel_timeout","try":"{\"message\": \"try\"}","confirm":"{\"message\":\"confirm\"}","cancel":"{\"message\": \"cancel\"}","step":0,"try_status":"","commit_status":"done","cancel_status":""},{"api":"http://localhost:8899/api/test","try":"{\"message\": \"try\"}","confirm":"{\"message\":\"confirm\"}","cancel":"{\"message\":\"cancel\"}","step":0,"try_status":"","commit_status":"done","cancel_status":""}],"exec_num":1,"exec_time":0,"ID":113,"step":2,"error_msg":""}
+2018/03/29 20:56:18.326 [D] http://localhost:8899/api/test_cancel_timeout/cancel post 请求返回内容: {"message":"cancel","type":"try api","code":0,"error_code":408,"error_message":"something was wrong","data":"{\"message\": \"try\"}"}
+2018/03/29 20:56:18.326 [D] http://localhost:8899/api/test/cancel post 请求返回内容: {"message":"cancel","type":"cancel api","code":200,"error_code":0,"error_message":"","data":"{\"message\": \"try\"}"}
+2018/03/29 20:56:18.326 [D] 执行重回队列的操作 cancel step
+2018/03/29 20:56:39.796 [D] mq reader is starting
+2018/03/29 20:56:47.851 [D] already send msg, key: ts_queue_114
+2018/03/29 20:56:48.810 [D] http://localhost:8899/api/test_confirm_fault/try post 请求返回内容: {"message":"try","type":"try api","code":200,"error_code":0,"error_message":"","data":"{\"message\": \"try\"}"}
+2018/03/29 20:56:48.810 [D] http://localhost:8899/api/test/try post 请求返回内容: {"message":"try","type":"try api","code":200,"error_code":0,"error_message":"","data":"{\"message\": \"try\"}"}
+2018/03/29 20:56:48.810 [D] http://localhost:8899/api/test_cancel_timeout/try post 请求返回内容: {"message":"try","type":"try api","code":200,"error_code":0,"error_message":"","data":"{\"message\": \"try\"}"}
+2018/03/29 20:56:48.810 [D] try 操作成功, ID: 114 1
+2018/03/29 20:56:48.810 [D] 持久化状态,ID: 114
+2018/03/29 20:56:48.813 [D] 更新数据库信息,ID: 114
+2018/03/29 20:56:48.813 [D] 执行 commit 逻辑  执行步骤: 1
+2018/03/29 20:56:48.814 [D] http://localhost:8899/api/test/confirm post 请求返回内容: {"message":"confirm","type":"try api","code":200,"error_code":0,"error_message":"","data":"{\"message\": \"try\"}"}
+2018/03/29 20:56:48.814 [D] http://localhost:8899/api/test_confirm_fault/confirm post 请求返回内容: {"message":"confirm","type":"try api","code":0,"error_code":401,"error_message":"something was wrong","data":"{\"message\": \"try\"}"}
+2018/03/29 20:56:48.814 [D] http://localhost:8899/api/test_cancel_timeout/confirm post 请求返回内容: {"message":"confirm","type":"try api","code":200,"error_code":0,"error_message":"","data":"{\"message\": \"try\"}"}
+2018/03/29 20:56:48.814 [D] 持久化状态,ID: 114
+2018/03/29 20:56:48.816 [D] 更新数据库信息,ID: 114
+2018/03/29 20:56:48.816 [D] 打印当前中断状态时的事务状态 {"type":"async","Task":[{"api":"http://localhost:8899/api/test_confirm_fault","try":"{\"message\": \"try\"}","confirm":"{\"message\":\"confirm\"}","cancel":"{\"message\":\"cancel\"}","step":0,"try_status":"","commit_status":"false","cancel_status":""},{"api":"http://localhost:8899/api/test_cancel_timeout","try":"{\"message\": \"try\"}","confirm":"{\"message\":\"confirm\"}","cancel":"{\"message\": \"cancel\"}","step":0,"try_status":"","commit_status":"done","cancel_status":""},{"api":"http://localhost:8899/api/test","try":"{\"message\": \"try\"}","confirm":"{\"message\":\"confirm\"}","cancel":"{\"message\":\"cancel\"}","step":0,"try_status":"","commit_status":"done","cancel_status":""}],"exec_num":1,"exec_time":0,"ID":114,"step":2,"error_msg":""}
+2018/03/29 20:56:48.817 [D] http://localhost:8899/api/test_cancel_timeout/cancel post 请求返回内容: {"message":"cancel","type":"try api","code":0,"error_code":408,"error_message":"something was wrong","data":"{\"message\": \"try\"}"}
+2018/03/29 20:56:48.817 [D] http://localhost:8899/api/test/cancel post 请求返回内容: {"message":"cancel","type":"cancel api","code":200,"error_code":0,"error_message":"","data":"{\"message\": \"try\"}"}
+2018/03/29 20:56:48.817 [D] 执行重回队列的操作 cancel step
+2018/03/29 20:56:48.830 [D] already send msg, key: ts_queue_114
+2018/03/29 20:58:31.116 [D] mq reader is starting
+2018/03/29 20:58:33.808 [D] already send msg, key: ts_queue_115
+2018/03/29 20:59:13.647 [D] mq reader is starting
+2018/03/29 20:59:18.683 [D] already send msg, key: ts_queue_116
+2018/03/29 20:59:22.663 [D] http://localhost:8899/api/test/try post 请求返回内容: {"message":"try","type":"try api","code":200,"error_code":0,"error_message":"","data":"{\"message\": \"try\"}"}
+2018/03/29 20:59:22.663 [D] http://localhost:8899/api/test_confirm_fault/try post 请求返回内容: {"message":"try","type":"try api","code":200,"error_code":0,"error_message":"","data":"{\"message\": \"try\"}"}
+2018/03/29 20:59:22.663 [D] http://localhost:8899/api/test_cancel_timeout/try post 请求返回内容: {"message":"try","type":"try api","code":200,"error_code":0,"error_message":"","data":"{\"message\": \"try\"}"}
+2018/03/29 20:59:22.663 [D] try 操作成功, ID: 116 1
+2018/03/29 20:59:22.663 [D] 持久化状态,ID: 116
+2018/03/29 20:59:22.665 [D] 更新数据库信息,ID: 116
+2018/03/29 20:59:22.665 [D] 执行 commit 逻辑  执行步骤: 1
+2018/03/29 20:59:22.665 [D] http://localhost:8899/api/test/confirm post 请求返回内容: {"message":"confirm","type":"try api","code":200,"error_code":0,"error_message":"","data":"{\"message\": \"try\"}"}
+2018/03/29 20:59:22.665 [D] http://localhost:8899/api/test_confirm_fault/confirm post 请求返回内容: {"message":"confirm","type":"try api","code":0,"error_code":401,"error_message":"something was wrong","data":"{\"message\": \"try\"}"}
+2018/03/29 20:59:22.665 [D] http://localhost:8899/api/test_cancel_timeout/confirm post 请求返回内容: {"message":"confirm","type":"try api","code":200,"error_code":0,"error_message":"","data":"{\"message\": \"try\"}"}
+2018/03/29 20:59:22.665 [D] 持久化状态,ID: 116
+2018/03/29 20:59:22.668 [D] 更新数据库信息,ID: 116
+2018/03/29 20:59:22.668 [D] 打印当前中断状态时的事务状态 {"type":"async","Task":[{"api":"http://localhost:8899/api/test_confirm_fault","try":"{\"message\": \"try\"}","confirm":"{\"message\":\"confirm\"}","cancel":"{\"message\":\"cancel\"}","step":0,"try_status":"","commit_status":"false","cancel_status":""},{"api":"http://localhost:8899/api/test_cancel_timeout","try":"{\"message\": \"try\"}","confirm":"{\"message\":\"confirm\"}","cancel":"{\"message\": \"cancel\"}","step":0,"try_status":"","commit_status":"done","cancel_status":""},{"api":"http://localhost:8899/api/test","try":"{\"message\": \"try\"}","confirm":"{\"message\":\"confirm\"}","cancel":"{\"message\":\"cancel\"}","step":0,"try_status":"","commit_status":"done","cancel_status":""}],"exec_num":1,"exec_time":0,"ID":116,"step":2,"error_msg":""}
+2018/03/29 20:59:22.668 [D] http://localhost:8899/api/test/cancel post 请求返回内容: {"message":"cancel","type":"cancel api","code":200,"error_code":0,"error_message":"","data":"{\"message\": \"try\"}"}
+2018/03/29 20:59:22.668 [D] http://localhost:8899/api/test_cancel_timeout/cancel post 请求返回内容: {"message":"cancel","type":"try api","code":0,"error_code":408,"error_message":"something was wrong","data":"{\"message\": \"try\"}"}
+2018/03/29 20:59:22.668 [D] 执行重回队列的操作 cancel step
+2018/03/29 20:59:22.675 [D] already send msg, key: ts_queue_116
+2018/03/29 21:02:01.239 [D] mq reader is starting
+2018/03/29 21:02:05.307 [D] already send msg, key: ts_queue_117
+2018/03/29 21:02:10.254 [D] http://localhost:8899/api/test_confirm_fault/try post 请求返回内容: {"message":"try","type":"try api","code":200,"error_code":0,"error_message":"","data":"{\"message\": \"try\"}"}
+2018/03/29 21:02:10.254 [D] http://localhost:8899/api/test_cancel_timeout/try post 请求返回内容: {"message":"try","type":"try api","code":200,"error_code":0,"error_message":"","data":"{\"message\": \"try\"}"}
+2018/03/29 21:02:10.255 [D] http://localhost:8899/api/test/try post 请求返回内容: {"message":"try","type":"try api","code":200,"error_code":0,"error_message":"","data":"{\"message\": \"try\"}"}
+2018/03/29 21:02:10.255 [D] try 操作成功, ID: 117 1
+2018/03/29 21:02:10.255 [D] 持久化状态,ID: 117
+2018/03/29 21:02:10.258 [D] 更新数据库信息,ID: 117
+2018/03/29 21:02:10.258 [D] 执行 commit 逻辑  执行步骤: 1
+2018/03/29 21:02:10.258 [D] http://localhost:8899/api/test/confirm post 请求返回内容: {"message":"confirm","type":"try api","code":200,"error_code":0,"error_message":"","data":"{\"message\": \"try\"}"}
+2018/03/29 21:02:10.259 [D] http://localhost:8899/api/test_confirm_fault/confirm post 请求返回内容: {"message":"confirm","type":"try api","code":0,"error_code":401,"error_message":"something was wrong","data":"{\"message\": \"try\"}"}
+2018/03/29 21:02:10.259 [D] http://localhost:8899/api/test_cancel_timeout/confirm post 请求返回内容: {"message":"confirm","type":"try api","code":200,"error_code":0,"error_message":"","data":"{\"message\": \"try\"}"}
+2018/03/29 21:02:10.259 [D] 持久化状态,ID: 117
+2018/03/29 21:02:10.262 [D] 更新数据库信息,ID: 117
+2018/03/29 21:02:10.262 [D] 打印当前中断状态时的事务状态 {"type":"async","Task":[{"api":"http://localhost:8899/api/test_confirm_fault","try":"{\"message\": \"try\"}","confirm":"{\"message\":\"confirm\"}","cancel":"{\"message\":\"cancel\"}","step":0,"try_status":"","commit_status":"false","cancel_status":""},{"api":"http://localhost:8899/api/test_cancel_timeout","try":"{\"message\": \"try\"}","confirm":"{\"message\":\"confirm\"}","cancel":"{\"message\": \"cancel\"}","step":0,"try_status":"","commit_status":"done","cancel_status":""},{"api":"http://localhost:8899/api/test","try":"{\"message\": \"try\"}","confirm":"{\"message\":\"confirm\"}","cancel":"{\"message\":\"cancel\"}","step":0,"try_status":"","commit_status":"done","cancel_status":""}],"exec_num":1,"exec_time":0,"ID":117,"step":2,"error_msg":""}
+2018/03/29 21:02:10.262 [D] http://localhost:8899/api/test_cancel_timeout/cancel post 请求返回内容: {"message":"cancel","type":"try api","code":0,"error_code":408,"error_message":"something was wrong","data":"{\"message\": \"try\"}"}
+2018/03/29 21:02:10.263 [D] http://localhost:8899/api/test/cancel post 请求返回内容: {"message":"cancel","type":"cancel api","code":200,"error_code":0,"error_message":"","data":"{\"message\": \"try\"}"}
+2018/03/29 21:02:10.263 [D] 执行重回队列的操作 cancel step
+2018/03/29 21:02:10.274 [D] already send msg, key: ts_queue_117
