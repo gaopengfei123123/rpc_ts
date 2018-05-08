@@ -2935,3 +2935,175 @@
 2018/03/30 11:59:46.631 [E] 准备开始取消
 2018/03/30 11:59:46.634 [D] 取消事务时插入数据库内容: {"type":"async","Task":[{"api":"http://localhost:8899/api/test_confirm_fault","try":"{\"message\": \"try\"}","confirm":"{\"message\":\"confirm\"}","cancel":"{\"message\":\"cancel\"}","step":0,"try_status":"","commit_status":"false","cancel_status":""},{"api":"http://localhost:8899/api/test_cancel_timeout","try":"{\"message\": \"try\"}","confirm":"{\"message\":\"confirm\"}","cancel":"{\"message\": \"cancel\"}","step":0,"try_status":"","commit_status":"done","cancel_status":"false"},{"api":"http://localhost:8899/api/test","try":"{\"message\": \"try\"}","confirm":"{\"message\":\"confirm\"}","cancel":"{\"message\":\"cancel\"}","step":0,"try_status":"","commit_status":"done","cancel_status":"done"}],"exec_num":3,"exec_time":0,"ID":130,"step":2,"error_msg":""} 1522382386 [{"code":0,"data":"","error_message":"out of max exec times","API":"","Index":0,"error_code":409}] 130
 2018/03/30 11:59:46.634 [D] 此处应该向某处发送 [事务取消] 通知
+2018/03/30 13:51:02.011 [E] 当前发送消息为:  {"ID":131,"exec_time":1522389062}
+2018/03/30 13:52:11.723 [E] 当前发送消息为:  {"ID":132,"exec_time":1522389131}
+2018/03/30 13:52:24.073 [D] mq reader is starting
+2018/03/30 13:52:26.260 [E] 当前发送消息为:  {"ID":133,"exec_time":1522389146}
+2018/03/30 13:54:05.971 [D] mq reader is starting
+2018/03/30 13:54:08.838 [E] 当前发送消息为:  {"ID":134,"exec_time":1522389248}
+2018/03/30 13:54:08.854 [D] already send msg, key: ts_queue_134
+2018/03/30 13:57:52.245 [D] mq reader is starting
+2018/03/30 13:57:55.103 [E] 当前发送消息为:  {"ID":135,"exec_time":1522389475}
+2018/03/30 13:57:55.106 [D] already send msg, key: ts_queue_135
+2018/03/30 13:58:22.526 [D] mq reader is starting
+2018/03/30 13:58:29.553 [E] 当前发送消息为:  {"ID":136,"exec_time":1522389509}
+2018/03/30 13:58:29.553 [D] already send msg, key: ts_queue_136
+2018/03/30 13:59:42.832 [D] mq reader is starting
+2018/03/30 13:59:45.946 [E] error input: <nil>
+2018/03/30 13:59:45.948 [E] error input: <nil>
+2018/03/30 13:59:45.949 [E] error input: <nil>
+2018/03/30 13:59:45.949 [E] error input: <nil>
+2018/03/30 13:59:45.950 [E] 当前发送消息为:  {"ID":137,"exec_time":1522389585}
+2018/03/30 13:59:45.951 [E] error input: dial tcp [::1]:9092: getsockopt: connection refused
+2018/03/30 14:01:28.959 [D] mq reader is starting
+2018/03/30 14:05:30.053 [E] error input: <nil>
+2018/03/30 14:05:30.055 [E] error input: <nil>
+2018/03/30 14:05:30.057 [E] error input: <nil>
+2018/03/30 14:05:30.057 [E] error input: <nil>
+2018/03/30 14:05:30.057 [E] 当前发送消息为:  {"ID":138,"exec_time":1522389930}
+2018/03/30 14:05:30.094 [E] error input: dial tcp :0: connect: can't assign requested address
+2018/03/30 14:05:49.270 [D] mq reader is starting
+2018/03/30 14:05:52.086 [E] error input: <nil>
+2018/03/30 14:05:52.087 [E] error input: <nil>
+2018/03/30 14:05:52.088 [E] error input: <nil>
+2018/03/30 14:05:52.088 [E] error input: <nil>
+2018/03/30 14:05:52.088 [E] 当前发送消息为:  {"ID":139,"exec_time":1522389952}
+2018/03/30 14:05:52.096 [E] error input: dial tcp :0: connect: can't assign requested address
+2018/03/30 14:07:01.764 [E] error input: <nil>
+2018/03/30 14:07:01.765 [E] error input: <nil>
+2018/03/30 14:07:01.767 [E] error input: <nil>
+2018/03/30 14:07:01.767 [E] error input: <nil>
+2018/03/30 14:07:01.767 [E] 当前发送消息为:  {"ID":140,"exec_time":1522390021}
+2018/03/30 14:07:01.779 [E] error input: dial tcp :0: connect: can't assign requested address
+2018/03/30 14:13:39.561 [E] error input: <nil>
+2018/03/30 14:13:39.566 [E] error input: <nil>
+2018/03/30 14:13:39.567 [E] error input: <nil>
+2018/03/30 14:13:39.567 [E] error input: <nil>
+2018/03/30 14:13:39.567 [E] 当前发送消息为:  {"ID":141,"exec_time":1522390419}
+2018/03/30 14:13:39.610 [E] error input: dial tcp :0: connect: can't assign requested address
+2018/03/30 14:18:02.139 [D] mq reader is starting
+2018/03/30 14:18:14.750 [E] error input: <nil>
+2018/03/30 14:18:14.751 [E] error input: <nil>
+2018/03/30 14:18:14.754 [E] error input: <nil>
+2018/03/30 14:18:14.754 [E] error input: <nil>
+2018/03/30 14:18:14.754 [E] 当前发送消息为:  {"ID":142,"exec_time":1522390694}
+2018/03/30 14:18:14.762 [E] error input: dial tcp :0: connect: can't assign requested address
+2018/03/30 14:19:11.190 [D] mq reader is starting
+2018/03/30 14:33:02.239 [D] mq reader is starting
+2018/03/30 14:33:28.080 [E] error input: <nil>
+2018/03/30 14:33:28.088 [E] error input: <nil>
+2018/03/30 14:33:28.090 [E] error input: <nil>
+2018/03/30 14:33:28.091 [E] error input: <nil>
+2018/03/30 14:33:28.091 [E] 当前发送消息为:  {"ID":143,"exec_time":1522391608}
+2018/03/30 14:33:28.097 [E] error input: dial tcp :0: connect: can't assign requested address
+2018/03/30 14:38:09.065 [D] mq reader is starting
+2018/03/30 14:38:17.199 [E] error input: <nil>
+2018/03/30 14:38:17.200 [E] error input: <nil>
+2018/03/30 14:38:17.202 [E] error input: <nil>
+2018/03/30 14:38:17.202 [E] error input: <nil>
+2018/03/30 14:38:17.202 [E] 当前发送消息为:  {"ID":144,"exec_time":1522391897}
+2018/03/30 14:38:17.206 [E] error input: dial tcp :0: connect: can't assign requested address
+2018/03/30 14:42:36.946 [D] mq reader is starting
+2018/03/30 14:56:58.288 [D] mq reader is starting
+2018/03/30 14:57:04.385 [E] error input: <nil>
+2018/03/30 14:57:04.386 [E] error input: <nil>
+2018/03/30 14:57:04.387 [E] error input: <nil>
+2018/03/30 14:57:04.387 [E] error input: <nil>
+2018/03/30 14:57:04.387 [E] 当前发送消息为:  {"ID":145,"exec_time":1522393024}
+2018/03/30 14:57:04.391 [E] error input: dial tcp :0: connect: can't assign requested address
+2018/05/08 15:49:50.862 [D] mq reader is starting
+2018/05/08 15:49:59.885 [I] message at offset 6:  = one!
+
+2018/05/08 15:49:59.885 [I] message at offset 7:  = two!
+
+2018/05/08 15:49:59.885 [I] message at offset 8:  = three!
+
+2018/05/08 15:49:59.885 [I] message at offset 9:  = one!
+
+2018/05/08 15:49:59.885 [I] message at offset 10:  = two!
+
+2018/05/08 15:49:59.885 [I] message at offset 11:  = three!
+
+2018/05/08 15:49:59.897 [E] 打印队列: {"ID":0,"exec_time":0}
+2018/05/08 15:49:59.897 [E] error input: sql: no rows in result set
+2018/05/08 15:49:59.897 [E] sql: no rows in result set
+2018/05/08 15:49:59.897 [E] 打印队列: {"ID":0,"exec_time":0}
+2018/05/08 15:49:59.897 [E] error input: sql: no rows in result set
+2018/05/08 15:49:59.897 [E] sql: no rows in result set
+2018/05/08 15:49:59.897 [E] 打印队列: {"ID":0,"exec_time":0}
+2018/05/08 15:49:59.897 [E] error input: sql: no rows in result set
+2018/05/08 15:49:59.897 [E] sql: no rows in result set
+2018/05/08 15:49:59.897 [E] 打印队列: {"ID":0,"exec_time":0}
+2018/05/08 15:49:59.897 [E] error input: sql: no rows in result set
+2018/05/08 15:49:59.897 [E] sql: no rows in result set
+2018/05/08 15:49:59.897 [E] 打印队列: {"ID":0,"exec_time":0}
+2018/05/08 15:49:59.897 [E] error input: sql: no rows in result set
+2018/05/08 15:49:59.897 [E] sql: no rows in result set
+2018/05/08 15:49:59.897 [E] 打印队列: {"ID":0,"exec_time":0}
+2018/05/08 15:49:59.897 [E] error input: sql: no rows in result set
+2018/05/08 15:49:59.898 [E] sql: no rows in result set
+2018/05/08 15:50:05.594 [E] error input: <nil>
+2018/05/08 15:50:05.596 [E] error input: <nil>
+2018/05/08 15:50:05.602 [E] error input: <nil>
+2018/05/08 15:50:05.602 [E] error input: <nil>
+2018/05/08 15:50:05.602 [E] 当前发送消息为:  {"ID":146,"exec_time":1525765805}
+2018/05/08 15:50:05.607 [E] error input: <nil>
+2018/05/08 15:50:05.613 [D] already send msg, key: ts_queue_146
+2018/05/08 15:50:08.882 [I] message at offset 12: ts_queue_146 = {"ID":146,"exec_time":1525765805}
+
+2018/05/08 15:50:08.886 [E] 打印队列: {"ID":146,"exec_time":1525765805}
+2018/05/08 15:50:08.886 [E] error input: <nil>
+2018/05/08 15:50:08.886 [E] 收到消息: {async [{http://localhost:8899/api/test {"message": "try"} {"message":"confirm"} {'message': 'cancel'} 0   } {http://localhost:8899/api/test {"message": "try"} {"message":"confirm"} {"message": "cancel"} 0   }] 0 0 146 0 }
+2018/05/08 15:50:08.886 [I] 执行 try,ID: 146
+2018/05/08 15:50:08.890 [D] http://localhost:8899/api/test/try post 请求返回内容: {"message":"try","type":"try api","code":200,"error_code":0,"error_message":"","data":"{\"message\": \"try\"}"}
+2018/05/08 15:50:08.890 [I] http://localhost:8899/api/test :  delay: 3 ms 200 {"message": "try"}
+2018/05/08 15:50:08.891 [D] http://localhost:8899/api/test/try post 请求返回内容: {"message":"try","type":"try api","code":200,"error_code":0,"error_message":"","data":"{\"message\": \"try\"}"}
+2018/05/08 15:50:08.891 [I] http://localhost:8899/api/test :  delay: 4 ms 200 {"message": "try"}
+2018/05/08 15:50:08.891 [I] try 操作完成,ID: 146  返回结果: [{"code":200,"data":"{\"message\": \"try\"}","error_message":"","API":"http://localhost:8899/api/test/try","Index":0,"error_code":0},{"code":200,"data":"{\"message\": \"try\"}","error_message":"","API":"http://localhost:8899/api/test/try","Index":1,"error_code":0}]
+2018/05/08 15:50:08.891 [D] try 操作成功, ID: 146 1
+2018/05/08 15:50:08.891 [D] 持久化状态,ID: 146
+2018/05/08 15:50:08.894 [E] error input: <nil>
+2018/05/08 15:50:08.901 [E] error input: <nil>
+2018/05/08 15:50:08.901 [D] 更新数据库信息,ID: 146
+2018/05/08 15:50:08.901 [D] 执行 commit 逻辑  执行步骤: 1
+2018/05/08 15:50:08.901 [D] http://localhost:8899/api/test/confirm post 请求返回内容: {"message":"confirm","type":"try api","code":200,"error_code":0,"error_message":"","data":"{\"message\": \"try\"}"}
+2018/05/08 15:50:08.901 [I] http://localhost:8899/api/test :  delay: 0 ms 200 {"message": "try"}
+2018/05/08 15:50:08.901 [D] http://localhost:8899/api/test/confirm post 请求返回内容: {"message":"confirm","type":"try api","code":200,"error_code":0,"error_message":"","data":"{\"message\": \"try\"}"}
+2018/05/08 15:50:08.901 [I] http://localhost:8899/api/test :  delay: 0 ms 200 {"message": "try"}
+2018/05/08 15:50:08.901 [E] 当前事务状态: &{async [{http://localhost:8899/api/test {"message": "try"} {"message":"confirm"} {'message': 'cancel'} 0  done } {http://localhost:8899/api/test {"message": "try"} {"message":"confirm"} {"message": "cancel"} 0  done }] 1 0 146 1 }
+2018/05/08 15:50:08.901 [I] 准备完成动作
+2018/05/08 15:50:08.903 [E] error input: <nil>
+2018/05/08 15:50:08.904 [E] error input: <nil>
+2018/05/08 15:50:08.905 [D] 执行成功的操作完成
+2018/05/08 15:50:08.905 [D] 当前准备执行的任务索引: [0 1]
+2018/05/08 16:00:30.237 [E] error input: <nil>
+2018/05/08 16:00:30.242 [E] error input: <nil>
+2018/05/08 16:00:30.243 [E] error input: <nil>
+2018/05/08 16:00:30.243 [E] error input: <nil>
+2018/05/08 16:00:30.243 [E] 当前发送消息为:  {"ID":147,"exec_time":1525766430}
+2018/05/08 16:00:30.256 [E] error input: <nil>
+2018/05/08 16:00:30.267 [D] already send msg, key: ts_queue_147
+2018/05/08 16:00:36.299 [I] message at offset 13: ts_queue_147 = {"ID":147,"exec_time":1525766430}
+
+2018/05/08 16:00:36.302 [E] 打印队列: {"ID":147,"exec_time":1525766430}
+2018/05/08 16:00:36.302 [E] error input: <nil>
+2018/05/08 16:00:36.302 [E] 收到消息: {async [{http://localhost:8899/api/tsest {"message": "try"} {"message":"confirm"} {'message': 'cancel'} 0   } {http://localhost:8899/api/test {"message": "try"} {"message":"confirm"} {"message": "cancel"} 0   }] 0 0 147 0 }
+2018/05/08 16:00:36.302 [I] 执行 try,ID: 147
+2018/05/08 16:00:36.306 [D] http://localhost:8899/api/tsest/try post 请求返回内容: 404 page not found
+2018/05/08 16:00:36.306 [I] http://localhost:8899/api/tsest :  delay: 3 ms 404 404 page not found
+2018/05/08 16:00:36.306 [D] http://localhost:8899/api/test/try post 请求返回内容: {"message":"try","type":"try api","code":200,"error_code":0,"error_message":"","data":"{\"message\": \"try\"}"}
+2018/05/08 16:00:36.306 [I] http://localhost:8899/api/test :  delay: 3 ms 200 {"message": "try"}
+2018/05/08 16:00:36.306 [I] try 操作完成,ID: 147  返回结果: [{"code":404,"data":"404 page not found","error_message":"request error","API":"http://localhost:8899/api/tsest/try","Index":0,"error_code":404},{"code":200,"data":"{\"message\": \"try\"}","error_message":"","API":"http://localhost:8899/api/test/try","Index":1,"error_code":0}]
+2018/05/08 16:00:36.306 [E] 准备开始取消
+2018/05/08 16:00:36.307 [E] error input: <nil>
+2018/05/08 16:00:36.308 [E] error input: <nil>
+2018/05/08 16:00:36.308 [D] 取消事务时插入数据库内容: {"type":"async","Task":[{"api":"http://localhost:8899/api/tsest","try":"{\"message\": \"try\"}","confirm":"{\"message\":\"confirm\"}","cancel":"{'message': 'cancel'}","step":0,"try_status":"","commit_status":"","cancel_status":""},{"api":"http://localhost:8899/api/test","try":"{\"message\": \"try\"}","confirm":"{\"message\":\"confirm\"}","cancel":"{\"message\": \"cancel\"}","step":0,"try_status":"","commit_status":"","cancel_status":""}],"exec_num":1,"exec_time":0,"ID":147,"step":0,"error_msg":""} 1525766436 [{"code":404,"data":"404 page not found","error_message":"request error","API":"http://localhost:8899/api/tsest/try","Index":0,"error_code":404},{"code":200,"data":"{\"message\": \"try\"}","error_message":"","API":"http://localhost:8899/api/test/try","Index":1,"error_code":0}] 147
+2018/05/08 16:00:36.308 [D] 此处应该向某处发送 [事务取消] 通知
+2018/05/08 16:09:30.669 [D] mq reader is starting
+2018/05/08 16:09:48.000 [D] mq reader is starting
+2018/05/08 16:11:05.249 [D] mq reader is starting
+2018/05/08 16:11:19.187 [D] mq reader is starting
+2018/05/08 16:11:32.965 [D] mq reader is starting
+2018/05/08 16:12:00.670 [D] mq reader is starting
+2018/05/08 16:12:15.327 [D] mq reader is starting
+2018/05/08 16:12:22.992 [D] mq reader is starting

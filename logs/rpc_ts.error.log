@@ -542,3 +542,107 @@
 2018/03/30 11:59:46.625 [E] 收到消息: {async [{http://localhost:8899/api/test_confirm_fault {"message": "try"} {"message":"confirm"} {"message":"cancel"} 0  false } {http://localhost:8899/api/test_cancel_timeout {"message": "try"} {"message":"confirm"} {"message": "cancel"} 0  done false} {http://localhost:8899/api/test {"message": "try"} {"message":"confirm"} {"message":"cancel"} 0  done done}] 2 0 130 2 }
 2018/03/30 11:59:46.631 [E] 超过最大执行次数, ID: 130
 2018/03/30 11:59:46.631 [E] 准备开始取消
+2018/03/30 13:51:02.011 [E] 当前发送消息为:  {"ID":131,"exec_time":1522389062}
+2018/03/30 13:52:11.723 [E] 当前发送消息为:  {"ID":132,"exec_time":1522389131}
+2018/03/30 13:52:26.260 [E] 当前发送消息为:  {"ID":133,"exec_time":1522389146}
+2018/03/30 13:54:08.838 [E] 当前发送消息为:  {"ID":134,"exec_time":1522389248}
+2018/03/30 13:57:55.103 [E] 当前发送消息为:  {"ID":135,"exec_time":1522389475}
+2018/03/30 13:58:29.553 [E] 当前发送消息为:  {"ID":136,"exec_time":1522389509}
+2018/03/30 13:59:45.946 [E] error input: <nil>
+2018/03/30 13:59:45.948 [E] error input: <nil>
+2018/03/30 13:59:45.949 [E] error input: <nil>
+2018/03/30 13:59:45.949 [E] error input: <nil>
+2018/03/30 13:59:45.950 [E] 当前发送消息为:  {"ID":137,"exec_time":1522389585}
+2018/03/30 13:59:45.951 [E] error input: dial tcp [::1]:9092: getsockopt: connection refused
+2018/03/30 14:05:30.053 [E] error input: <nil>
+2018/03/30 14:05:30.055 [E] error input: <nil>
+2018/03/30 14:05:30.057 [E] error input: <nil>
+2018/03/30 14:05:30.057 [E] error input: <nil>
+2018/03/30 14:05:30.057 [E] 当前发送消息为:  {"ID":138,"exec_time":1522389930}
+2018/03/30 14:05:30.094 [E] error input: dial tcp :0: connect: can't assign requested address
+2018/03/30 14:05:52.086 [E] error input: <nil>
+2018/03/30 14:05:52.087 [E] error input: <nil>
+2018/03/30 14:05:52.088 [E] error input: <nil>
+2018/03/30 14:05:52.088 [E] error input: <nil>
+2018/03/30 14:05:52.088 [E] 当前发送消息为:  {"ID":139,"exec_time":1522389952}
+2018/03/30 14:05:52.096 [E] error input: dial tcp :0: connect: can't assign requested address
+2018/03/30 14:07:01.764 [E] error input: <nil>
+2018/03/30 14:07:01.765 [E] error input: <nil>
+2018/03/30 14:07:01.767 [E] error input: <nil>
+2018/03/30 14:07:01.767 [E] error input: <nil>
+2018/03/30 14:07:01.767 [E] 当前发送消息为:  {"ID":140,"exec_time":1522390021}
+2018/03/30 14:07:01.779 [E] error input: dial tcp :0: connect: can't assign requested address
+2018/03/30 14:13:39.561 [E] error input: <nil>
+2018/03/30 14:13:39.566 [E] error input: <nil>
+2018/03/30 14:13:39.567 [E] error input: <nil>
+2018/03/30 14:13:39.567 [E] error input: <nil>
+2018/03/30 14:13:39.567 [E] 当前发送消息为:  {"ID":141,"exec_time":1522390419}
+2018/03/30 14:13:39.610 [E] error input: dial tcp :0: connect: can't assign requested address
+2018/03/30 14:18:14.750 [E] error input: <nil>
+2018/03/30 14:18:14.751 [E] error input: <nil>
+2018/03/30 14:18:14.754 [E] error input: <nil>
+2018/03/30 14:18:14.754 [E] error input: <nil>
+2018/03/30 14:18:14.754 [E] 当前发送消息为:  {"ID":142,"exec_time":1522390694}
+2018/03/30 14:18:14.762 [E] error input: dial tcp :0: connect: can't assign requested address
+2018/03/30 14:33:28.080 [E] error input: <nil>
+2018/03/30 14:33:28.088 [E] error input: <nil>
+2018/03/30 14:33:28.090 [E] error input: <nil>
+2018/03/30 14:33:28.091 [E] error input: <nil>
+2018/03/30 14:33:28.091 [E] 当前发送消息为:  {"ID":143,"exec_time":1522391608}
+2018/03/30 14:33:28.097 [E] error input: dial tcp :0: connect: can't assign requested address
+2018/03/30 14:38:17.199 [E] error input: <nil>
+2018/03/30 14:38:17.200 [E] error input: <nil>
+2018/03/30 14:38:17.202 [E] error input: <nil>
+2018/03/30 14:38:17.202 [E] error input: <nil>
+2018/03/30 14:38:17.202 [E] 当前发送消息为:  {"ID":144,"exec_time":1522391897}
+2018/03/30 14:38:17.206 [E] error input: dial tcp :0: connect: can't assign requested address
+2018/03/30 14:57:04.385 [E] error input: <nil>
+2018/03/30 14:57:04.386 [E] error input: <nil>
+2018/03/30 14:57:04.387 [E] error input: <nil>
+2018/03/30 14:57:04.387 [E] error input: <nil>
+2018/03/30 14:57:04.387 [E] 当前发送消息为:  {"ID":145,"exec_time":1522393024}
+2018/03/30 14:57:04.391 [E] error input: dial tcp :0: connect: can't assign requested address
+2018/05/08 15:49:59.897 [E] 打印队列: {"ID":0,"exec_time":0}
+2018/05/08 15:49:59.897 [E] error input: sql: no rows in result set
+2018/05/08 15:49:59.897 [E] sql: no rows in result set
+2018/05/08 15:49:59.897 [E] 打印队列: {"ID":0,"exec_time":0}
+2018/05/08 15:49:59.897 [E] error input: sql: no rows in result set
+2018/05/08 15:49:59.897 [E] sql: no rows in result set
+2018/05/08 15:49:59.897 [E] 打印队列: {"ID":0,"exec_time":0}
+2018/05/08 15:49:59.897 [E] error input: sql: no rows in result set
+2018/05/08 15:49:59.897 [E] sql: no rows in result set
+2018/05/08 15:49:59.897 [E] 打印队列: {"ID":0,"exec_time":0}
+2018/05/08 15:49:59.897 [E] error input: sql: no rows in result set
+2018/05/08 15:49:59.897 [E] sql: no rows in result set
+2018/05/08 15:49:59.897 [E] 打印队列: {"ID":0,"exec_time":0}
+2018/05/08 15:49:59.897 [E] error input: sql: no rows in result set
+2018/05/08 15:49:59.897 [E] sql: no rows in result set
+2018/05/08 15:49:59.897 [E] 打印队列: {"ID":0,"exec_time":0}
+2018/05/08 15:49:59.897 [E] error input: sql: no rows in result set
+2018/05/08 15:49:59.898 [E] sql: no rows in result set
+2018/05/08 15:50:05.594 [E] error input: <nil>
+2018/05/08 15:50:05.596 [E] error input: <nil>
+2018/05/08 15:50:05.602 [E] error input: <nil>
+2018/05/08 15:50:05.602 [E] error input: <nil>
+2018/05/08 15:50:05.602 [E] 当前发送消息为:  {"ID":146,"exec_time":1525765805}
+2018/05/08 15:50:05.607 [E] error input: <nil>
+2018/05/08 15:50:08.886 [E] 打印队列: {"ID":146,"exec_time":1525765805}
+2018/05/08 15:50:08.886 [E] error input: <nil>
+2018/05/08 15:50:08.886 [E] 收到消息: {async [{http://localhost:8899/api/test {"message": "try"} {"message":"confirm"} {'message': 'cancel'} 0   } {http://localhost:8899/api/test {"message": "try"} {"message":"confirm"} {"message": "cancel"} 0   }] 0 0 146 0 }
+2018/05/08 15:50:08.894 [E] error input: <nil>
+2018/05/08 15:50:08.901 [E] error input: <nil>
+2018/05/08 15:50:08.901 [E] 当前事务状态: &{async [{http://localhost:8899/api/test {"message": "try"} {"message":"confirm"} {'message': 'cancel'} 0  done } {http://localhost:8899/api/test {"message": "try"} {"message":"confirm"} {"message": "cancel"} 0  done }] 1 0 146 1 }
+2018/05/08 15:50:08.903 [E] error input: <nil>
+2018/05/08 15:50:08.904 [E] error input: <nil>
+2018/05/08 16:00:30.237 [E] error input: <nil>
+2018/05/08 16:00:30.242 [E] error input: <nil>
+2018/05/08 16:00:30.243 [E] error input: <nil>
+2018/05/08 16:00:30.243 [E] error input: <nil>
+2018/05/08 16:00:30.243 [E] 当前发送消息为:  {"ID":147,"exec_time":1525766430}
+2018/05/08 16:00:30.256 [E] error input: <nil>
+2018/05/08 16:00:36.302 [E] 打印队列: {"ID":147,"exec_time":1525766430}
+2018/05/08 16:00:36.302 [E] error input: <nil>
+2018/05/08 16:00:36.302 [E] 收到消息: {async [{http://localhost:8899/api/tsest {"message": "try"} {"message":"confirm"} {'message': 'cancel'} 0   } {http://localhost:8899/api/test {"message": "try"} {"message":"confirm"} {"message": "cancel"} 0   }] 0 0 147 0 }
+2018/05/08 16:00:36.306 [E] 准备开始取消
+2018/05/08 16:00:36.307 [E] error input: <nil>
+2018/05/08 16:00:36.308 [E] error input: <nil>

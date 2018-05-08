@@ -12,12 +12,14 @@ import(
 	"github.com/astaxie/beego/logs"
 	// 引入 mysql 驱动
 	"database/sql"
-	_ "github.com/GO-SQL-Driver/MySQL"
+	_ "github.com/GO-SQL-Driver/MySQL" // 引入 mysql 驱动
 )
 
 const(	
-	SYNC_MODE = "sync"		//同步操作模式
-	ASYNC_MODE = "async"		//异步操作模式
+	//SYNC_MODE 同步操作模式
+	SYNC_MODE = "sync"		
+	//ASYNC_MODE 异步操作模式
+	ASYNC_MODE = "async"		
 )
 
 func init(){

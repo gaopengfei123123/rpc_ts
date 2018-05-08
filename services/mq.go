@@ -7,7 +7,7 @@ import(
 	// "time"
 	"github.com/astaxie/beego/logs"
 	"database/sql"
-	_ "github.com/GO-SQL-Driver/MySQL"
+	_ "github.com/GO-SQL-Driver/MySQL"	// 引入 mysql 驱动
 	"encoding/json"
 )
 
@@ -57,7 +57,8 @@ func (tpl *MQTemplate) searchInDB() (ServerForm, error){
 
 // Send 向队列插入数据 (目前是使用 kafka)
 func (mq *MQService) Send(key string,value string){
-	conn, _ := kafka.DialLeader(context.Background(), "tcp", KAFKA_HOST, KAFKA_TOPIC, KAFKA_PARTITION)
+	conn, err := kafka.DialLeader(context.Background(), "tcp", KAFKA_HOST, KAFKA_TOPIC, KAFKA_PARTITION)
+	checkErr(err)
 	defer conn.Close()
 
 	conn.WriteMessages(
@@ -66,6 +67,7 @@ func (mq *MQService) Send(key string,value string){
 			Value: []byte(value),
 		},
 	)
+
 
 	logs.Debug("already send msg, key:", key)
 }

@@ -1564,3 +1564,30 @@
 
 2018/03/30 11:59:46.626 [I] http://localhost:8899/api/test :  delay: 1 ms 200 {"message": "try"}
 2018/03/30 11:59:46.626 [I] http://localhost:8899/api/test_cancel_timeout :  delay: 1 ms 408 {"message":"cancel","type":"try api","code":0,"error_code":408,"error_message":"something was wrong","data":"{\"message\": \"try\"}"}
+2018/05/08 15:49:59.885 [I] message at offset 6:  = one!
+
+2018/05/08 15:49:59.885 [I] message at offset 7:  = two!
+
+2018/05/08 15:49:59.885 [I] message at offset 8:  = three!
+
+2018/05/08 15:49:59.885 [I] message at offset 9:  = one!
+
+2018/05/08 15:49:59.885 [I] message at offset 10:  = two!
+
+2018/05/08 15:49:59.885 [I] message at offset 11:  = three!
+
+2018/05/08 15:50:08.882 [I] message at offset 12: ts_queue_146 = {"ID":146,"exec_time":1525765805}
+
+2018/05/08 15:50:08.886 [I] 执行 try,ID: 146
+2018/05/08 15:50:08.890 [I] http://localhost:8899/api/test :  delay: 3 ms 200 {"message": "try"}
+2018/05/08 15:50:08.891 [I] http://localhost:8899/api/test :  delay: 4 ms 200 {"message": "try"}
+2018/05/08 15:50:08.891 [I] try 操作完成,ID: 146  返回结果: [{"code":200,"data":"{\"message\": \"try\"}","error_message":"","API":"http://localhost:8899/api/test/try","Index":0,"error_code":0},{"code":200,"data":"{\"message\": \"try\"}","error_message":"","API":"http://localhost:8899/api/test/try","Index":1,"error_code":0}]
+2018/05/08 15:50:08.901 [I] http://localhost:8899/api/test :  delay: 0 ms 200 {"message": "try"}
+2018/05/08 15:50:08.901 [I] http://localhost:8899/api/test :  delay: 0 ms 200 {"message": "try"}
+2018/05/08 15:50:08.901 [I] 准备完成动作
+2018/05/08 16:00:36.299 [I] message at offset 13: ts_queue_147 = {"ID":147,"exec_time":1525766430}
+
+2018/05/08 16:00:36.302 [I] 执行 try,ID: 147
+2018/05/08 16:00:36.306 [I] http://localhost:8899/api/tsest :  delay: 3 ms 404 404 page not found
+2018/05/08 16:00:36.306 [I] http://localhost:8899/api/test :  delay: 3 ms 200 {"message": "try"}
+2018/05/08 16:00:36.306 [I] try 操作完成,ID: 147  返回结果: [{"code":404,"data":"404 page not found","error_message":"request error","API":"http://localhost:8899/api/tsest/try","Index":0,"error_code":404},{"code":200,"data":"{\"message\": \"try\"}","error_message":"","API":"http://localhost:8899/api/test/try","Index":1,"error_code":0}]

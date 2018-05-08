@@ -7,7 +7,7 @@ import(
 
 	// 引入 mysql 驱动
 	"database/sql"
-	_ "github.com/GO-SQL-Driver/MySQL"
+	_ "github.com/GO-SQL-Driver/MySQL" // 引入 mysql 驱动
 	"github.com/astaxie/beego/logs"
 )
 

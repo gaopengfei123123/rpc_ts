@@ -1428,3 +1428,44 @@
 2018/03/30 11:59:46.631 [D] 执行重回队列的操作 cancel step
 2018/03/30 11:59:46.634 [D] 取消事务时插入数据库内容: {"type":"async","Task":[{"api":"http://localhost:8899/api/test_confirm_fault","try":"{\"message\": \"try\"}","confirm":"{\"message\":\"confirm\"}","cancel":"{\"message\":\"cancel\"}","step":0,"try_status":"","commit_status":"false","cancel_status":""},{"api":"http://localhost:8899/api/test_cancel_timeout","try":"{\"message\": \"try\"}","confirm":"{\"message\":\"confirm\"}","cancel":"{\"message\": \"cancel\"}","step":0,"try_status":"","commit_status":"done","cancel_status":"false"},{"api":"http://localhost:8899/api/test","try":"{\"message\": \"try\"}","confirm":"{\"message\":\"confirm\"}","cancel":"{\"message\":\"cancel\"}","step":0,"try_status":"","commit_status":"done","cancel_status":"done"}],"exec_num":3,"exec_time":0,"ID":130,"step":2,"error_msg":""} 1522382386 [{"code":0,"data":"","error_message":"out of max exec times","API":"","Index":0,"error_code":409}] 130
 2018/03/30 11:59:46.634 [D] 此处应该向某处发送 [事务取消] 通知
+2018/03/30 13:52:24.073 [D] mq reader is starting
+2018/03/30 13:54:05.971 [D] mq reader is starting
+2018/03/30 13:54:08.854 [D] already send msg, key: ts_queue_134
+2018/03/30 13:57:52.245 [D] mq reader is starting
+2018/03/30 13:57:55.106 [D] already send msg, key: ts_queue_135
+2018/03/30 13:58:22.526 [D] mq reader is starting
+2018/03/30 13:58:29.553 [D] already send msg, key: ts_queue_136
+2018/03/30 13:59:42.832 [D] mq reader is starting
+2018/03/30 14:01:28.959 [D] mq reader is starting
+2018/03/30 14:05:49.270 [D] mq reader is starting
+2018/03/30 14:18:02.139 [D] mq reader is starting
+2018/03/30 14:19:11.190 [D] mq reader is starting
+2018/03/30 14:33:02.239 [D] mq reader is starting
+2018/03/30 14:38:09.065 [D] mq reader is starting
+2018/03/30 14:42:36.946 [D] mq reader is starting
+2018/03/30 14:56:58.288 [D] mq reader is starting
+2018/05/08 15:49:50.862 [D] mq reader is starting
+2018/05/08 15:50:05.613 [D] already send msg, key: ts_queue_146
+2018/05/08 15:50:08.890 [D] http://localhost:8899/api/test/try post 请求返回内容: {"message":"try","type":"try api","code":200,"error_code":0,"error_message":"","data":"{\"message\": \"try\"}"}
+2018/05/08 15:50:08.891 [D] http://localhost:8899/api/test/try post 请求返回内容: {"message":"try","type":"try api","code":200,"error_code":0,"error_message":"","data":"{\"message\": \"try\"}"}
+2018/05/08 15:50:08.891 [D] try 操作成功, ID: 146 1
+2018/05/08 15:50:08.891 [D] 持久化状态,ID: 146
+2018/05/08 15:50:08.901 [D] 更新数据库信息,ID: 146
+2018/05/08 15:50:08.901 [D] 执行 commit 逻辑  执行步骤: 1
+2018/05/08 15:50:08.901 [D] http://localhost:8899/api/test/confirm post 请求返回内容: {"message":"confirm","type":"try api","code":200,"error_code":0,"error_message":"","data":"{\"message\": \"try\"}"}
+2018/05/08 15:50:08.901 [D] http://localhost:8899/api/test/confirm post 请求返回内容: {"message":"confirm","type":"try api","code":200,"error_code":0,"error_message":"","data":"{\"message\": \"try\"}"}
+2018/05/08 15:50:08.905 [D] 执行成功的操作完成
+2018/05/08 15:50:08.905 [D] 当前准备执行的任务索引: [0 1]
+2018/05/08 16:00:30.267 [D] already send msg, key: ts_queue_147
+2018/05/08 16:00:36.306 [D] http://localhost:8899/api/tsest/try post 请求返回内容: 404 page not found
+2018/05/08 16:00:36.306 [D] http://localhost:8899/api/test/try post 请求返回内容: {"message":"try","type":"try api","code":200,"error_code":0,"error_message":"","data":"{\"message\": \"try\"}"}
+2018/05/08 16:00:36.308 [D] 取消事务时插入数据库内容: {"type":"async","Task":[{"api":"http://localhost:8899/api/tsest","try":"{\"message\": \"try\"}","confirm":"{\"message\":\"confirm\"}","cancel":"{'message': 'cancel'}","step":0,"try_status":"","commit_status":"","cancel_status":""},{"api":"http://localhost:8899/api/test","try":"{\"message\": \"try\"}","confirm":"{\"message\":\"confirm\"}","cancel":"{\"message\": \"cancel\"}","step":0,"try_status":"","commit_status":"","cancel_status":""}],"exec_num":1,"exec_time":0,"ID":147,"step":0,"error_msg":""} 1525766436 [{"code":404,"data":"404 page not found","error_message":"request error","API":"http://localhost:8899/api/tsest/try","Index":0,"error_code":404},{"code":200,"data":"{\"message\": \"try\"}","error_message":"","API":"http://localhost:8899/api/test/try","Index":1,"error_code":0}] 147
+2018/05/08 16:00:36.308 [D] 此处应该向某处发送 [事务取消] 通知
+2018/05/08 16:09:30.669 [D] mq reader is starting
+2018/05/08 16:09:48.000 [D] mq reader is starting
+2018/05/08 16:11:05.249 [D] mq reader is starting
+2018/05/08 16:11:19.187 [D] mq reader is starting
+2018/05/08 16:11:32.965 [D] mq reader is starting
+2018/05/08 16:12:00.670 [D] mq reader is starting
+2018/05/08 16:12:15.327 [D] mq reader is starting
+2018/05/08 16:12:22.992 [D] mq reader is starting
