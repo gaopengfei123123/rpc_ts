@@ -37,7 +37,7 @@ func (rd *RedisClient) Get(key string) string{
 
 // Set 设置缓存
 func (rd *RedisClient) Set(key string,value string) bool{
-	err := rd.client.Set(key,value,REDIS_CACHE_TTL)
+	err := rd.client.Set(key,value,RedisCacheTTL)
 	if err != nil {
 		panic(err)
 	}

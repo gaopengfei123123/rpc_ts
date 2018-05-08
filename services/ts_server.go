@@ -16,17 +16,17 @@ import(
 )
 
 const(	
-	//SYNC_MODE 同步操作模式
-	SYNC_MODE = "sync"		
-	//ASYNC_MODE 异步操作模式
-	ASYNC_MODE = "async"		
+	//syncMode 同步操作模式
+	syncMode = "sync"		
+	//asyncMode 异步操作模式
+	asyncMode = "async"		
 )
 
 func init(){
 	fmt.Println("初始化 log 配置")
 	// log 开异步
 	logs.Async(1e3)
-	config := fmt.Sprintf(`{"filename":"%s","separate":["error", "warning", "notice", "info", "debug"]}`, LOG_PATH )
+	config := fmt.Sprintf(`{"filename":"%s","separate":["error", "warning", "notice", "info", "debug"]}`, LogPath )
 	logs.SetLogger(logs.AdapterConsole, config)
 }
 
@@ -74,9 +74,9 @@ func ServerService(jsonStr []byte){
 
 	logs.Error("收到消息:", requestForm)
 	switch requestForm.Type {
-	case SYNC_MODE:
+	case syncMode:
 		syncHandler(requestForm)
-	case ASYNC_MODE:
+	case asyncMode:
 		asyncHandler(requestForm)
 	default:
 		fmt.Println("操作异常")
@@ -96,7 +96,7 @@ func asyncHandler(req ServerForm){
 	// 执行次数加1
 	req.ExecNum ++
 	// 检测执行次数
-	if req.ExecNum > MAX_EXEC_NUM {
+	if req.ExecNum > MaxExecNum {
 		logs.Error("已超过最大执行次数,", req.toString())
 		return 
 	}
@@ -201,7 +201,7 @@ func execItem(taskType string, index int,task ServerItem,  resultChan chan<- res
 	}(task, taskType)
 
 	// 这里就是声明一个倒计时
-	ctx, cancel := context.WithTimeout(context.Background(),MAX_EXEC_TIME * time.Second)
+	ctx, cancel := context.WithTimeout(context.Background(),MaxExecTime * time.Second)
 	defer cancel()
 
 	// 监听超时时间
@@ -382,7 +382,7 @@ func (req *ServerForm) success(){
 
 // 插入MQ
 func (req *ServerForm) insertMQ() {
-	if (req.ExecNum >= MAX_EXEC_NUM){
+	if (req.ExecNum >= MaxExecNum){
 		logs.Error("超过最大执行次数, ID:", req.ID)
 
 		var respbd []respBody

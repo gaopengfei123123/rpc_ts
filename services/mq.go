@@ -15,7 +15,7 @@ func init(){
 	fmt.Println("初始化 log 配置")
 	// log 开异步
 	logs.Async(1e3)
-	config := fmt.Sprintf(`{"filename":"%s","separate":["error", "warning", "notice", "info", "debug"]}`, LOG_PATH )
+	config := fmt.Sprintf(`{"filename":"%s","separate":["error", "warning", "notice", "info", "debug"]}`, LogPath )
 	logs.SetLogger(logs.AdapterMultiFile, config)
 }
 
@@ -57,7 +57,7 @@ func (tpl *MQTemplate) searchInDB() (ServerForm, error){
 
 // Send 向队列插入数据 (目前是使用 kafka)
 func (mq *MQService) Send(key string,value string){
-	conn, err := kafka.DialLeader(context.Background(), "tcp", KAFKA_HOST, KAFKA_TOPIC, KAFKA_PARTITION)
+	conn, err := kafka.DialLeader(context.Background(), "tcp", KafkaHost, KafkaTopic, KafkaPatition)
 	checkErr(err)
 	defer conn.Close()
 
@@ -81,9 +81,9 @@ func (mq *MQService) Read(){
 func startReading(){
 	// make a new reader that consumes from topic-A, partition 0, at offset 42
 	r := kafka.NewReader(kafka.ReaderConfig{
-		Brokers:   []string{KAFKA_HOST},
-		Topic:     KAFKA_TOPIC,
-		Partition: KAFKA_PARTITION,
+		Brokers:   []string{KafkaHost},
+		Topic:     KafkaTopic,
+		Partition: KafkaPatition,
 		MinBytes:  10e3, // 10KB
 		MaxBytes:  10e6, // 10MB
 	})

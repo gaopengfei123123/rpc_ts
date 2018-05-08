@@ -15,7 +15,7 @@ func init(){
 	fmt.Println("初始化 log 配置")
 	// log 开异步
 	logs.Async(1e3)
-	config := fmt.Sprintf(`{"filename":"%s","separate":["error", "warning", "notice", "info", "debug"]}`, LOG_PATH )
+	config := fmt.Sprintf(`{"filename":"%s","separate":["error", "warning", "notice", "info", "debug"]}`, LogPath )
 	logs.SetLogger(logs.AdapterMultiFile, config)
 }
 

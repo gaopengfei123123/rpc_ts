@@ -2,33 +2,34 @@ package services
 
 // redis 的一些配置
 const (
-	REDIS_HOST = "localhost:6379"
-	REDIS_PASSWORD = ""
-	REDIS_DB = 0
-	REDIS_CACHE_TTL = 7200
+	RedisHost = "localhost:6379"
+	RedisPassword = ""
+	RredisDB = 0
+	RedisCacheTTL = 7200
 )
 
 
 // kafka 的一些配置
 const (
-	// KAFKA_TOPIC 指定的主题名
-	KAFKA_TOPIC = "my-topic"
-	// KAFKA_PARTITION 指定分区
-	KAFKA_PARTITION = 0
-	// KAFKA_HOST kafka 链接地址
-	KAFKA_HOST = "localhost:9092"
+	// KafkaTopic 指定的主题名
+	KafkaTopic = "my-topic"
+	// KafkaPatition 指定分区
+	KafkaPatition = 0
+	// KafkaHost kafka 链接地址
+	KafkaHost = "localhost:9092"
 )
 
 // 消费者服务的一些配置
 const (
-	// MAX_EXEC_NUM 最大执行次数
-	MAX_EXEC_NUM = 3
-	// MAX_EXEC_TIME 最大执行时间(单位 秒)
-	MAX_EXEC_TIME = 20
+	// MaxExecNum 最大执行次数
+	MaxExecNum = 3
+	// MaxExecTime 最大执行时间(单位 秒)
+	MaxExecTime = 20
 )
 
 
 // log 的一些设置
 const (
-	LOG_PATH = "./logs/rpc_ts.log"
+	// LogPath  日志地址
+	LogPath = "./logs/rpc_ts.log"
 )
