@@ -8,7 +8,7 @@ import (
 func init(){
 	logs.Async(1e3)
 	config := fmt.Sprintf(`{"filename":"%s"}`, LogPath )
-	logs.SetLogger(logs.AdapterFile, config)
+	logs.SetLogger(logs.AdapterConsole, config)
 }
 // redis 的一些配置
 const (
