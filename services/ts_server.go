@@ -22,13 +22,6 @@ const(
 	asyncMode = "async"		
 )
 
-func init(){
-	fmt.Println("初始化 log 配置")
-	// log 开异步
-	logs.Async(1e3)
-	config := fmt.Sprintf(`{"filename":"%s","separate":["error", "warning", "notice", "info", "debug"]}`, LogPath )
-	logs.SetLogger(logs.AdapterConsole, config)
-}
 
 
 // ServerForm 接收参数时的 json 格式
@@ -296,12 +289,7 @@ func (req *ServerForm) combineCommit(){
 	// 完成动作
 	logs.Info("准备完成动作")
 	req.success()
-
-	
-
 	logs.Debug("当前准备执行的任务索引:", indexFilter)
-
-
 }
 
 // 执行单个 commit 操作
@@ -377,7 +365,7 @@ func (req *ServerForm) success(){
 	checkErr(err)
 	_, err = stmt.Exec(req.toString(), req.ExecNum, time.Now().Unix(), req.ID)
 	checkErr(err)
-	logs.Debug("执行成功的操作完成")
+	logs.Debug("已向数据库标记执行成功")
 }
 
 // 插入MQ

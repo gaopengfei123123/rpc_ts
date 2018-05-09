@@ -2,7 +2,6 @@ package services
 
 import(
 	"github.com/segmentio/kafka-go"
-	"fmt"
 	"context"
 	// "time"
 	"github.com/astaxie/beego/logs"
@@ -11,13 +10,6 @@ import(
 	"encoding/json"
 )
 
-func init(){
-	fmt.Println("初始化 log 配置")
-	// log 开异步
-	logs.Async(1e3)
-	config := fmt.Sprintf(`{"filename":"%s","separate":["error", "warning", "notice", "info", "debug"]}`, LogPath )
-	logs.SetLogger(logs.AdapterMultiFile, config)
-}
 
 // MQService mq 服务,目前暂定 kafka, 包含 send 和 read 两个方法
 type MQService struct{}

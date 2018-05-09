@@ -1,5 +1,15 @@
 package services
+import (
+	"github.com/astaxie/beego/logs"
+	"fmt"
+)
 
+// 进行 log 日志生成方案的配置
+func init(){
+	logs.Async(1e3)
+	config := fmt.Sprintf(`{"filename":"%s"}`, LogPath )
+	logs.SetLogger(logs.AdapterFile, config)
+}
 // redis 的一些配置
 const (
 	RedisHost = "localhost:6379"

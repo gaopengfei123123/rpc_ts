@@ -11,13 +11,6 @@ import(
 	"github.com/astaxie/beego/logs"
 )
 
-func init(){
-	fmt.Println("初始化 log 配置")
-	// log 开异步
-	logs.Async(1e3)
-	config := fmt.Sprintf(`{"filename":"%s","separate":["error", "warning", "notice", "info", "debug"]}`, LogPath )
-	logs.SetLogger(logs.AdapterMultiFile, config)
-}
 
 // ClientForm 接收参数时的 json 格式
 type ClientForm struct{
