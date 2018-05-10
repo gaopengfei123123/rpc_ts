@@ -13,7 +13,11 @@ import(
 
 // MQService mq 服务,目前暂定 kafka, 包含 send 和 read 两个方法
 type MQService struct{}
-
+// MQ 队列应该实现的方法
+type MQ interface{
+	Read()
+	Send(key string,value string)
+}
 
 // MQTemplate 存储的消息模型
 type MQTemplate struct{
@@ -36,7 +40,7 @@ func (tpl *MQTemplate) searchInDB() (ServerForm, error){
 	// 只查询可运行的任务状态
 	err := db.QueryRow(`SELECT id,payload,exec_num,create_at,update_at FROM rpc_ts WHERE id = ? AND status<2 AND update_at<=?`, tpl.ID, tpl.ExecTime).Scan(&rpcTs.ID,&rpcTs.Payload,&rpcTs.ExecNum,&rpcTs.CreateAt,&rpcTs.UpdateAt)
 
-	logs.Error("打印队列:", JSONToStr(tpl))
+	logs.Debug("打印队列:", JSONToStr(tpl))
 	var server ServerForm
 	if err != nil {
 		return server, err
@@ -59,8 +63,6 @@ func (mq *MQService) Send(key string,value string){
 			Value: []byte(value),
 		},
 	)
-
-
 	logs.Debug("already send msg, key:", key)
 }
 
@@ -79,7 +81,6 @@ func startReading(){
 		MinBytes:  10e3, // 10KB
 		MaxBytes:  10e6, // 10MB
 	})
-
 
 	ctx := context.Background()
 	for {

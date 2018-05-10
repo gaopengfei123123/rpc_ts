@@ -11,6 +11,15 @@ import(
 	"github.com/astaxie/beego/logs"
 )
 
+// client 端的 mq 组件就抽象在这里了
+var mq MQ
+
+// 初始化的时候将接口变成实体
+func init(){
+	var kafka = MQService{}
+	mq = &kafka
+}
+
 
 // ClientForm 接收参数时的 json 格式
 type ClientForm struct{
@@ -68,7 +77,6 @@ func (cf *ClientForm) insertMQ() {
 
 	insertKey := fmt.Sprintf("ts_queue_%v", cf.ID)
 	// 向消息队列中发送消息
-	var mq MQService
 	mq.Send(insertKey,JSONToStr(mqTpl))
 }
 
