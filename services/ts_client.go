@@ -9,15 +9,16 @@ import(
 	"database/sql"
 	_ "github.com/GO-SQL-Driver/MySQL" // 引入 mysql 驱动
 	"github.com/astaxie/beego/logs"
+	mq "rpc_ts/tools/mqhandler"
 )
 
 // client 端的 mq 组件就抽象在这里了
-var mq MQ
+var mqServer mq.MQ
 
 // 初始化的时候将接口变成实体
 func init(){
-	var kafka = MQService{}
-	mq = &kafka
+	var kafka = mq.MQService{}
+	mqServer = kafka
 }
 
 
@@ -77,7 +78,7 @@ func (cf *ClientForm) insertMQ() {
 
 	insertKey := fmt.Sprintf("ts_queue_%v", cf.ID)
 	// 向消息队列中发送消息
-	mq.Send(insertKey,JSONToStr(mqTpl))
+	mqServer.Send(insertKey,JSONToStr(mqTpl))
 }
 
 func checkErr(err error) {

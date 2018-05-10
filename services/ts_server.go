@@ -387,7 +387,7 @@ func (req *ServerForm) insertMQ() {
 	insertKey := fmt.Sprintf("ts_queue_%d_%d", req.ID, req.ExecNum)
 	logs.Error("插入队列", insertKey, jsonStr)
 	// 向消息队列中发送消息
-	var mq MQService
+	mq := GetMQServer()
 	mq.Send(insertKey,JSONToStr(jsonStr))
 }
 

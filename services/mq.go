@@ -1,28 +1,26 @@
 package services
 
 import(
-	"github.com/segmentio/kafka-go"
-	"context"
+	// "github.com/segmentio/kafka-go"
+	// "context"
 	// "time"
 	"github.com/astaxie/beego/logs"
 	"database/sql"
 	_ "github.com/GO-SQL-Driver/MySQL"	// 引入 mysql 驱动
 	"encoding/json"
+	mq "rpc_ts/tools/mqhandler"
 )
-
-
-// MQService mq 服务,目前暂定 kafka, 包含 send 和 read 两个方法
-type MQService struct{}
-// MQ 队列应该实现的方法
-type MQ interface{
-	Read()
-	Send(key string,value string)
-}
 
 // MQTemplate 存储的消息模型
 type MQTemplate struct{
 	ID int `json:"ID"`				// 消息在数据库上的 id
 	ExecTime int `json:"exec_time"`	//上次执行时间
+}
+// GetMQServer 获取 mq 服务实体(kafka 和 rabbitmq 可选)
+func GetMQServer() mq.MQ{
+	var mqHandler mq.MQ
+	mqHandler = new(mq.MQService)
+	return mqHandler
 }
 
 //从数据库中搜索数据
@@ -49,49 +47,4 @@ func (tpl *MQTemplate) searchInDB() (ServerForm, error){
 	json.Unmarshal([]byte(rpcTs.Payload), &server)
 	server.ID = tpl.ID
 	return server, nil
-}
-
-// Send 向队列插入数据 (目前是使用 kafka)
-func (mq *MQService) Send(key string,value string){
-	conn, err := kafka.DialLeader(context.Background(), "tcp", KafkaHost, KafkaTopic, KafkaPatition)
-	checkErr(err)
-	defer conn.Close()
-
-	conn.WriteMessages(
-		kafka.Message{
-			Key: []byte(key),
-			Value: []byte(value),
-		},
-	)
-	logs.Debug("already send msg, key:", key)
-}
-
-func (mq *MQService) Read(){
-	logs.Debug("mq reader is starting")
-	startReading()
-}
-
-// 开始监听消息队列
-func startReading(){
-	// make a new reader that consumes from topic-A, partition 0, at offset 42
-	r := kafka.NewReader(kafka.ReaderConfig{
-		Brokers:   []string{KafkaHost},
-		Topic:     KafkaTopic,
-		Partition: KafkaPatition,
-		MinBytes:  10e3, // 10KB
-		MaxBytes:  10e6, // 10MB
-	})
-
-	ctx := context.Background()
-	for {
-		m, err := r.FetchMessage(ctx)
-		if err != nil {
-			break
-		}
-		logs.Info("message at offset %d: %s = %s\n", m.Offset, string(m.Key), string(m.Value))
-		go ServerService(m.Value)
-
-		r.CommitMessages(ctx, m)
-	}
-	defer r.Close()
 }
