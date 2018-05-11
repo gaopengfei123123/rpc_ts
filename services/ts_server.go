@@ -13,6 +13,7 @@ import(
 	// 引入 mysql 驱动
 	"database/sql"
 	_ "github.com/GO-SQL-Driver/MySQL" // 引入 mysql 驱动
+	"math/rand"
 )
 
 const(	
@@ -49,6 +50,9 @@ type ServerItem struct{
 
 // ServerService 用于处理队列任务的模块
 func ServerService(jsonStr []byte){
+
+	// 每次最开始接受处理的时候设置一个唯一ID (目前使用随机数演示一下)
+	logs.SetUniqueID(rand.Int63n(10000))
 	defer func() {
 		if err := recover(); err != nil {
 			logs.Error(err)
