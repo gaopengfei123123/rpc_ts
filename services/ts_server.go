@@ -13,7 +13,7 @@ import(
 	// 引入 mysql 驱动
 	"database/sql"
 	_ "github.com/GO-SQL-Driver/MySQL" // 引入 mysql 驱动
-	"math/rand"
+	"rpc_ts/tools/uniqueid"
 )
 
 const(	
@@ -22,6 +22,13 @@ const(
 	//asyncMode 异步操作模式
 	asyncMode = "async"		
 )
+// 用于生成全局唯一 id 的结构体
+var uniqueWorker *uniqueid.Worker
+
+func init(){
+	// 初始化的时候加载计数实例
+	uniqueWorker, _ = uniqueid.NewWorker(1)
+}
 
 
 
@@ -52,7 +59,8 @@ type ServerItem struct{
 func ServerService(jsonStr []byte){
 
 	// 每次最开始接受处理的时候设置一个唯一ID (目前使用随机数演示一下)
-	logs.SetUniqueID(rand.Int63n(10000))
+	uid := uniqueWorker.GetID()
+	logs.SetUniqueID(uid)
 	defer func() {
 		if err := recover(); err != nil {
 			logs.Error(err)
