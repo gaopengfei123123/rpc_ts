@@ -9,7 +9,7 @@ import(
 	"net/http"
 	"io/ioutil"
 	"bytes"
-	"github.com/astaxie/beego/logs"
+	logs "rpc_ts/tools/loghandler"
 	// 引入 mysql 驱动
 	"database/sql"
 	_ "github.com/GO-SQL-Driver/MySQL" // 引入 mysql 驱动
@@ -65,7 +65,7 @@ func ServerService(jsonStr []byte){
 	checkErr(err)
 
 
-	logs.Error("收到消息:", requestForm)
+	logs.Error(requestForm)
 	switch requestForm.Type {
 	case syncMode:
 		syncHandler(requestForm)

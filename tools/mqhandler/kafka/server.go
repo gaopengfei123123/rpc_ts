@@ -3,7 +3,8 @@ package kafka
 import(
 	"github.com/segmentio/kafka-go"
 	"context"
-	"github.com/astaxie/beego/logs"
+	// "github.com/astaxie/beego/logs"
+	logs "rpc_ts/tools/loghandler"
 	// "github.com/astaxie/beego/logs"
 	// "fmt"
 )

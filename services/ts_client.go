@@ -8,7 +8,7 @@ import(
 	// 引入 mysql 驱动
 	"database/sql"
 	_ "github.com/GO-SQL-Driver/MySQL" // 引入 mysql 驱动
-	"github.com/astaxie/beego/logs"
+	logs "rpc_ts/tools/loghandler"
 	mq "rpc_ts/tools/mqhandler"
 )
 
@@ -74,7 +74,7 @@ func (cf *ClientForm) insertMQ() {
 	mqTpl.ID = int(cf.ID)
 	mqTpl.ExecTime = int(time.Now().Unix())
 
-	logs.Error("当前发送消息为: ", JSONToStr(mqTpl))
+	logs.Error(mqTpl)
 
 	insertKey := fmt.Sprintf("ts_queue_%v", cf.ID)
 	// 向消息队列中发送消息

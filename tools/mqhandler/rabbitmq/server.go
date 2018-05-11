@@ -2,7 +2,8 @@ package rabbitmq
 
 import(
 	"github.com/streadway/amqp"
-	"github.com/astaxie/beego/logs"
+	// "github.com/astaxie/beego/logs"
+	logs "rpc_ts/tools/loghandler"
 )
 
 // rabbitmq 的相关配置
