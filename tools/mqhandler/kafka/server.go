@@ -63,6 +63,11 @@ func (kf Kafka) Read(f func(jsonStr []byte)){
 	defer r.Close()
 }
 
+// Delay 发送延时队列
+func (kf Kafka) Delay(f func(jsonStr []byte, expire string)){
+	logs.Error("The method has not been implemented.")
+}
+
 func checkErr(err error) {
 	if err != nil {
 		panic(err)

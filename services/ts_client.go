@@ -17,8 +17,8 @@ var mqServer mq.MQ
 
 // 初始化的时候将接口变成实体
 func init(){
-	var kafka = mq.MQService{}
-	mqServer = kafka
+	var rabbitmq = mq.MQService{}
+	mqServer = rabbitmq
 }
 
 
