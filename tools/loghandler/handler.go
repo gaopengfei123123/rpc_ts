@@ -23,7 +23,7 @@ var uniqueID int64
 // log 的基础设置都在这里了
 func init(){
 	config := fmt.Sprintf(`{"filename":"%s"}`, LogPath )
-	logs.SetLogger(logs.AdapterFile, config)
+	logs.SetLogger(logs.AdapterConsole, config)
 	// 开启文件行号显示
 	logs.EnableFuncCallDepth(true)
 	// 因为是自己封装的需要将包层级给标明,否则文件行号只会显示依赖包中的行号
