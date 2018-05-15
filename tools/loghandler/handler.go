@@ -54,7 +54,7 @@ func Debug(f interface{},v ...interface{}){
 	tmpl := GetLogTemplate()
 	tmpl.Data = f
 	strByte, _ := json.Marshal(tmpl)
-	logs.Debug(string(strByte),v)
+	logs.Debug(string(strByte),v...)
 }
 
 // Info 方法
@@ -63,7 +63,7 @@ func Info(f interface{},v ...interface{}){
 	tmpl.Data = f
 	strByte, _ := json.Marshal(tmpl)
 
-	logs.Info(string(strByte),v)
+	logs.Info(string(strByte),v...)
 }
 
 // Warn 方法
@@ -71,7 +71,7 @@ func Warn(f interface{},v ...interface{}){
 	tmpl := GetLogTemplate()
 	tmpl.Data = f
 	strByte, _ := json.Marshal(tmpl)
-	logs.Warn(string(strByte),v)
+	logs.Warn(string(strByte),v...)
 }
 
 // Error 方法
@@ -79,7 +79,7 @@ func Error(f interface{},v ...interface{}){
 	tmpl := GetLogTemplate()
 	tmpl.Data = f
 	strByte, _ := json.Marshal(tmpl)
-	logs.Error(string(strByte),v)
+	logs.Error(string(strByte),v...)
 }
 
 
@@ -88,7 +88,7 @@ func Emergency(f interface{},v ...interface{}){
 	tmpl := GetLogTemplate()
 	tmpl.Data = f
 	strByte, _ := json.Marshal(tmpl)
-	logs.Emergency(string(strByte),v)
+	logs.Emergency(string(strByte),v...)
 }
 
 // Critical 方法
@@ -96,7 +96,7 @@ func Critical(f interface{},v ...interface{}){
 	tmpl := GetLogTemplate()
 	tmpl.Data = f
 	strByte, _ := json.Marshal(tmpl)
-	logs.Critical(string(strByte),v)
+	logs.Critical(string(strByte),v...)
 }
 
 // Alert 方法
@@ -104,7 +104,7 @@ func Alert(f interface{},v ...interface{}){
 	tmpl := GetLogTemplate()
 	tmpl.Data = f
 	strByte, _ := json.Marshal(tmpl)
-	logs.Alert(string(strByte),v)
+	logs.Alert(string(strByte),v...)
 }
 
 // Notice 方法
@@ -112,6 +112,6 @@ func Notice(f interface{},v ...interface{}){
 	tmpl := GetLogTemplate()
 	tmpl.Data = f
 	strByte, _ := json.Marshal(tmpl)
-	logs.Notice(string(strByte),v)
+	logs.Notice(string(strByte),v...)
 }
 

@@ -1,3 +1,5 @@
+//Package services 这是处理事务任务的主体,通过监听队列来获取事务处理任务,目前支持同步执行和串行执行
+// 同步执行采用的并发处理机制,每个都是独立的
 package services
 
 import(
@@ -14,6 +16,7 @@ import(
 	"database/sql"
 	_ "github.com/GO-SQL-Driver/MySQL" // 引入 mysql 驱动
 	"rpc_ts/tools/uniqueid"
+	"strconv"
 )
 
 const(	
@@ -58,7 +61,7 @@ type ServerItem struct{
 // ServerService 用于处理队列任务的模块
 func ServerService(jsonStr []byte){
 
-	// 每次最开始接受处理的时候设置一个唯一ID (目前使用随机数演示一下)
+	// 每次最开始接受处理的时候设置一个唯一ID (目前使用的是 snowflake 机制)
 	uid := uniqueWorker.GetID()
 	logs.SetUniqueID(uid)
 	defer func() {
@@ -73,18 +76,17 @@ func ServerService(jsonStr []byte){
 
 	
 	requestForm, err := mqTpl.searchInDB()
-
 	checkErr(err)
 
-
-	logs.Error(requestForm)
 	switch requestForm.Type {
 	case syncMode:
+		// 顺序执行
 		syncHandler(requestForm)
 	case asyncMode:
+		// 并发执行
 		asyncHandler(requestForm)
 	default:
-		fmt.Println("操作异常")
+		logs.Error(requestForm, "操作异常")
 	}
 }
 
@@ -97,7 +99,7 @@ func syncHandler(req ServerForm){
 
 // 并发执行
 func asyncHandler(req ServerForm){
-	fmt.Println("这里是异步操作")
+	logs.Info("开始执行并发操作")
 	// 执行次数加1
 	req.ExecNum ++
 	// 检测执行次数
@@ -111,9 +113,8 @@ func asyncHandler(req ServerForm){
 	case 0:
 		req.combineTry()
 	case 1:
-		logs.Debug("需要执行commit 任务")
+		req.combineCommit()
 	case 2:
-		logs.Debug("需要执行 cancel 任务", req.toString())
 		req.combineBreak()
 	}
 }
@@ -126,9 +127,9 @@ func (req *ServerForm) combineTry(){
 	resChan := make(chan respBody, len(req.Task))
 	defer close(resChan)
 
-	logs.Info("执行 try,ID:", req.ID)
+	logs.Info("执行 try 操作")
 
-
+	// 遍历任务列表, 并发的进行 try 请求
 	for index, value := range req.Task{
 		go execItem("try", index, value, resChan)
 	}
@@ -146,15 +147,14 @@ func (req *ServerForm) combineTry(){
 
 		result = append(result, res)
 	}
-
-	logs.Info("try 操作完成,ID:", req.ID, " 返回结果:", JSONToStr(result))
 	
 	// 如果不通过的话
 	if !isPass {
+		logs.Info("try 操作返回错误,执行 cancel 阶段")
 		req.cancel(result)
 	} else {
 		req.Step ++
-		logs.Debug("try 操作成功, ID:", req.ID,req.Step)
+		logs.Debug("try 操作成功, 持久化后进入 commit 阶段")
 		// 更新数据库信息
 		req.updateStatus()
 		// 执行并发提交
@@ -169,8 +169,8 @@ func execItem(taskType string, index int,task ServerItem,  resultChan chan<- res
 		if err := recover(); err != nil {
 			logs.Error(err)
 		}
-	}()
-	// defer wg.Done()
+	}();
+	logs.Info("请求开始, API: %s, type: %s", task.API, taskType)
 
 	// 创建一个阻塞通道,用于执行请求任务,也是为了计算超时时间
 	dst := make(chan respBody)
@@ -195,10 +195,10 @@ func execItem(taskType string, index int,task ServerItem,  resultChan chan<- res
 		// 对返回内容打上 api 信息
 		resp.API = url
 		
-		end := time.Now()
-		exeTime := end.Sub(start).Nanoseconds() / 1000000
+		ttl := time.Since(start)
 
-		logs.Info(task.API, ":"," delay:" ,  exeTime , "ms",resp.Status, string(resp.Body))
+		resp.ExecTime =  strconv.FormatFloat(ttl.Seconds() * 1000, 'f', 3, 64) + " ms"
+		logs.Info(resp, "请求完毕")
 
 		// 将请求结果导出
 		dst <- resp
@@ -230,7 +230,7 @@ func execItem(taskType string, index int,task ServerItem,  resultChan chan<- res
 			}
 			resultChan <- errResp
 
-			logs.Warn("URL: %s has been running toooooooo looooooong! \n",task.API)
+			logs.Warn(errResp)
 			break LOOP
 		}
 	}
@@ -244,7 +244,7 @@ func execItem(taskType string, index int,task ServerItem,  resultChan chan<- res
 func (req *ServerForm) combineCommit(){
 	// 首先筛选出来未执行的任务的下标, 因为执行到这一步的时候已经是 try 操作完毕了
 	// 因此这里主要看的是 ServerForm 的Step 和 Item 当中的 commit 的执行状态
-	logs.Debug("执行 commit 逻辑 ","执行步骤:", req.Step)
+	logs.Debug("开始执行 commit 部分")
 
 	resChan := make(chan respBody, len(req.Task))
 	defer close(resChan)
@@ -273,6 +273,7 @@ func (req *ServerForm) combineCommit(){
 			isPass = false
 			// 执行超时的则重回队列
 			if res.ErrorCode != 408 {
+				// 出现非超时错误时将回滚整个任务列表
 				isBreak = true
 			}
 			req.Task[res.Index].CommitStatus = "false"
@@ -284,9 +285,9 @@ func (req *ServerForm) combineCommit(){
 
 	logs.Error("当前事务状态:", req)
 
+	// confirm 执行出现失败, 回滚已执行的任务
 	if isBreak {
-		logs.Info("执行中断操作操作,ID:", req.ID)
-		//  进入下一阶段
+		logs.Info("confirm 执行出现失败, 回滚已执行的任务")
 		req.Step++
 		req.updateStatus()
 		req.combineBreak()
@@ -294,14 +295,15 @@ func (req *ServerForm) combineCommit(){
 	}
 
 	if !isPass {
-		logs.Debug("执行重回队列的操作")
+		// 执行重回队列操作
+		logs.Debug("执行重回队列的操作 commit step")
+		req.insertMQ()
 		return
 	}
 
 	// 完成动作
-	logs.Info("准备完成动作")
+	logs.Info("任务执行完毕, 准备持久化数据")
 	req.success()
-	logs.Debug("当前准备执行的任务索引:", indexFilter)
 }
 
 // 执行单个 commit 操作
@@ -332,7 +334,7 @@ func (req *ServerForm) toString() string{
 
 // 更新当前任务的mysql状态
 func (req *ServerForm) updateStatus(){
-	logs.Debug("持久化状态,ID:", req.ID)
+	logs.Debug("持久化状态,ID: %d", req.ID)
 	db, _ := sql.Open("mysql", "root:123123@tcp(127.0.0.1:33060)/go?charset=utf8")
 	sql := "UPDATE rpc_ts SET payload=?,status=1,exec_num=?,update_at=?,error_info=? WHERE id=?"
 	stmt, err := db.Prepare(sql)
@@ -340,7 +342,7 @@ func (req *ServerForm) updateStatus(){
 
 	_, err = stmt.Exec(req.toString(), req.ExecNum, time.Now().Unix(), req.ErrorMsg, req.ID)
 	checkErr(err)
-	logs.Debug("更新数据库信息,ID:", req.ID)
+	logs.Debug(" 持久化成功,ID: %d", req.ID)
 }
 
 // 并行操作 try 不通过直接取消事务,
@@ -366,7 +368,7 @@ func (req *ServerForm) crash(errMsg []respBody){
 	checkErr(err)
 	_, err = stmt.Exec(req.toString(), req.ExecNum, time.Now().Unix(), errStr, req.ID)
 	checkErr(err)
-	logs.Debug("此处应该向某处发送 [事务异常] 通知")
+	logs.Error("此处应该向某处发送 [事务异常] 通知")
 }
 
 // 事务执行完成动作
@@ -377,7 +379,7 @@ func (req *ServerForm) success(){
 	checkErr(err)
 	_, err = stmt.Exec(req.toString(), req.ExecNum, time.Now().Unix(), req.ID)
 	checkErr(err)
-	logs.Debug("已向数据库标记执行成功")
+	logs.Info("已向数据库标记执行成功")
 }
 
 // 插入MQ
@@ -400,12 +402,13 @@ func (req *ServerForm) insertMQ() {
 	logs.Error("插入队列", insertKey, jsonStr)
 	// 向消息队列中发送消息
 	mq := GetMQServer()
-	mq.Send(insertKey,JSONToStr(jsonStr))
+	mq.Delay(insertKey,JSONToStr(jsonStr), "10000")
 }
 
 // 执行中断事务的操作
  func (req *ServerForm) combineBreak(){
-	logs.Debug("打印当前中断状态时的事务状态", req.toString())
+	logs.Info("进入 cancel 阶段")
+	logs.Info(req)
 
 	resChan := make(chan respBody, len(req.Task))
 	defer close(resChan)
@@ -492,6 +495,7 @@ type respBody struct{
 	API string
 	Index int	// 任务所属的下标
 	ErrorCode int `json:"error_code"`
+	ExecTime  string `json:"exec_time"`	// 请求执行时间
 }
 // post 请求工具
 func postClien(url string, jsonStr string) respBody {
