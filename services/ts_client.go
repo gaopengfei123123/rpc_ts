@@ -74,7 +74,7 @@ func (cf *ClientForm) insertMQ() {
 	mqTpl.ID = int(cf.ID)
 	mqTpl.ExecTime = int(time.Now().Unix())
 
-	logs.Error(mqTpl)
+	logs.Debug(mqTpl)
 
 	insertKey := fmt.Sprintf("ts_queue_%v", cf.ID)
 	// 向消息队列中发送消息

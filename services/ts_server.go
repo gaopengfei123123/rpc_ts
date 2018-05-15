@@ -20,10 +20,12 @@ import(
 )
 
 const(	
-	//syncMode 同步操作模式
+	// syncMode 同步操作模式
 	syncMode = "sync"		
-	//asyncMode 异步操作模式
+	// asyncMode 异步操作模式
 	asyncMode = "async"		
+	// queueExpire 延时队列的延时执行时间,单位毫秒
+	queueExpire = "10000"
 )
 // 用于生成全局唯一 id 的结构体
 var uniqueWorker *uniqueid.Worker
@@ -283,8 +285,6 @@ func (req *ServerForm) combineCommit(){
 		result = append(result, res)
 	}
 
-	logs.Error("当前事务状态:", req)
-
 	// confirm 执行出现失败, 回滚已执行的任务
 	if isBreak {
 		logs.Info("confirm 执行出现失败, 回滚已执行的任务")
@@ -334,7 +334,8 @@ func (req *ServerForm) toString() string{
 
 // 更新当前任务的mysql状态
 func (req *ServerForm) updateStatus(){
-	logs.Debug("持久化状态,ID: %d", req.ID)
+	logs.Info("持久化状态,ID: %d", req.ID)
+	logs.Debug(req)
 	db, _ := sql.Open("mysql", "root:123123@tcp(127.0.0.1:33060)/go?charset=utf8")
 	sql := "UPDATE rpc_ts SET payload=?,status=1,exec_num=?,update_at=?,error_info=? WHERE id=?"
 	stmt, err := db.Prepare(sql)
@@ -342,7 +343,7 @@ func (req *ServerForm) updateStatus(){
 
 	_, err = stmt.Exec(req.toString(), req.ExecNum, time.Now().Unix(), req.ErrorMsg, req.ID)
 	checkErr(err)
-	logs.Debug(" 持久化成功,ID: %d", req.ID)
+	logs.Info(" 持久化成功,ID: %d", req.ID)
 }
 
 // 并行操作 try 不通过直接取消事务,
@@ -355,8 +356,8 @@ func (req *ServerForm) cancel(errMsg []respBody){
 	checkErr(err)
 	_, err = stmt.Exec(req.toString(), req.ExecNum, time.Now().Unix(), errStr, req.ID)
 	checkErr(err)
-	logs.Debug("取消事务时插入数据库内容:",req.toString(),time.Now().Unix(),errStr,req.ID)
-	logs.Debug("此处应该向某处发送 [事务取消] 通知")
+	logs.Info("任务已取消, ID: %d: ",req.ID)
+	logs.Error("此处应该向某处发送 [事务取消] 通知")
 }
 
 // 存在非正常取消操作
@@ -385,7 +386,7 @@ func (req *ServerForm) success(){
 // 插入MQ
 func (req *ServerForm) insertMQ() {
 	if (req.ExecNum >= MaxExecNum){
-		logs.Error("超过最大执行次数, ID:", req.ID)
+		logs.Error("超过最大执行次数 3 次")
 
 		var respbd []respBody
 		respbd = append(respbd, respBody{Error: "out of max exec times",ErrorCode: 409,})
@@ -399,16 +400,15 @@ func (req *ServerForm) insertMQ() {
 	}
 
 	insertKey := fmt.Sprintf("ts_queue_%d_%d", req.ID, req.ExecNum)
-	logs.Error("插入队列", insertKey, jsonStr)
+	logs.Info("插入队列, 主键ID: %d", req.ID)
 	// 向消息队列中发送消息
 	mq := GetMQServer()
-	mq.Delay(insertKey,JSONToStr(jsonStr), "10000")
+	mq.Delay(insertKey,JSONToStr(jsonStr), queueExpire)
 }
 
 // 执行中断事务的操作
  func (req *ServerForm) combineBreak(){
 	logs.Info("进入 cancel 阶段")
-	logs.Info(req)
 
 	resChan := make(chan respBody, len(req.Task))
 	defer close(resChan)
@@ -456,7 +456,7 @@ func (req *ServerForm) insertMQ() {
 
 	if !isPass {
 		// 执行重回队列操作
-		logs.Debug("执行重回队列的操作 cancel step")
+		logs.Info("执行重回队列的操作 cancel step")
 		req.insertMQ()
 		return
 	}
@@ -519,8 +519,6 @@ func postClien(url string, jsonStr string) respBody {
 
 
 	body, _ := ioutil.ReadAll(resp.Body)
-
-	logs.Debug(url, "post 请求返回内容:", string(body))
 
 	if resp.StatusCode == 200 {
 		respForm := respBody{}

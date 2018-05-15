@@ -37,7 +37,7 @@ func (tpl *MQTemplate) searchInDB() (ServerForm, error){
 	// 只查询可运行的任务状态
 	err := db.QueryRow(`SELECT id,payload,exec_num,create_at,update_at FROM rpc_ts WHERE id = ? AND status<2 AND update_at<=?`, tpl.ID, tpl.ExecTime).Scan(&rpcTs.ID,&rpcTs.Payload,&rpcTs.ExecNum,&rpcTs.CreateAt,&rpcTs.UpdateAt)
 
-	logs.Debug("打印队列:", JSONToStr(tpl))
+	logs.Info("打印队列:", JSONToStr(tpl))
 	var server ServerForm
 	if err != nil {
 		return server, err
