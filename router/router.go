@@ -3,6 +3,7 @@ import (
 	"github.com/gin-gonic/gin"
 	"rpc_ts/controllers"
 	"net/http"
+	logs "rpc_ts/tools/loghandler"
 )
 
 
@@ -65,9 +66,14 @@ func trySuccess(c *gin.Context){
 		ErrorCode int	`json:"error_code"`
 		ErrorMessage string	`json:"error_message"`
 		Data string `json:"data"`
+		Params string `json:"params"`
+		ExParams string `json:"ex_params"`
+		
 	}
 	// 验证是否成功绑定
 	if c.BindJSON(&testForm) == nil {
+
+		logs.Error(testForm, "收到的数据_client")
 		testForm.Type = "try api"
 		testForm.Code = statusCode
 		testForm.ErrorCode = errorCode

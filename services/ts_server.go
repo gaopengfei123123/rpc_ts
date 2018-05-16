@@ -44,20 +44,22 @@ type ServerForm struct{
 	ExecNum int `json:"exec_num"`		//执行次数
 	ExecTime int `json:"exec_time"`		//执行时间
 	ID	int 	`json:"ID"`				//数据库主键
-	Step	int `json:"step"`			//执行的步骤 0为未开始, 1时当为并发时已完成 try,当是串行时再商量
+	Step	int `json:"step"`			//执行的步骤 并行(async)时,0=>try;1=>commit;2=>cancel;   串行(sync)时,代表执行到第几条命令
 	ErrorMsg string `json:"error_msg"`  //执行出错的原因
 }
 
 // ServerItem 单个任务需要的结构
 type ServerItem struct{
-	API string `json:"api" binding:"required"`
-	Try string `json:"try" binding:"required"`
-	Confirm string `json:"confirm" binding:"required"`
-	Cancel string `json:"cancel" binding:"required"`
-	Step int `json:"step"`					//单位操作执行阶段 0 为 try 阶段,1为 commit 阶段,2为 cancel 阶段
-	TryStatus string	`json:"try_status"`		// 各阶段的执行任务 有 wait,done,false 三种情况
+	API string `json:"api" binding:"required"`				// 需要执行的 api
+	Try string `json:"try" binding:"required"`				// try 请求时的参数
+	Confirm string `json:"confirm" binding:"required"`		// confirm 请求的参数
+	Cancel string `json:"cancel" binding:"required"`		// cancel 请求时的参数
+	Step int `json:"step"`									// 单位操作执行阶段 0 为 try 阶段,1为 commit 阶段,2为 cancel 阶段
+	TryStatus string	`json:"try_status"`					// 各阶段的执行任务 有 wait,done,false 三种情况
 	CommitStatus string `json:"commit_status"`
 	CancelStatus string `json:"cancel_status"`
+	ExParams string `json:"ex_params"`						// 来自上次请求时的参数, 仅在串行执行的时候使用
+	Response string `json:"response"`						// 执行 confirm 接口时返回的参数 用于串行时的
 }
 
 // ServerService 用于处理队列任务的模块
@@ -96,7 +98,53 @@ func ServerService(jsonStr []byte){
 
 // 顺序执行
 func syncHandler(req ServerForm){
-	fmt.Println("这里是同步操作", req)
+	logs.Info("开始执行串行操作")
+
+	// 执行次数加1
+	req.ExecNum ++
+	// 检测执行次数
+	if req.ExecNum > MaxExecNum {
+		logs.Error("已超过最大执行次数,", req.toString())
+		return 
+	}
+
+
+	// 用于承接每次请求调用回的参数
+	var exParams string
+	var status int		// 1 代表执行成功, 2代表超时,需要延时执行, 3 代表需要执行 cancel流程
+
+	for startIndex := req.Step; startIndex < len(req.Task); startIndex++ {
+		req.Task[startIndex].ExParams = exParams
+		exParams, status  = req.execSingleTask(startIndex)
+
+		if status != 1 {
+			logs.Error("操作不能继续")
+		}
+	} 
+
+	logs.Debug(req,"这里是同步操作")
+}
+
+
+// 自行单个任务,返回响应结果
+func (req *ServerForm) execSingleTask(index int) (response string, status int){
+	var task ServerItem
+	task = req.Task[index]
+
+	var res respBody
+
+	resChan := make(chan respBody, 1)
+	defer close(resChan)
+
+	if (task.TryStatus != "true") {
+		execItem("try", index, task, resChan)
+
+		res = <- resChan
+		logs.Error(res, "收到消息_server")
+	}
+
+
+	return "", 1
 }
 
 // 并发执行
@@ -166,7 +214,7 @@ func (req *ServerForm) combineTry(){
 
 // 执行单个请求操作, 可根据 taskType 来区分请求的包体
 func execItem(taskType string, index int,task ServerItem,  resultChan chan<- respBody){
-	// 类似 try catch 的一个放报错机制
+	// 类似 try catch 的一个防报错机制
 	defer func() {
 		if err := recover(); err != nil {
 			logs.Error(err)
@@ -186,13 +234,14 @@ func execItem(taskType string, index int,task ServerItem,  resultChan chan<- res
 		switch taskType {
 		case "try":
 			url = fmt.Sprintf("%s/try", task.API)
-			resp = postClien(url, task.Try)
+			resp = postClien(url, task.Try, task.ExParams)
 		case "confirm":
 			url = fmt.Sprintf("%s/confirm", task.API)
-			resp = postClien(url, task.Confirm)
+			resp = postClien(url, task.Confirm, task.ExParams)
 		case "cancel":
 			url = fmt.Sprintf("%s/cancel", task.API)
-			resp = postClien(url, task.Cancel)
+			// 当执行取消操作的时候将会把 confirm 操作的返回值当做额外参数放进去
+			resp = postClien(url, task.Cancel, task.Response)
 		}
 		// 对返回内容打上 api 信息
 		resp.API = url
@@ -320,11 +369,6 @@ func execCommit(task ServerItem, resChan chan<- respBody, ){
 	defer close(dst)
 }
 
-// 同步执行 cancel 步骤?
-func combineCancel(req *ServerForm){
-
-}
-
 
 func (req *ServerForm) toString() string{
 	jsonByte, _ := json.Marshal(req)
@@ -407,7 +451,7 @@ func (req *ServerForm) insertMQ() {
 }
 
 // 执行中断事务的操作
- func (req *ServerForm) combineBreak(){
+func (req *ServerForm) combineBreak(){
 	logs.Info("进入 cancel 阶段")
 
 	resChan := make(chan respBody, len(req.Task))
@@ -464,7 +508,7 @@ func (req *ServerForm) insertMQ() {
 	// 全部正常回滚则关闭事务
 	req.cancel(result)
 	logs.Info("终止操作完毕!ID:", req.ID)
- }
+}
 
 
 // ==================================TOOLS===================================
@@ -489,16 +533,23 @@ func JSONToStr(req interface{}) string{
 
 // 进行 post 请求时的返回的结构体
 type respBody struct{
-	Status int		`json:"code"`
-	Body string		`json:"data"`
-	Error string	`json:"error_message"`
-	API string
-	Index int	// 任务所属的下标
-	ErrorCode int `json:"error_code"`
-	ExecTime  string `json:"exec_time"`	// 请求执行时间
+	Status int		`json:"code"`			// 请求任务后返回的状态码
+	Body string		`json:"data"`			// 返回的信息主体
+	Error string	`json:"error_message"`	// 返回的错误信息
+	API string								// 请求的 api
+	Index int								// 任务所属的下标
+	ErrorCode int 	`json:"error_code"`		// 错误编码
+	ExecTime  string 						// 请求执行时间
+}
+
+
+// 向远程请求时发送的格式
+type postBody struct{
+	Params string 	`json:"params"`		// 请求时的参数
+	ExParams string `json:"ex_params"` 	// 请求时的额外参数, 当 type=sync 的时候会把上个任务的返回值传到这里
 }
 // post 请求工具
-func postClien(url string, jsonStr string) respBody {
+func postClien(url string, jsonStr string, exParams string) respBody {
 	// 类似 try catch 的一个放报错机制
 	defer func() {
 		if err := recover(); err != nil {
@@ -506,7 +557,16 @@ func postClien(url string, jsonStr string) respBody {
 		}
 	}()
 
-	var jsonByte = []byte(jsonStr)
+	postBody := postBody{
+		Params: jsonStr,
+		ExParams: exParams,
+	}
+
+	jsonByte, err := json.Marshal(postBody)
+	checkErr(err)
+
+	logs.Error(string(jsonByte), "即将发送的数据")
+
 	req, err := http.NewRequest("POST", url, bytes.NewBuffer(jsonByte))
 	req.Header.Set("Content-Type", "application/json")
 
@@ -520,6 +580,7 @@ func postClien(url string, jsonStr string) respBody {
 
 	body, _ := ioutil.ReadAll(resp.Body)
 
+	// 如果是正常返回则解析 json 数据
 	if resp.StatusCode == 200 {
 		respForm := respBody{}
 		json.Unmarshal(body, &respForm)

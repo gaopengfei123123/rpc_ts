@@ -1,0 +1,206 @@
+{
+	"info": {
+		"name": "rpc_ts",
+		"_postman_id": "f19b8f63-22cb-c893-6461-e04549c2dd29",
+		"description": "rpc_ts 的测试接口",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "提交事务消息",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"type\": \"async\",\n\t\"task\": [\n\t\t{\n\t\t\t\"api\": \"http://localhost:8899/api/test\",\n\t\t\t\"try\": \"{\\\"message\\\": \\\"try\\\"}\",\n\t\t\t\"confirm\": \"{\\\"message\\\":\\\"confirm\\\"}\",\n\t\t\t\"cancel\":\"{'message': 'cancel'}\"\n\t\t},\n\t\t{\n\t\t\t\"api\": \"http://localhost:8899/api/test\",\n\t\t\t\"try\": \"{\\\"message\\\": \\\"try\\\"}\",\n\t\t\t\"confirm\": \"{\\\"message\\\":\\\"confirm\\\"}\",\n\t\t\t\"cancel\":\"{\\\"message\\\": \\\"cancel\\\"}\"\n\t\t}\n\t\t]\n}"
+				},
+				"url": {
+					"raw": "localhost:8899/client",
+					"host": [
+						"localhost"
+					],
+					"port": "8899",
+					"path": [
+						"client"
+					]
+				},
+				"description": null
+			},
+			"response": []
+		},
+		{
+			"name": "提交事务消息_有一个 try 失败的例子",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"type\": \"async\",\n\t\"task\": [\n\t\t{\n\t\t\t\"api\": \"http://localhost:8899/api/tsest\",\n\t\t\t\"try\": \"{\\\"message\\\": \\\"try\\\"}\",\n\t\t\t\"confirm\": \"{\\\"message\\\":\\\"confirm\\\"}\",\n\t\t\t\"cancel\":\"{'message': 'cancel'}\"\n\t\t},\n\t\t{\n\t\t\t\"api\": \"http://localhost:8899/api/test\",\n\t\t\t\"try\": \"{\\\"message\\\": \\\"try\\\"}\",\n\t\t\t\"confirm\": \"{\\\"message\\\":\\\"confirm\\\"}\",\n\t\t\t\"cancel\":\"{\\\"message\\\": \\\"cancel\\\"}\"\n\t\t}\n\t\t]\n}"
+				},
+				"url": {
+					"raw": "localhost:8899/client",
+					"host": [
+						"localhost"
+					],
+					"port": "8899",
+					"path": [
+						"client"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "提交事务消息_完全成功的例子",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"type\": \"async\",\n\t\"task\": [\n\t\t{\n\t\t\t\"api\": \"http://localhost:8899/api/test\",\n\t\t\t\"try\": \"{\\\"message\\\": \\\"try\\\"}\",\n\t\t\t\"confirm\": \"{\\\"message\\\":\\\"confirm\\\"}\",\n\t\t\t\"cancel\":\"{\\\"message\\\": \\\"cancel\\\"}\"\n\t\t},\n\t\t{\n\t\t\t\"api\": \"http://localhost:8899/api/test\",\n\t\t\t\"try\": \"{\\\"message\\\": \\\"try\\\"}\",\n\t\t\t\"confirm\": \"{\\\"message\\\":\\\"confirm\\\"}\",\n\t\t\t\"cancel\":\"{\\\"message\\\": \\\"cancel\\\"}\"\n\t\t}\n\t\t]\n}"
+				},
+				"url": {
+					"raw": "localhost:8899/client",
+					"host": [
+						"localhost"
+					],
+					"port": "8899",
+					"path": [
+						"client"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "提交事务消息_有一个 confirm 失败的例子",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"type\": \"async\",\n\t\"task\": [\n\t\t{\n\t\t\t\"api\": \"http://localhost:8899/api/test\",\n\t\t\t\"try\": \"{\\\"message\\\": \\\"try\\\"}\",\n\t\t\t\"confirm\": \"{\\\"message\\\":\\\"confirm\\\"}\",\n\t\t\t\"cancel\":\"{\\\"message\\\":\\\"cancel\\\"}\"\n\t\t},\n\t\t{\n\t\t\t\"api\": \"http://localhost:8899/api/test_confirm_fault\",\n\t\t\t\"try\": \"{\\\"message\\\": \\\"try\\\"}\",\n\t\t\t\"confirm\": \"{\\\"message\\\":\\\"confirm\\\"}\",\n\t\t\t\"cancel\":\"{\\\"message\\\": \\\"cancel\\\"}\"\n\t\t}\n\t\t]\n}"
+				},
+				"url": {
+					"raw": "localhost:8899/client",
+					"host": [
+						"localhost"
+					],
+					"port": "8899",
+					"path": [
+						"client"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "提交事务消息_有一个 cancel 失败的例子",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"type\": \"async\",\n\t\"task\": [\n\t\t{\n\t\t\t\"api\": \"http://localhost:8899/api/test_confirm_fault\",\n\t\t\t\"try\": \"{\\\"message\\\": \\\"try\\\"}\",\n\t\t\t\"confirm\": \"{\\\"message\\\":\\\"confirm\\\"}\",\n\t\t\t\"cancel\":\"{\\\"message\\\":\\\"cancel\\\"}\"\n\t\t},\n\t\t{\n\t\t\t\"api\": \"http://localhost:8899/api/test_cancel_fault\",\n\t\t\t\"try\": \"{\\\"message\\\": \\\"try\\\"}\",\n\t\t\t\"confirm\": \"{\\\"message\\\":\\\"confirm\\\"}\",\n\t\t\t\"cancel\":\"{\\\"message\\\": \\\"cancel\\\"}\"\n\t\t},\n\t\t{\n\t\t\t\"api\": \"http://localhost:8899/api/test\",\n\t\t\t\"try\": \"{\\\"message\\\": \\\"try\\\"}\",\n\t\t\t\"confirm\": \"{\\\"message\\\":\\\"confirm\\\"}\",\n\t\t\t\"cancel\":\"{\\\"message\\\":\\\"cancel\\\"}\"\n\t\t}\n\t\t]\n}"
+				},
+				"url": {
+					"raw": "localhost:8899/client",
+					"host": [
+						"localhost"
+					],
+					"port": "8899",
+					"path": [
+						"client"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "提交事务消息_有一个 cancel 超时的例子",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"type\": \"async\",\n\t\"task\": [\n\t\t{\n\t\t\t\"api\": \"http://localhost:8899/api/test_confirm_fault\",\n\t\t\t\"try\": \"{\\\"message\\\": \\\"try\\\"}\",\n\t\t\t\"confirm\": \"{\\\"message\\\":\\\"confirm\\\"}\",\n\t\t\t\"cancel\":\"{\\\"message\\\":\\\"cancel\\\"}\"\n\t\t},\n\t\t{\n\t\t\t\"api\": \"http://localhost:8899/api/test_cancel_timeout\",\n\t\t\t\"try\": \"{\\\"message\\\": \\\"try\\\"}\",\n\t\t\t\"confirm\": \"{\\\"message\\\":\\\"confirm\\\"}\",\n\t\t\t\"cancel\":\"{\\\"message\\\": \\\"cancel\\\"}\"\n\t\t},\n\t\t{\n\t\t\t\"api\": \"http://localhost:8899/api/test\",\n\t\t\t\"try\": \"{\\\"message\\\": \\\"try\\\"}\",\n\t\t\t\"confirm\": \"{\\\"message\\\":\\\"confirm\\\"}\",\n\t\t\t\"cancel\":\"{\\\"message\\\":\\\"cancel\\\"}\"\n\t\t}\n\t\t]\n}"
+				},
+				"url": {
+					"raw": "localhost:8899/client",
+					"host": [
+						"localhost"
+					],
+					"port": "8899",
+					"path": [
+						"client"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "提交事务消息-并行执行",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"type\": \"sync\",\n\t\"task\": [\n\t\t{\n\t\t\t\"api\": \"http://localhost:8899/api/test\",\n\t\t\t\"try\": \"{\\\"message\\\": \\\"try\\\"}\",\n\t\t\t\"confirm\": \"{\\\"message\\\":\\\"confirm\\\"}\",\n\t\t\t\"cancel\":\"{'message': 'cancel'}\"\n\t\t},\n\t\t{\n\t\t\t\"api\": \"http://localhost:8899/api/test\",\n\t\t\t\"try\": \"{\\\"message\\\": \\\"try\\\"}\",\n\t\t\t\"confirm\": \"{\\\"message\\\":\\\"confirm\\\"}\",\n\t\t\t\"cancel\":\"{\\\"message\\\": \\\"cancel\\\"}\"\n\t\t}\n\t\t]\n}"
+				},
+				"url": {
+					"raw": "localhost:8899/client",
+					"host": [
+						"localhost"
+					],
+					"port": "8899",
+					"path": [
+						"client"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
