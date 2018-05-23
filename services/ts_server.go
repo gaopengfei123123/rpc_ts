@@ -112,7 +112,7 @@ func syncHandler(req ServerForm){
 	// 用于承接每次请求调用回的参数
 	var exParams string
 	var status int		// 1 代表执行成功, 2代表超时,需要延时执行, 3 代表需要执行 cancel流程
-
+	exParams = "0"
 	for startIndex := req.Step; startIndex < len(req.Task); startIndex++ {
 		req.Task[startIndex].ExParams = exParams
 		exParams, status  = req.execSingleTask(startIndex)
