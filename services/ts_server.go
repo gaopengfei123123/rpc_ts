@@ -136,12 +136,20 @@ func (req *ServerForm) execSingleTask(index int) (response string, status int){
 	resChan := make(chan respBody, 1)
 	defer close(resChan)
 
-	if (task.TryStatus != "true") {
+	if (task.TryStatus == "") {
 		execItem("try", index, task, resChan)
 
 		res = <- resChan
-		logs.Error(res, "收到消息_server")
+		logs.Error(res, "收到 try 消息_server")
+
+		if ( res.Status == 200 ) {
+			execItem("confirm", index, task, resChan)
+			res = <- resChan
+			logs.Error(res, "收到 confirm 消息_server")
+		}
 	}
+
+
 
 
 	return "", 1

@@ -381,7 +381,7 @@ func step1Confirm(c *gin.Context){
 		a , _ := strconv.Atoi(form.Params)
 		b , _ := strconv.Atoi(form.ExParams)
 
-		res = a + b
+		res = a  + b
 		// 执行失败条件
 		if res > 10 {
 			c.JSON(200, gin.H{
