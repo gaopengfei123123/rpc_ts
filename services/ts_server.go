@@ -117,12 +117,18 @@ func syncHandler(req ServerForm){
 		req.Task[startIndex].ExParams = exParams
 		exParams, status  = req.execSingleTask(startIndex)
 
-		if status != 1 {
-			logs.Error("操作不能继续")
+		if status == 1 {
+			// 将返回信息存入当前任务的 Response, 并传递给下一个任务的 exParams 中
+			req.Task[startIndex].Response = exParams
+			req.Step++
+			req.updateStatus()
+			logs.Error("index: %d task 返回内容为: %s", startIndex, exParams)
+		} else {
+			logs.Error("index: %d 执行失败了 ,状态码: %d", startIndex, status)
 		}
 	} 
 
-	logs.Debug(req,"这里是同步操作")
+	logs.Debug("这里是同步操作")
 }
 
 
@@ -138,21 +144,29 @@ func (req *ServerForm) execSingleTask(index int) (response string, status int){
 
 	if (task.TryStatus == "") {
 		execItem("try", index, task, resChan)
-
 		res = <- resChan
-		logs.Error(res, "收到 try 消息_server")
+		logs.Error("收到 try 消息_server")
+		logs.Debug(res)
 
 		if ( res.Status == 200 ) {
 			execItem("confirm", index, task, resChan)
 			res = <- resChan
-			logs.Error(res, "收到 confirm 消息_server")
+			logs.Error("收到 confirm 消息_server")
+			logs.Debug(res)
+
+			if res.Status == 200 {
+				logs.Debug("task %d 执行完毕,返回内容 $s", index, res.Body)
+				return res.Body, 1
+			}
 		}
+
+		return res.Error, 0
 	}
 
 
 
 
-	return "", 1
+	return "execSingleTask error", 1
 }
 
 // 并发执行
