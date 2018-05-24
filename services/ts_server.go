@@ -108,32 +108,72 @@ func syncHandler(req ServerForm){
 		return 
 	}
 
-
 	// 用于承接每次请求调用回的参数
+	var errMsg string
 	var exParams string
-	var status int		// 1 代表执行成功, 2代表超时,需要延时执行, 3 代表需要执行 cancel流程
+	var status string		// 1 代表执行成功, 2代表超时,需要延时执行, 3 代表需要执行 cancel流程, 第一位是 try 阶段,第二位是 confirm 阶段
 	exParams = "0"
+
+LOOP:
 	for startIndex := req.Step; startIndex < len(req.Task); startIndex++ {
 		req.Task[startIndex].ExParams = exParams
-		exParams, status  = req.execSingleTask(startIndex)
+		exParams, status, errMsg  = req.execSingleTask(startIndex)
+		req.Step = startIndex + 1
 
-		if status == 1 {
-			// 将返回信息存入当前任务的 Response, 并传递给下一个任务的 exParams 中
+		switch status{
+		case "11":
+			// 执行正常
+			// 将返回信息存入当前任务的 Response, 并传递给下一个任务的 exParams 中,
 			req.Task[startIndex].Response = exParams
-			req.Step++
+			req.Task[startIndex].TryStatus  = "true"
+			req.Task[startIndex].CommitStatus  = "true"
+		
 			req.updateStatus()
 			logs.Error("index: %d task 返回内容为: %s", startIndex, exParams)
-		} else {
-			logs.Error("index: %d 执行失败了 ,状态码: %d", startIndex, status)
+		case "10":
+			// confirm 失败
+			req.Task[startIndex].TryStatus  = "true"
+			req.Task[startIndex].CommitStatus  = "false"
+			logs.Error("执行失败,需要回滚, 错误原因: %s", errMsg)
+			break LOOP
+		default:
+			req.Task[startIndex].TryStatus  = "false"
+			logs.Error("index: %d 执行失败了 ,状态码: %s, 错误信息: %s", startIndex, status, errMsg)
+			req.serialBreak()
+			break LOOP
+		}
+
+		if req.Step == len(req.Task) {
+			logs.Info("串行任务执行成功")
 		}
 	} 
+}
 
-	logs.Debug("这里是同步操作")
+// 串行版本的回滚执行
+func (req *ServerForm) serialBreak(){
+	logs.Info("执行串行回滚")
+	logs.Info(req)
+	var task ServerItem
+	var res respBody
+	resChan := make(chan respBody, 1)
+
+	for currentIndex := req.Step - 1; currentIndex >= 0; currentIndex-- {
+		task = req.Task[currentIndex]
+		logs.Alert("执行 index: %d", currentIndex)
+		logs.Info(task)
+
+		execItem("cancel", currentIndex, task, resChan)
+
+		res = <-resChan
+		logs.Error("cancel 结果, index: %d", currentIndex)
+		logs.Error(res)
+	}
+
 }
 
 
 // 自行单个任务,返回响应结果
-func (req *ServerForm) execSingleTask(index int) (response string, status int){
+func (req *ServerForm) execSingleTask(index int) (response string, status string, errMsg string){
 	var task ServerItem
 	task = req.Task[index]
 
@@ -148,25 +188,35 @@ func (req *ServerForm) execSingleTask(index int) (response string, status int){
 		logs.Error("收到 try 消息_server")
 		logs.Debug(res)
 
+		// try 阶段执行成功
 		if ( res.Status == 200 ) {
 			execItem("confirm", index, task, resChan)
 			res = <- resChan
 			logs.Error("收到 confirm 消息_server")
 			logs.Debug(res)
 
+			// confirm 执行成功
 			if res.Status == 200 {
 				logs.Debug("task %d 执行完毕,返回内容 $s", index, res.Body)
-				return res.Body, 1
+				return res.Body, "11", ""
+			} else if res.Status == 408 {
+				// confirm 执行超时
+				return "", "12", res.Error
+			} else {
+				// confirm 执行失败
+				return "", "10", res.Error
 			}
+			// 执行超时
+		} else if res.Status == 408 {
+			// try 执行超时
+			return "", "2", res.Error
 		}
 
-		return res.Error, 0
+		// try 阶段失败
+		return "", "0", res.Error
 	}
 
-
-
-
-	return "execSingleTask error", 1
+	return "execSingleTask error","0","task status != \"\""
 }
 
 // 并发执行

@@ -53,20 +53,6 @@ func RegistRouter(r *gin.Engine) *gin.Engine {
 	r.POST("/api/step/confirm", step1Confirm)
 	r.POST("/api/step/cancel", step1Cancel)
 
-	// // 串行执行 step_2 完全成功的例子
-	// r.POST("/api/step_2/try", step2Try)
-	// r.POST("/api/step_2/confirm", step2Confirm)
-	// r.POST("/api/step_2/cancel", step2Cancel)
-
-	// // 串行执行 step_3 完全成功的例子
-	// r.POST("/api/step_3/try", step3Try)
-	// r.POST("/api/step_3/confirm", step3Confirm)
-	// r.POST("/api/step_3/cancel", step3Cancel)
-
-
-
-
-
 	return r
 }
 
@@ -350,7 +336,7 @@ func step1Try(c *gin.Context){
 		} else if res == 10 {
 			c.JSON(408, gin.H{
 				"data": strconv.Itoa(res),
-				"code": 200,
+				"code": 408,
 			})
 		// 执行成功
 		} else {
