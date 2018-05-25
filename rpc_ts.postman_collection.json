@@ -186,7 +186,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n\t\"type\": \"sync\",\n\t\"task\": [\n\t\t{\n\t\t\t\"api\": \"http://localhost:8899/api/test\",\n\t\t\t\"try\": \"{\\\"message\\\": \\\"try\\\"}\",\n\t\t\t\"confirm\": \"{\\\"message\\\":\\\"confirm\\\"}\",\n\t\t\t\"cancel\":\"{'message': 'cancel'}\"\n\t\t},\n\t\t{\n\t\t\t\"api\": \"http://localhost:8899/api/test\",\n\t\t\t\"try\": \"{\\\"message\\\": \\\"try\\\"}\",\n\t\t\t\"confirm\": \"{\\\"message\\\":\\\"confirm\\\"}\",\n\t\t\t\"cancel\":\"{\\\"message\\\": \\\"cancel\\\"}\"\n\t\t}\n\t\t]\n}"
+					"raw": "{\n\t\"type\": \"sync\",\n\t\"task\": [\n\t\t{\n\t\t\t\"api\": \"http://localhost:8899/api/step\",\n\t\t\t\"try\": \"1\",\n\t\t\t\"confirm\": \"1\",\n\t\t\t\"cancel\":\"1\"\n\t\t},\n\t\t{\n\t\t\t\"api\": \"http://localhost:8899/api/step\",\n\t\t\t\"try\": \"1\",\n\t\t\t\"confirm\": \"1\",\n\t\t\t\"cancel\":\"1\"\n\t\t},\n\t\t{\n\t\t\t\"api\": \"http://localhost:8899/api/step\",\n\t\t\t\"try\": \"1\",\n\t\t\t\"confirm\": \"1\",\n\t\t\t\"cancel\":\"1\"\n\t\t},\n\t\t{\n\t\t\t\"api\": \"http://localhost:8899/api/step\",\n\t\t\t\"try\": \"1\",\n\t\t\t\"confirm\": \"1\",\n\t\t\t\"cancel\":\"1\"\n\t\t}\n\t]\n}"
 				},
 				"url": {
 					"raw": "localhost:8899/client",
@@ -199,6 +199,62 @@
 					]
 				},
 				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "提交事务消息_有一个 confirm 超时的例子(未完成)",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"type\": \"async\",\n\t\"task\": [\n\t\t{\n\t\t\t\"api\": \"http://localhost:8899/api/test\",\n\t\t\t\"try\": \"{\\\"message\\\": \\\"try\\\"}\",\n\t\t\t\"confirm\": \"{\\\"message\\\":\\\"confirm\\\"}\",\n\t\t\t\"cancel\":\"{\\\"message\\\":\\\"cancel\\\"}\"\n\t\t},\n\t\t{\n\t\t\t\"api\": \"http://localhost:8899/api/test_confirm_fault\",\n\t\t\t\"try\": \"{\\\"message\\\": \\\"try\\\"}\",\n\t\t\t\"confirm\": \"{\\\"message\\\":\\\"confirm\\\"}\",\n\t\t\t\"cancel\":\"{\\\"message\\\": \\\"cancel\\\"}\"\n\t\t}\n\t\t]\n}"
+				},
+				"url": {
+					"raw": "localhost:8899/client",
+					"host": [
+						"localhost"
+					],
+					"port": "8899",
+					"path": [
+						"client"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "提交事务消息-并行执行-confirm失败的例子",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"type\": \"sync\",\n  \"task\": [\n    {\n      \"api\": \"http://localhost:8899/api/step\",\n      \"try\": \"3\",\n      \"confirm\": \"3\",\n      \"cancel\":\"3\"\n    },\n    {\n      \"api\": \"http://localhost:8899/api/step\",\n      \"try\": \"3\",\n      \"confirm\": \"3\",\n      \"cancel\":\"3\"\n    },\n    {\n      \"api\": \"http://localhost:8899/api/step\",\n      \"try\": \"3\",\n      \"confirm\": \"3\",\n      \"cancel\":\"3\"\n    },\n    {\n      \"api\": \"http://localhost:8899/api/step\",\n      \"try\": \"3\",\n      \"confirm\": \"3\",\n      \"cancel\":\"3\"\n    }\n  ]\n}"
+				},
+				"url": {
+					"raw": "localhost:8899/client",
+					"host": [
+						"localhost"
+					],
+					"port": "8899",
+					"path": [
+						"client"
+					]
+				},
+				"description": null
 			},
 			"response": []
 		}

@@ -12,9 +12,6 @@ import(
 	"io/ioutil"
 	"bytes"
 	logs "rpc_ts/tools/loghandler"
-	// 引入 mysql 驱动
-	"database/sql"
-	_ "github.com/GO-SQL-Driver/MySQL" // 引入 mysql 驱动
 	"rpc_ts/tools/uniqueid"
 	"strconv"
 )
@@ -137,11 +134,11 @@ LOOP:
 			logs.Error("执行失败,需要回滚, 错误原因: %s", errMsg)
 			break LOOP
 		default:
-			errInfo := []respBody{respBody{Error:errMsg}}
+			req.ErrorMsg = errMsg
 			// try 失败
 			req.Task[startIndex].TryStatus  = "false"
 			logs.Error("index: %d 执行失败了 ,状态码: %s, 错误信息: %s", startIndex, status, errMsg)
-			req.serialBreak(errInfo)
+			req.serialBreak()
 			break LOOP
 		}
 
@@ -152,32 +149,32 @@ LOOP:
 }
 
 // 串行版本的回滚执行
-func (req *ServerForm) serialBreak(errMsg []respBody){
+func (req *ServerForm) serialBreak(){
 	logs.Info("执行串行回滚")
 	logs.Info(req)
 	var task ServerItem
 	var res respBody	
-
+	var errMsg []respBody
 
 	resChan := make(chan respBody, 1)
 
 LOOP:
 	for currentIndex := req.Step - 1; currentIndex >= 0; currentIndex-- {
 		task = req.Task[currentIndex]
-		logs.Alert("执行 index: %d", currentIndex)
-		logs.Alert(task)
 
 		if task.CommitStatus != "true" {
 			logs.Alert("未执行到 commit 步骤,跳过该任务 index: %d", currentIndex)
 			continue
 		}
+
 		execItem("cancel", currentIndex, task, resChan)
 		res = <-resChan
+		errMsg = append(errMsg, res)
 
 		if res.Status == 200 {
-			logs.Info("Task Index: %d cancel 执行成功,")
+			logs.Info("Task Index: %d cancel 执行成功", currentIndex)
 		} else {
-			logs.Error("Task Index: %d cancel 执行失败,")
+			logs.Error("Task Index: %d cancel 执行失败", currentIndex)
 			logs.Error("这里应该通知事务回滚失败, 需要手动排查")
 			break LOOP
 		}
@@ -468,7 +465,7 @@ func (req *ServerForm) toString() string{
 func (req *ServerForm) updateStatus(){
 	logs.Info("持久化状态,ID: %d", req.ID)
 	logs.Debug(req)
-	db, _ := sql.Open("mysql", "root:123123@tcp(127.0.0.1:33060)/go?charset=utf8")
+	db := GetDb()
 	sql := "UPDATE rpc_ts SET payload=?,status=1,exec_num=?,update_at=?,error_info=? WHERE id=?"
 	stmt, err := db.Prepare(sql)
 	checkErr(err)
@@ -482,7 +479,7 @@ func (req *ServerForm) updateStatus(){
 func (req *ServerForm) cancel(errMsg []respBody){
 	logs.Error("准备开始取消")
 	errStr := JSONToStr(errMsg)
-	db, _ := sql.Open("mysql", "root:123123@tcp(127.0.0.1:33060)/go?charset=utf8")
+	db := GetDb()
 	sql := "UPDATE rpc_ts SET payload=?, status=20, exec_num=?, update_at=?, error_info=? WHERE id=?"
 	stmt, err := db.Prepare(sql)
 	checkErr(err)
@@ -495,7 +492,7 @@ func (req *ServerForm) cancel(errMsg []respBody){
 // 存在非正常取消操作
 func (req *ServerForm) crash(errMsg []respBody){
 	errStr := JSONToStr(errMsg)
-	db, _ := sql.Open("mysql", "root:123123@tcp(127.0.0.1:33060)/go?charset=utf8")
+	db := GetDb()
 	sql := "UPDATE rpc_ts SET payload=?, status=21, exec_num=?, update_at=?, error_info=? WHERE id=?"
 	stmt, err := db.Prepare(sql)
 	checkErr(err)
@@ -506,7 +503,7 @@ func (req *ServerForm) crash(errMsg []respBody){
 
 // 事务执行完成动作
 func (req *ServerForm) success(){
-	db, _ := sql.Open("mysql", "root:123123@tcp(127.0.0.1:33060)/go?charset=utf8")
+	db := GetDb()
 	sql := "UPDATE rpc_ts SET payload=?, status=2, exec_num=?, update_at=? WHERE id=?"
 	stmt, err := db.Prepare(sql)
 	checkErr(err)

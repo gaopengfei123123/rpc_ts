@@ -1,3 +1,4 @@
+// Package services 这里放置一一些公用的组件
 package services
 
 import(
@@ -20,6 +21,13 @@ func GetMQServer() mq.MQ{
 	var mqHandler mq.MQ
 	mqHandler = new(mq.MQService)
 	return mqHandler
+}
+
+// GetDb 获取 mysql 链接信息
+func GetDb() *sql.DB{
+	db, _ := sql.Open("mysql", "root:123123@tcp(127.0.0.1:33060)/go?charset=utf8")
+
+	return db
 }
 
 //从数据库中搜索数据

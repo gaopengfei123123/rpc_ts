@@ -1,13 +1,10 @@
+// Package services 这里主要是接收事务执行的逻辑
 package services
 
 import(
 	"fmt"
 	"encoding/json"
 	"time"
-
-	// 引入 mysql 驱动
-	"database/sql"
-	_ "github.com/GO-SQL-Driver/MySQL" // 引入 mysql 驱动
 	logs "rpc_ts/tools/loghandler"
 	mq "rpc_ts/tools/mqhandler"
 )
@@ -47,9 +44,8 @@ func (cf *ClientForm) toString() string {
 
 // 插入数据库
 func (cf *ClientForm) insertSQL() int64 {
-	db, err := sql.Open("mysql", "root:123123@tcp(127.0.0.1:33060)/go?charset=utf8")
+	db := GetDb()
 	defer db.Close()
-	checkErr(err)
 
 	//insert
 	stmt, err := db.Prepare("INSERT rpc_ts SET payload=? , status=?,exec_num=?, update_at=? , create_at=?")

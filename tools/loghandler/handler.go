@@ -7,8 +7,10 @@ import(
 )
 // log 的一些设置
 const (
-	// LogPath  日志地址
+	// LogPath  日志文件地址
 	LogPath = "./logs/rpc_ts.log"
+	// ConsoleType 类型, 支持 console, file
+	ConsoleType = "console"
 )
 
 // LogInfoTemplate log 信息模板
@@ -23,7 +25,7 @@ var uniqueID int64
 // log 的基础设置都在这里了
 func init(){
 	config := fmt.Sprintf(`{"filename":"%s"}`, LogPath )
-	logs.SetLogger(logs.AdapterConsole, config)
+	logs.SetLogger(ConsoleType, config)
 	// 开启文件行号显示
 	logs.EnableFuncCallDepth(true)
 	// 因为是自己封装的需要将包层级给标明,否则文件行号只会显示依赖包中的行号
