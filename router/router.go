@@ -404,33 +404,38 @@ func step1Cancel(c *gin.Context){
 	form, err := decodeParams(c)
 	
 	if err == nil{
-		logs.Debug("接收参数 prams: %d, ex_params: %d", form.Params, form.ExParams)
+		logs.Debug("接收参数 prams: %s, ex_params: %s", form.Params, form.ExParams)
 
 		var res int
 		a , _ := strconv.Atoi(form.Params)
 		b , _ := strconv.Atoi(form.ExParams)
 		res = b - a
 
-		// 执行失败条件
-		if res > 5 {
-			c.JSON(200, gin.H{
-				"code": 200,
-				"error_code": 401,
-				"error_message": "result must <= 5",
-			})
-		// 制造一种超时条件
-		} else if res == 5 {
-			c.JSON(408, gin.H{
-				"data": strconv.Itoa(res),
-				"code": 200,
-			})
-		// 执行成功
-		} else {
-			c.JSON(200, gin.H{
-				"data": strconv.Itoa(res),
-				"code": 200,
-			})
-		}
+
+		c.JSON(200, gin.H{
+			"data": strconv.Itoa(res),
+			"code": 200,
+		})
+		// // 执行失败条件
+		// if res > 5 {
+		// 	c.JSON(200, gin.H{
+		// 		"code": 200,
+		// 		"error_code": 401,
+		// 		"error_message": "result must <= 5",
+		// 	})
+		// // 制造一种超时条件
+		// } else if res == 5 {
+		// 	c.JSON(408, gin.H{
+		// 		"data": strconv.Itoa(res),
+		// 		"code": 200,
+		// 	})
+		// // 执行成功
+		// } else {
+		// 	c.JSON(200, gin.H{
+		// 		"data": strconv.Itoa(res),
+		// 		"code": 200,
+		// 	})
+		// }
 	} else {
 		// 处理失败时的返回
 		c.JSON(400, gin.H{

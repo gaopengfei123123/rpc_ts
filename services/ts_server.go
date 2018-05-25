@@ -137,9 +137,11 @@ LOOP:
 			logs.Error("执行失败,需要回滚, 错误原因: %s", errMsg)
 			break LOOP
 		default:
+			errInfo := []respBody{respBody{Error:errMsg}}
+			// try 失败
 			req.Task[startIndex].TryStatus  = "false"
 			logs.Error("index: %d 执行失败了 ,状态码: %s, 错误信息: %s", startIndex, status, errMsg)
-			req.serialBreak()
+			req.serialBreak(errInfo)
 			break LOOP
 		}
 
@@ -150,25 +152,39 @@ LOOP:
 }
 
 // 串行版本的回滚执行
-func (req *ServerForm) serialBreak(){
+func (req *ServerForm) serialBreak(errMsg []respBody){
 	logs.Info("执行串行回滚")
 	logs.Info(req)
 	var task ServerItem
-	var res respBody
+	var res respBody	
+
+
 	resChan := make(chan respBody, 1)
 
+LOOP:
 	for currentIndex := req.Step - 1; currentIndex >= 0; currentIndex-- {
 		task = req.Task[currentIndex]
 		logs.Alert("执行 index: %d", currentIndex)
-		logs.Info(task)
+		logs.Alert(task)
 
+		if task.CommitStatus != "true" {
+			logs.Alert("未执行到 commit 步骤,跳过该任务 index: %d", currentIndex)
+			continue
+		}
 		execItem("cancel", currentIndex, task, resChan)
-
 		res = <-resChan
-		logs.Error("cancel 结果, index: %d", currentIndex)
-		logs.Error(res)
+
+		if res.Status == 200 {
+			logs.Info("Task Index: %d cancel 执行成功,")
+		} else {
+			logs.Error("Task Index: %d cancel 执行失败,")
+			logs.Error("这里应该通知事务回滚失败, 需要手动排查")
+			break LOOP
+		}
 	}
 
+	// 想数据库发送回滚信息, 这里的 errMsg 是回滚时的返回信息, 和 combineCancel 的时候不一样
+	req.cancel(errMsg)
 }
 
 
@@ -657,8 +673,9 @@ func postClien(url string, jsonStr string, exParams string) respBody {
 		respForm := respBody{}
 		json.Unmarshal(body, &respForm)
 
+		// 当出现业务错误码的时候,也响应在 status 上
 		if (respForm.ErrorCode != 0) {
-			respForm.Status = 401
+			respForm.Status = respForm.ErrorCode
 		}
 		
 		return respForm
