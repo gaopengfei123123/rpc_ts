@@ -114,6 +114,7 @@ func syncHandler(req ServerForm){
 LOOP:
 	for startIndex := req.Step; startIndex < len(req.Task); startIndex++ {
 		req.Task[startIndex].ExParams = exParams
+
 		exParams, status, errMsg  = req.execSingleTask(startIndex)
 		req.Step = startIndex + 1
 
@@ -134,13 +135,17 @@ LOOP:
 			logs.Error("执行失败,需要回滚, 错误原因: %s", errMsg)
 			break LOOP
 		default:
-			req.ErrorMsg = errMsg
 			// try 失败
 			req.Task[startIndex].TryStatus  = "false"
+			req.ErrorMsg = errMsg
+			req.updateStatus()
 			logs.Error("index: %d 执行失败了 ,状态码: %s, 错误信息: %s", startIndex, status, errMsg)
 			req.serialBreak()
 			break LOOP
 		}
+
+		logs.Info("当前执行 task index: %d", startIndex)
+		logs.Info(req.Task[startIndex])
 
 		if req.Step == len(req.Task) {
 			logs.Info("串行任务执行成功")
@@ -485,7 +490,7 @@ func (req *ServerForm) cancel(errMsg []respBody){
 	checkErr(err)
 	_, err = stmt.Exec(req.toString(), req.ExecNum, time.Now().Unix(), errStr, req.ID)
 	checkErr(err)
-	logs.Info("任务已取消, ID: %d: ",req.ID)
+	logs.Info("任务已取消, ID: %d",req.ID)
 	logs.Error("此处应该向某处发送 [事务取消] 通知")
 }
 
@@ -592,7 +597,7 @@ func (req *ServerForm) combineBreak(){
 
 	// 全部正常回滚则关闭事务
 	req.cancel(result)
-	logs.Info("终止操作完毕!ID:", req.ID)
+	logs.Info("终止操作完毕!ID: %d", req.ID)
 }
 
 
